@@ -32,8 +32,6 @@ namespace Control
         public void LlenarComboTipoAmbulancia(ComboBox cmbTipo)
         {
             cmbTipo.Items.Clear();
-            cmbTipo.Items.Add("---Seleccione---");
-            cmbTipo.SelectedIndex = 0;
             cmbTipo.DataSource = dAmbulancia.ConsultarTipo();
             cmbTipo.ValueMember = "ID_TIPO_AMBULANCIA";
             cmbTipo.DisplayMember = "NOMBRE_TIPO_AMBULANCIA";

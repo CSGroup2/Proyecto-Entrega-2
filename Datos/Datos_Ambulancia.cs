@@ -78,6 +78,12 @@ namespace Datos
                 SqlCommand comando = new SqlCommand(sentencia, c1);
                 SqlDataAdapter SqlDat = new SqlDataAdapter(comando);
                 SqlDat.Fill(DtResultado);
+                DataRow nuevaFila = DtResultado.NewRow();
+
+                nuevaFila["ID_TIPO_AMBULANCIA"] = 0;
+                nuevaFila["NOMBRE_TIPO_AMBULANCIA"] = "--Seleccione--";
+
+                DtResultado.Rows.InsertAt(nuevaFila, 0);
             }
             catch (Exception ex)
             {
