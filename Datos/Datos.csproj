@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="Datos_Ambulancia.cs" />
     <Compile Include="Datos_Email_Sistema.cs" />
     <Compile Include="Datos_Email_Servidor.cs" />
     <Compile Include="Datos_Login.cs" />

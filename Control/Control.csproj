@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adm_Ambulancia.cs" />
     <Compile Include="Adm_Login.cs" />
     <Compile Include="Adm_Peticion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
