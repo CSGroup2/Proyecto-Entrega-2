@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="Peticion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario_Cache.cs" />
   </ItemGroup>
