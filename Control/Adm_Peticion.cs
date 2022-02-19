@@ -52,15 +52,16 @@ namespace Control
 
         /*--------------------------Frm_Peticion_Registrar-------------------------------*/
 
-        public void guardarPeticion(string cantAmb, string punto_Origen, string punto_Destino)
+        public void guardarPeticion(string cantAmb, string tipo_ambulancia,string punto_Origen, string punto_Destino)
         {
             cliente = new Cliente();
-            cliente.Id_cliente = admL.IdCliente();
+            cliente.Id_cliente = admL.IdUsuario();
 
             //Validar datos
-            int nAmb = v.AEntero(cantAmb);
+            int tAmb = 0;
+            int nAmb = 0; //v.AEntero(cantAmb);
 
-            Peticion peticion = new Peticion(cliente,nAmb,punto_Origen,punto_Destino,DateTime.Now);
+            Peticion peticion = new Peticion(cliente, tAmb, nAmb, punto_Origen, punto_Destino, DateTime.Now);
             
             Lista.Add(peticion);            //Añadir la peticion a la lista
             guardarPeticionBDD(peticion);   //Mandar la peticion a la base de datos
@@ -71,6 +72,13 @@ namespace Control
             lbl_cedula.Text = admL.CedulaUsuario();
             lbl_nombre.Text = admL.NombreUsuario();
             lbl_apellido.Text = admL.ApellidoUsuario();
+        }
+
+        public void llenarTipoAmb(ComboBox cmb_TAmb)
+        {
+            cmb_TAmb.DataSource = datosPeticion.cargarTipoAmb();
+            cmb_TAmb.DisplayMember = "nombre_cliente";
+            cmb_TAmb.ValueMember = "id_Cliente";
         }
 
         public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino)
@@ -87,12 +95,12 @@ namespace Control
         // Guardar la petición en la Base de Datos
         private void guardarPeticionBDD(Peticion peticion)
         {
-            string mensaje = "";
+            /*string mensaje = "";
             mensaje = datosPeticion.insetar(peticion);
             if (mensaje[0] == '1')
                 MessageBox.Show("Su petición fue ingresada correctamente.");
             else
-                MessageBox.Show("Error: " + mensaje);
+                MessageBox.Show("Error: " + mensaje);*/
         }
     }
 }

@@ -29,6 +29,7 @@ namespace Visual {
             this.btncancelar = new FontAwesome.Sharp.IconButton();
             this.btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.pncontenido = new System.Windows.Forms.Panel();
+            this.cmb_TAmb = new System.Windows.Forms.ComboBox();
             this.nud_Ambulancia = new System.Windows.Forms.NumericUpDown();
             this.lbl_apellido = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -38,13 +39,12 @@ namespace Visual {
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Destino = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Origen = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pncontenido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_Ambulancia)).BeginInit();
@@ -126,7 +126,7 @@ namespace Visual {
             // pncontenido
             // 
             this.pncontenido.BackColor = System.Drawing.Color.White;
-            this.pncontenido.Controls.Add(this.comboBox1);
+            this.pncontenido.Controls.Add(this.cmb_TAmb);
             this.pncontenido.Controls.Add(this.nud_Ambulancia);
             this.pncontenido.Controls.Add(this.lbl_apellido);
             this.pncontenido.Controls.Add(this.label9);
@@ -144,6 +144,15 @@ namespace Visual {
             this.pncontenido.Name = "pncontenido";
             this.pncontenido.Size = new System.Drawing.Size(409, 291);
             this.pncontenido.TabIndex = 14;
+            // 
+            // cmb_TAmb
+            // 
+            this.cmb_TAmb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_TAmb.FormattingEnabled = true;
+            this.cmb_TAmb.Location = new System.Drawing.Point(182, 162);
+            this.cmb_TAmb.Name = "cmb_TAmb";
+            this.cmb_TAmb.Size = new System.Drawing.Size(177, 29);
+            this.cmb_TAmb.TabIndex = 23;
             // 
             // nud_Ambulancia
             // 
@@ -262,6 +271,18 @@ namespace Visual {
             this.txt_Destino.Size = new System.Drawing.Size(194, 26);
             this.txt_Destino.TabIndex = 11;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label6.Location = new System.Drawing.Point(39, 167);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Tipo Ambulancia:";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -320,27 +341,6 @@ namespace Visual {
             this.label2.TabIndex = 1;
             this.label2.Text = "Registro de Peticiones";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(182, 162);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 29);
-            this.comboBox1.TabIndex = 23;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label6.Location = new System.Drawing.Point(39, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Tipo Ambulancia:";
-            // 
             // Frm_Peticion_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +382,7 @@ namespace Visual {
         private System.Windows.Forms.TextBox txt_Destino;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown nud_Ambulancia;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmb_TAmb;
         private System.Windows.Forms.Label label6;
     }
 }

@@ -17,6 +17,7 @@ namespace Visual {
         public Frm_Peticion_Registrar () {
             InitializeComponent ();
             adm.datosCliente(lbl_cedula,lbl_nombre, lbl_apellido);
+            adm.llenarTipoAmb(cmb_TAmb);
         }
 
         // Cerrar formulario
@@ -28,10 +29,10 @@ namespace Visual {
         // Guardar peticion
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            string cantAmb = nud_Ambulancia.Value.ToString(), punto_Origen=txt_Origen.Text, punto_Destino=txt_Destino.Text;
+            string cantAmb = nud_Ambulancia.Value.ToString(), punto_Origen = txt_Origen.Text, punto_Destino = txt_Destino.Text, tipo_ambulancia = Convert.ToString(cmb_TAmb.SelectedValue);
             //verificamos si los campos están llenos
             if (txt_Origen.Text != "" && txt_Destino.Text != "")
-                adm.guardarPeticion(cantAmb, punto_Origen, punto_Destino);
+                adm.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
             else
                 MensajeError("Por favor ingrese los datos necesarios.");
         }

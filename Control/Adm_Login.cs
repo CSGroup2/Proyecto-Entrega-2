@@ -91,16 +91,9 @@ namespace Control {
             return usuarioCache.Apellidos;
         }
 
-        public int IdCliente() 
-        {
-            //necesito un método que me devuelva
-            //el id del cliente en base al id del usuario
-            return 0;
-        }
-
         public string CedulaUsuario() 
         {
-            //necesito un método que me devuelva
+            //método que me devuelva
             //la cedula del usuario
             return "";
         }

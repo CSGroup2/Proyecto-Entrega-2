@@ -12,5 +12,9 @@ namespace Datos
         Conexion con = new Conexion();
         SqlCommand cmd = new SqlCommand();
 
+        public object cargarTipoAmb()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
