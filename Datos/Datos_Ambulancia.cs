@@ -68,6 +68,31 @@ namespace Datos
             return msj;
         }
 
+        public DataTable ConsultarTipo()
+        {
+            DataTable DtResultado = new DataTable("TIPO_AMBULANCIA");
+            SqlConnection c1 = con.abrir_conexion();
+            try
+            {
+                string sentencia = "Select * from TIPO_AMBULANCIA where ID_ESTADO = 1";
+                SqlCommand comando = new SqlCommand(sentencia, c1);
+                SqlDataAdapter SqlDat = new SqlDataAdapter(comando);
+                SqlDat.Fill(DtResultado);
+                DataRow nuevaFila = DtResultado.NewRow();
+
+                nuevaFila["ID_TIPO_AMBULANCIA"] = 0;
+                nuevaFila["NOMBRE_TIPO_AMBULANCIA"] = "--Seleccione--";
+
+                DtResultado.Rows.InsertAt(nuevaFila, 0);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+                //MessageBox.Show("Eroor: " + ex);
+            }
+            return DtResultado;
+        }
+
         public bool ConsultarPlaca(string text)
         {
             throw new NotImplementedException();
