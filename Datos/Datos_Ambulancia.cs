@@ -68,6 +68,25 @@ namespace Datos
             return msj;
         }
 
+        public DataTable ConsultarTipo()
+        {
+            DataTable DtResultado = new DataTable("TIPO_AMBULANCIA");
+            SqlConnection c1 = con.abrir_conexion();
+            try
+            {
+                string sentencia = "Select * from TIPO_AMBULANCIA where ID_ESTADO = 1";
+                SqlCommand comando = new SqlCommand(sentencia, c1);
+                SqlDataAdapter SqlDat = new SqlDataAdapter(comando);
+                SqlDat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+                //MessageBox.Show("Eroor: " + ex);
+            }
+            return DtResultado;
+        }
+
         public bool ConsultarPlaca(string text)
         {
             throw new NotImplementedException();

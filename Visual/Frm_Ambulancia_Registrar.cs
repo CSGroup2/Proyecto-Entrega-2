@@ -1,4 +1,5 @@
 ﻿
+using Control;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,8 @@ using System.Windows.Forms;
 
 namespace Visual {
     public partial class Frm_Ambulancia_Registrar : Form {
+        Adm_Ambulancia admA = Adm_Ambulancia.GetAdm();
+
         Btn_Comportamiento cbtn = new Btn_Comportamiento ();
 
         public Frm_Ambulancia_Registrar () {
@@ -18,7 +21,8 @@ namespace Visual {
         }
 
         private void FrmAmbulanciaReg_Load (object sender, EventArgs e) {
-            this.pncontenido.BackColor = Color.FromArgb (200, 255, 255, 255);
+            this.pncontenido.BackColor = Color.FromArgb(200, 255, 255, 255);
+            admA.LlenarComboTipoAmbulancia(cmbTipo);
         }
 
         #region Efecto boton guardar

@@ -58,12 +58,12 @@ namespace Control
             cliente.Id_cliente = admL.IdCliente();
 
             //Validar datos
-            int nAmb = v.AEntero(cantAmb);
+            /*int nAmb = v.AEntero(cantAmb);
 
             Peticion peticion = new Peticion(cliente,nAmb,punto_Origen,punto_Destino,DateTime.Now);
             
             Lista.Add(peticion);            //Añadir la peticion a la lista
-            guardarPeticionBDD(peticion);   //Mandar la peticion a la base de datos
+            guardarPeticionBDD(peticion);  */ //Mandar la peticion a la base de datos
         }
 
         public void datosCliente(Label lbl_cedula, Label lbl_nombre, Label lbl_apellido)
@@ -87,12 +87,12 @@ namespace Control
         // Guardar la petición en la Base de Datos
         private void guardarPeticionBDD(Peticion peticion)
         {
-            string mensaje = "";
+            /*string mensaje = "";
             mensaje = datosPeticion.insetar(peticion);
             if (mensaje[0] == '1')
                 MessageBox.Show("Su petición fue ingresada correctamente.");
             else
-                MessageBox.Show("Error: " + mensaje);
+                MessageBox.Show("Error: " + mensaje);*/
         }
     }
 }
