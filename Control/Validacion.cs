@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +8,8 @@ using System.Windows.Forms;
 
 namespace Control {
     public class Validacion {
+
+        Datos_Ambulancia dAmbulancia = new Datos_Ambulancia();
 
         // Método que valida las entradas de datos en módulo ambulancias y lanza un error visible para el usuario
         public bool Validar(TextBox txtPlaca, TextBox txtModelo, ComboBox cmbTipo, TextBox txtCapacidad, TextBox txtObservacion, ErrorProvider errorP)
@@ -18,9 +21,14 @@ namespace Control {
                 errorP.SetError(txtPlaca, "Ingrese la placa");
                 no_error = false;
             }
-            if (!Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{3}$") || !Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{4}$") || dAmbulancia.ConsultarPlaca(txtPlaca.Text))
+            if (!Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{3}$") || !Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{4}$"))
             {
-                errorP.SetError(txtPlaca, "La placa ya está registrada\nLa placa debe contener de 3 letras y 3-4 dígitos");
+                errorP.SetError(txtPlaca, "La placa debe contener de 3 letras y 3-4 dígitos");
+                no_error = false;
+            }
+            if (dAmbulancia.ConsultarPlaca(placa))
+            {
+                errorP.SetError(txtPlaca, "La placa ya está registrada");
                 no_error = false;
             }
             if (String.IsNullOrEmpty(txtModelo.Text))
