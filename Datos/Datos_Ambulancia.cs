@@ -21,7 +21,6 @@ namespace Datos
             {
                 if (a != null)
                 {
-                    //establecer transaccion
                     //comando
                     SqlCommand comando = new SqlCommand();
                     comando.Connection = c1;
