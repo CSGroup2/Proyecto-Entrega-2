@@ -30,7 +30,7 @@ namespace Control {
         Adm_Login admL = Adm_Login.GetAdm();
         Adm_Peticion admP = Adm_Peticion.GetAdm();
         Adm_Ambulancia admA = Adm_Ambulancia.GetAdm();
-        Adm_Conductor admC = Adm_Conductor.GetAdm();
+        Adm_Conductor admCo = Adm_Conductor.GetAdm();
 
         public List<Asignacion_Cabecera> ListaC { get => listaC; set => listaC = value; }
         public List<Asignacion_Detalle> ListaD { get => listaD; set => listaD = value; }
@@ -69,6 +69,11 @@ namespace Control {
         public void llenarTablaAmbulanciaAsignar(DataGridView dgvAmbulancia)
         {
             admA.ListarAmbulanciasDisponibles(dgvAmbulancia);
+        }
+
+        public void llenarTablaConductorAsignar(DataGridView dgvConductores)
+        {
+            admCo.ListarConductoresDisponibles(dgvConductores);
         }
     }
 }

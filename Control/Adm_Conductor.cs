@@ -21,6 +21,8 @@ namespace Control {
         Validacion v = null;
         Conductor conductor = null;
 
+        Datos_Conductor dConductor = new Datos_Conductor();
+
         //public Usuario_Cache UsuarioCache { get => usuarioCache; set => usuarioCache = value; }
 
         // Constructor: Adm_Login
@@ -75,6 +77,12 @@ namespace Control {
             if (v.EsCorrectoGuardar (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1)) {
 
             }
+        }
+
+        internal void ListarConductoresDisponibles(DataGridView dgvConductores)
+        {
+            dgvConductores.Refresh();
+            dgvConductores.DataSource = dConductor.ListarConductoresDisponibles();
         }
 
         public void LimpiarCampos (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
