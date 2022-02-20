@@ -2,6 +2,7 @@
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,29 @@ namespace Datos
 
         public string insetar(Peticion peticion)
         {
-            throw new NotImplementedException();
+            string msj = "";
+            SqlConnection conexion = con.abrir_conexion();
+            try
+            {
+                if (peticion != null)
+                {
+                    //comando
+                    SqlCommand comando = new SqlCommand();
+                    comando.Connection = conexion;
+                    comando.CommandText = "sp_insertar_peticion";
+                    comando.CommandType = CommandType.StoredProcedure;
+
+
+                    comando.ExecuteNonQuery();
+                    msj = "1";
+                }
+            }
+            catch (Exception ex) 
+            {
+                con.cerrar_conexion(conexion);
+                msj = "OCURRIO UN ERROR " + ex.Message;
+            }
+            return msj;
         }
     }
 }

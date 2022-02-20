@@ -14,11 +14,13 @@ namespace Control
         private static Adm_Ambulancia adm = new Adm_Ambulancia();
         Datos_Ambulancia dAmbulancia = new Datos_Ambulancia();
 
+        //Si los haces null los llamas en los metodos de abajo no los vuelves a crear
         List<Ambulancia> ambulancias = null;
-        Ambulancia a = null;
+        Ambulancia a = null;//ta por gusto
 
+        //Tienes que llamar a estos que tienen letra mauscula revisa mi Adm_Peticion en el guardar
         public List<Ambulancia> Ambulancias { get => ambulancias; set => ambulancias = value; }
-        public Ambulancia A { get => a; set => a = value; }
+        public Ambulancia A { get => a; set => a = value; }//ta por gusto
 
         public Adm_Ambulancia()
         {
@@ -96,11 +98,11 @@ namespace Control
         //método para receptar los datos y guardar temporalmente en una lista
         public void Guardar(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
-            Ambulancia a = null;
+            Ambulancia a = null;//esta linea ta por gusto
             if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
                 a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
-                ambulancias.Add(a);
+                ambulancias.Add(a); // Ambulancias.add(a);
                 GuardarBD(a);
             }
             else

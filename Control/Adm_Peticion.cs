@@ -62,7 +62,7 @@ namespace Control
             int tAmb = v.AEntero(tipo_ambulancia);
             int nAmb = v.AEntero(cantAmb);
 
-            Peticion peticion = new Peticion(cliente, tAmb, nAmb, punto_Origen, punto_Destino, DateTime.Now);
+            peticion = new Peticion(cliente, tAmb, nAmb, punto_Origen, punto_Destino,"En Progreso");
             
             Lista.Add(peticion);            //Añadir la peticion a la lista
             guardarPeticionBDD(peticion);   //Mandar la peticion a la base de datos
