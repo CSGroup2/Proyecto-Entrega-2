@@ -80,11 +80,12 @@ namespace Control
             admA.LlenarComboTipoAmbulancia(cmb_TAmb);
         }
 
-        public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino)
+        public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino, ComboBox cmb_TAmb)
         {
             nud_Ambulancia.Value=1;
             txt_Origen.Text = "";
             txt_Destino.Text = "";
+            cmb_TAmb.SelectedIndex = 0;
         }
 
         public string CedulaUsuario()

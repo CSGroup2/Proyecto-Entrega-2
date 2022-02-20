@@ -32,7 +32,7 @@ namespace Visual {
             string cantAmb = nud_Ambulancia.Value.ToString(), punto_Origen = txt_Origen.Text, 
                 punto_Destino = txt_Destino.Text, tipo_ambulancia = Convert.ToString(cmb_TAmb.SelectedValue);
             //verificamos si los campos están llenos
-            if (txt_Origen.Text != "" && txt_Destino.Text != "")
+            if (txt_Origen.Text != "" && txt_Destino.Text != "" && cmb_TAmb.SelectedIndex!=0)
                 adm.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
             else
                 MensajeError("Por favor ingrese los datos necesarios.");
@@ -41,7 +41,7 @@ namespace Visual {
         // Borrar lo que tipeó
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
-            adm.borrarTipeos(nud_Ambulancia, txt_Origen, txt_Destino);
+            adm.borrarTipeos(nud_Ambulancia, txt_Origen, txt_Destino, cmb_TAmb);
         }
 
         private void MensajeError(string mensaje)
