@@ -24,33 +24,31 @@ namespace Visual {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnimprimir = new FontAwesome.Sharp.IconButton();
             this.btnguardar = new FontAwesome.Sharp.IconButton();
             this.pncontenido = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbModelo = new System.Windows.Forms.RadioButton();
+            this.rdbPlaca = new System.Windows.Forms.RadioButton();
             this.chbTipo = new System.Windows.Forms.CheckBox();
             this.btnMostrartodos = new FontAwesome.Sharp.IconButton();
             this.btnConsultar = new FontAwesome.Sharp.IconButton();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.chbEstado = new System.Windows.Forms.CheckBox();
-            this.opbNombres = new System.Windows.Forms.RadioButton();
-            this.opbCedula = new System.Windows.Forms.RadioButton();
+            this.chbDisponibilidad = new System.Windows.Forms.CheckBox();
             this.txtDato = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dgvListar = new System.Windows.Forms.DataGridView();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.capacidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAmbulancias = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.pncontenido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancias)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -108,27 +106,62 @@ namespace Visual {
             // pncontenido
             // 
             this.pncontenido.BackColor = System.Drawing.Color.White;
+            this.pncontenido.Controls.Add(this.groupBox1);
             this.pncontenido.Controls.Add(this.chbTipo);
             this.pncontenido.Controls.Add(this.btnMostrartodos);
             this.pncontenido.Controls.Add(this.btnConsultar);
             this.pncontenido.Controls.Add(this.cmbTipo);
-            this.pncontenido.Controls.Add(this.chbEstado);
-            this.pncontenido.Controls.Add(this.opbNombres);
-            this.pncontenido.Controls.Add(this.opbCedula);
+            this.pncontenido.Controls.Add(this.chbDisponibilidad);
             this.pncontenido.Controls.Add(this.txtDato);
             this.pncontenido.Controls.Add(this.label14);
-            this.pncontenido.Controls.Add(this.dgvListar);
+            this.pncontenido.Controls.Add(this.dgvAmbulancias);
             this.pncontenido.Location = new System.Drawing.Point(20, 15);
             this.pncontenido.Name = "pncontenido";
             this.pncontenido.Size = new System.Drawing.Size(622, 308);
             this.pncontenido.TabIndex = 14;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbModelo);
+            this.groupBox1.Controls.Add(this.rdbPlaca);
+            this.groupBox1.Location = new System.Drawing.Point(237, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(180, 39);
+            this.groupBox1.TabIndex = 60;
+            this.groupBox1.TabStop = false;
+            // 
+            // rdbModelo
+            // 
+            this.rdbModelo.AutoSize = true;
+            this.rdbModelo.BackColor = System.Drawing.Color.Transparent;
+            this.rdbModelo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbModelo.Location = new System.Drawing.Point(100, 17);
+            this.rdbModelo.Name = "rdbModelo";
+            this.rdbModelo.Size = new System.Drawing.Size(67, 19);
+            this.rdbModelo.TabIndex = 52;
+            this.rdbModelo.Text = "Modelo";
+            this.rdbModelo.UseVisualStyleBackColor = false;
+            // 
+            // rdbPlaca
+            // 
+            this.rdbPlaca.AutoSize = true;
+            this.rdbPlaca.BackColor = System.Drawing.Color.Transparent;
+            this.rdbPlaca.Checked = true;
+            this.rdbPlaca.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbPlaca.Location = new System.Drawing.Point(11, 17);
+            this.rdbPlaca.Name = "rdbPlaca";
+            this.rdbPlaca.Size = new System.Drawing.Size(60, 19);
+            this.rdbPlaca.TabIndex = 51;
+            this.rdbPlaca.TabStop = true;
+            this.rdbPlaca.Text = "Placa";
+            this.rdbPlaca.UseVisualStyleBackColor = false;
             // 
             // chbTipo
             // 
             this.chbTipo.AutoSize = true;
             this.chbTipo.BackColor = System.Drawing.Color.Transparent;
             this.chbTipo.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbTipo.Location = new System.Drawing.Point(25, 55);
+            this.chbTipo.Location = new System.Drawing.Point(25, 63);
             this.chbTipo.Name = "chbTipo";
             this.chbTipo.Size = new System.Drawing.Size(54, 19);
             this.chbTipo.TabIndex = 59;
@@ -144,7 +177,7 @@ namespace Visual {
             this.btnMostrartodos.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnMostrartodos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMostrartodos.IconSize = 35;
-            this.btnMostrartodos.Location = new System.Drawing.Point(420, 43);
+            this.btnMostrartodos.Location = new System.Drawing.Point(420, 52);
             this.btnMostrartodos.Name = "btnMostrartodos";
             this.btnMostrartodos.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMostrartodos.Size = new System.Drawing.Size(171, 37);
@@ -152,6 +185,7 @@ namespace Visual {
             this.btnMostrartodos.Text = "Mostrar Todos";
             this.btnMostrartodos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnMostrartodos.UseVisualStyleBackColor = true;
+            this.btnMostrartodos.Click += new System.EventHandler(this.btnMostrartodos_Click);
             this.btnMostrartodos.MouseLeave += new System.EventHandler(this.btnmostrartodos_MouseLeave);
             this.btnMostrartodos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnmostrartodos_MouseMove);
             // 
@@ -164,7 +198,7 @@ namespace Visual {
             this.btnConsultar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsultar.IconSize = 35;
-            this.btnConsultar.Location = new System.Drawing.Point(235, 42);
+            this.btnConsultar.Location = new System.Drawing.Point(235, 52);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnConsultar.Size = new System.Drawing.Size(168, 37);
@@ -172,54 +206,29 @@ namespace Visual {
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             this.btnConsultar.MouseLeave += new System.EventHandler(this.btnconsultar_MouseLeave);
             this.btnConsultar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnconsultar_MouseMove);
             // 
             // cmbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
-            this.cmbTipo.Location = new System.Drawing.Point(80, 53);
+            this.cmbTipo.Location = new System.Drawing.Point(80, 63);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(145, 21);
             this.cmbTipo.TabIndex = 56;
             // 
-            // chbEstado
+            // chbDisponibilidad
             // 
-            this.chbEstado.AutoSize = true;
-            this.chbEstado.BackColor = System.Drawing.Color.Transparent;
-            this.chbEstado.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chbEstado.Location = new System.Drawing.Point(448, 17);
-            this.chbEstado.Name = "chbEstado";
-            this.chbEstado.Size = new System.Drawing.Size(124, 19);
-            this.chbEstado.TabIndex = 55;
-            this.chbEstado.Text = "Disponibilidad";
-            this.chbEstado.UseVisualStyleBackColor = false;
-            // 
-            // opbNombres
-            // 
-            this.opbNombres.AutoSize = true;
-            this.opbNombres.BackColor = System.Drawing.Color.Transparent;
-            this.opbNombres.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opbNombres.Location = new System.Drawing.Point(336, 18);
-            this.opbNombres.Name = "opbNombres";
-            this.opbNombres.Size = new System.Drawing.Size(67, 19);
-            this.opbNombres.TabIndex = 52;
-            this.opbNombres.Text = "Modelo";
-            this.opbNombres.UseVisualStyleBackColor = false;
-            // 
-            // opbCedula
-            // 
-            this.opbCedula.AutoSize = true;
-            this.opbCedula.BackColor = System.Drawing.Color.Transparent;
-            this.opbCedula.Checked = true;
-            this.opbCedula.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opbCedula.Location = new System.Drawing.Point(235, 17);
-            this.opbCedula.Name = "opbCedula";
-            this.opbCedula.Size = new System.Drawing.Size(60, 19);
-            this.opbCedula.TabIndex = 51;
-            this.opbCedula.TabStop = true;
-            this.opbCedula.Text = "Placa";
-            this.opbCedula.UseVisualStyleBackColor = false;
+            this.chbDisponibilidad.AutoSize = true;
+            this.chbDisponibilidad.BackColor = System.Drawing.Color.Transparent;
+            this.chbDisponibilidad.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chbDisponibilidad.Location = new System.Drawing.Point(453, 18);
+            this.chbDisponibilidad.Name = "chbDisponibilidad";
+            this.chbDisponibilidad.Size = new System.Drawing.Size(124, 19);
+            this.chbDisponibilidad.TabIndex = 55;
+            this.chbDisponibilidad.Text = "Disponibilidad";
+            this.chbDisponibilidad.UseVisualStyleBackColor = false;
             // 
             // txtDato
             // 
@@ -239,67 +248,17 @@ namespace Visual {
             this.label14.TabIndex = 49;
             this.label14.Text = "Dato: ";
             // 
-            // dgvListar
+            // dgvAmbulancias
             // 
-            this.dgvListar.AllowUserToAddRows = false;
-            this.dgvListar.AllowUserToDeleteRows = false;
-            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codigo,
-            this.estado,
-            this.placa,
-            this.Modelo,
-            this.tipo,
-            this.capacidad,
-            this.observacion});
-            this.dgvListar.Location = new System.Drawing.Point(25, 96);
-            this.dgvListar.Name = "dgvListar";
-            this.dgvListar.ReadOnly = true;
-            this.dgvListar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListar.Size = new System.Drawing.Size(566, 182);
-            this.dgvListar.TabIndex = 48;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "Codigo";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Disponibilidad";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
-            // placa
-            // 
-            this.placa.HeaderText = "Numero de Placa";
-            this.placa.Name = "placa";
-            this.placa.ReadOnly = true;
-            // 
-            // Modelo
-            // 
-            this.Modelo.HeaderText = "Modelo";
-            this.Modelo.Name = "Modelo";
-            this.Modelo.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
-            // capacidad
-            // 
-            this.capacidad.HeaderText = "Capacidad";
-            this.capacidad.Name = "capacidad";
-            this.capacidad.ReadOnly = true;
-            // 
-            // observacion
-            // 
-            this.observacion.HeaderText = "Observación";
-            this.observacion.Name = "observacion";
-            this.observacion.ReadOnly = true;
+            this.dgvAmbulancias.AllowUserToAddRows = false;
+            this.dgvAmbulancias.AllowUserToDeleteRows = false;
+            this.dgvAmbulancias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAmbulancias.Location = new System.Drawing.Point(25, 103);
+            this.dgvAmbulancias.Name = "dgvAmbulancias";
+            this.dgvAmbulancias.ReadOnly = true;
+            this.dgvAmbulancias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAmbulancias.Size = new System.Drawing.Size(566, 182);
+            this.dgvAmbulancias.TabIndex = 48;
             // 
             // panel1
             // 
@@ -325,6 +284,10 @@ namespace Visual {
             this.label2.TabIndex = 1;
             this.label2.Text = "Consulta de Ambulancias";
             // 
+            // errorP
+            // 
+            this.errorP.ContainerControl = this;
+            // 
             // Frm_Ambulancia_Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,9 +302,12 @@ namespace Visual {
             this.panel2.ResumeLayout(false);
             this.pncontenido.ResumeLayout(false);
             this.pncontenido.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancias)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,21 +321,16 @@ namespace Visual {
         private FontAwesome.Sharp.IconButton btnMostrartodos;
         private FontAwesome.Sharp.IconButton btnConsultar;
         private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.CheckBox chbEstado;
-        private System.Windows.Forms.RadioButton opbNombres;
-        private System.Windows.Forms.RadioButton opbCedula;
+        private System.Windows.Forms.CheckBox chbDisponibilidad;
+        private System.Windows.Forms.RadioButton rdbModelo;
+        private System.Windows.Forms.RadioButton rdbPlaca;
         private System.Windows.Forms.TextBox txtDato;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dgvListar;
+        private System.Windows.Forms.DataGridView dgvAmbulancias;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chbTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn placa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Modelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capacidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn observacion;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ErrorProvider errorP;
     }
 }
