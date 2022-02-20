@@ -14,13 +14,10 @@ namespace Control
         private static Adm_Ambulancia adm = new Adm_Ambulancia();
         Datos_Ambulancia dAmbulancia = new Datos_Ambulancia();
 
-        //Si los haces null los llamas en los metodos de abajo no los vuelves a crear
         List<Ambulancia> ambulancias = null;
-        Ambulancia a = null;//ta por gusto
+        Ambulancia a = null;
 
-        //Tienes que llamar a estos que tienen letra mauscula revisa mi Adm_Peticion en el guardar
         public List<Ambulancia> Ambulancias { get => ambulancias; set => ambulancias = value; }
-        public Ambulancia A { get => a; set => a = value; }//ta por gusto
 
         public Adm_Ambulancia()
         {
@@ -36,6 +33,7 @@ namespace Control
             return adm;
         }
 
+        //método para cargar los datos al combobox de Tipo Ambulancia
         public void LlenarComboTipoAmbulancia(ComboBox cmbTipo)
         {
             cmbTipo.Items.Clear();
@@ -94,14 +92,13 @@ namespace Control
             return no_error;
         }
 
-        //
+        //método para receptar los datos y guardar temporalmente en una lista
         public void Guardar(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
-            Ambulancia a = null;//esta linea ta por gusto
             if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
                 a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
-                ambulancias.Add(a); // Ambulancias.add(a);
+                Ambulancias.Add(a); 
                 GuardarBD(a);
             }
             else
@@ -110,6 +107,7 @@ namespace Control
             }
         }
 
+        //método para insertar los datos de la lista en la BD
         public void GuardarBD(Ambulancia a)
         {
             string mensaje = "";
@@ -125,6 +123,7 @@ namespace Control
                 
         }
 
+        //método para limpiar campos
         public void LimpiarCampos(TextBox txtPlaca, TextBox txtModelo, ComboBox cmbTipo, TextBox txtCapacidad, TextBox txtObservacion)
         {
             txtPlaca.Text = "";
@@ -134,5 +133,59 @@ namespace Control
             txtObservacion.Text = "";
         }
 
+        public bool ValidarC(RadioButton rdbPlaca, TextBox txtDato, CheckBox chbTipo, ComboBox cmbTipo, ErrorProvider errorP)
+        {
+            bool no_error = true;
+            if (rdbPlaca.Checked)
+            {
+                if (String.IsNullOrEmpty(txtDato.Text.Trim()))
+                {
+                    errorP.SetError(txtDato, "Ingrese la placa");
+                    no_error = false;
+                }
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(txtDato.Text))
+                {
+                    errorP.SetError(txtDato, "Ingrese el modelo de la ambulancia");
+                    no_error = false;
+                }
+            }
+            if(chbTipo.Checked)
+            {
+                if (cmbTipo.Text == "--Seleccione--")
+                {
+                    errorP.SetError(cmbTipo, "Seleccione un tipo de ambulancia");
+                    no_error = false;
+                }
+            }
+            return no_error;
+        }
+
+        //
+        public void ConsultarAmbulancias(DataGridView dgvAmbulancias, TextBox txtDato, ComboBox cmbTipo, CheckBox chbDisponibilidad, int buscarOb, int buscarOp)
+        {
+            string dato = txtDato.Text;
+            int disponibilidad = 0, tipo = cmbTipo.SelectedIndex ;
+            if (chbDisponibilidad.Checked)
+            {
+                disponibilidad = 1;
+            }
+            dgvAmbulancias.Refresh();
+            dgvAmbulancias.DataSource = dAmbulancia.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
+        }
+
+        public void ListarAmbulancias(DataGridView dgvAmbulancias)
+        {
+            dgvAmbulancias.Refresh();
+            dgvAmbulancias.DataSource = dAmbulancia.ListarAmbulancias();
+        }
+
+        internal void ListarAmbulanciasDisponibles(DataGridView dgvAmbulancia)
+        {
+            dgvAmbulancia.Refresh();
+            dgvAmbulancia.DataSource = dAmbulancia.ListarAmbulanciasDisponibles();
+        }
     }
 }

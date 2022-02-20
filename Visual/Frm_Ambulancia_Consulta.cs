@@ -1,4 +1,5 @@
 ﻿
+using Control;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,10 @@ using System.Windows.Forms;
 namespace Visual {
     public partial class Frm_Ambulancia_Consultar : Form {
 
+        Adm_Ambulancia admA = Adm_Ambulancia.GetAdm();
+        public int buscarOb, buscarOp;
         Btn_Comportamiento cbtn = new Btn_Comportamiento ();
+
         public Frm_Ambulancia_Consultar () {
             InitializeComponent ();
         }
@@ -21,6 +25,8 @@ namespace Visual {
 
         private void FrmAmbulanciaConsul_Load (object sender, EventArgs e) {
             this.pncontenido.BackColor = Color.FromArgb (140, 255, 255, 255);
+            admA.LlenarComboTipoAmbulancia(cmbTipo);
+            admA.ListarAmbulancias(dgvAmbulancias);
         }
 
         #region Efecto boton Consultar 
@@ -61,5 +67,39 @@ namespace Visual {
             cbtn.desactivaboton (sender);
         }
         #endregion
+
+        private void btnMostrartodos_Click(object sender, EventArgs e)
+        {
+            admA.ListarAmbulancias(dgvAmbulancias);
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if(admA.ValidarC(rdbPlaca, txtDato, chbTipo, cmbTipo, errorP))
+            {
+                if (rdbPlaca.Checked == true)
+                {
+                    buscarOb = 1;
+                }
+                else 
+                {
+                    buscarOb = 2;
+                }
+                if (chbDisponibilidad.Checked == true)
+                {
+                    buscarOp = 1;
+                }
+                else if(chbTipo.Checked == true)
+                {
+                    buscarOp = 2;
+                }
+                else if (chbDisponibilidad.Checked == true && chbTipo.Checked == true)
+                {
+                    buscarOp = 3;
+                }
+                admA.ConsultarAmbulancias(dgvAmbulancias, txtDato, cmbTipo, chbDisponibilidad, buscarOb, buscarOp);
+            }
+            
+        }
     }
 }

@@ -37,6 +37,7 @@ namespace Visual
             // 
             // dgvConductores
             // 
+            this.dgvConductores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConductores.Location = new System.Drawing.Point(35, 25);
             this.dgvConductores.Name = "dgvConductores";
@@ -80,8 +81,9 @@ namespace Visual
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Frm_Elegir_Conductor
+            // Frm_Asignar_Conductor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +94,8 @@ namespace Visual
             this.Controls.Add(this.btnElegir);
             this.Controls.Add(this.dgvConductores);
             this.DoubleBuffered = true;
-            this.Name = "Frm_Elegir_Conductor";
+            this.Name = "Frm_Asignar_Conductor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Elegir_Conductor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).EndInit();
             this.ResumeLayout(false);

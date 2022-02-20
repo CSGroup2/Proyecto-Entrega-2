@@ -42,13 +42,6 @@ namespace Visual
             this.dgvAmb_Cond = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_Ambulancia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cant_Ambulancias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Punto_Origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Punto_Destino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Condicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeticion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmb_Cond)).BeginInit();
             this.SuspendLayout();
@@ -56,14 +49,6 @@ namespace Visual
             // dgvPeticion
             // 
             this.dgvPeticion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeticion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Cliente,
-            this.Tipo_Ambulancia,
-            this.Cant_Ambulancias,
-            this.Punto_Origen,
-            this.Punto_Destino,
-            this.Condicion});
             this.dgvPeticion.Location = new System.Drawing.Point(32, 27);
             this.dgvPeticion.Name = "dgvPeticion";
             this.dgvPeticion.Size = new System.Drawing.Size(587, 128);
@@ -157,6 +142,7 @@ namespace Visual
             this.btnAmbulancia.Text = "Elegir";
             this.btnAmbulancia.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAmbulancia.UseVisualStyleBackColor = true;
+            this.btnAmbulancia.Click += new System.EventHandler(this.btnAmbulancia_Click);
             // 
             // btnAsignar
             // 
@@ -249,48 +235,6 @@ namespace Visual
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            // 
-            // Tipo_Ambulancia
-            // 
-            this.Tipo_Ambulancia.HeaderText = "Tipo Ambulancia";
-            this.Tipo_Ambulancia.Name = "Tipo_Ambulancia";
-            this.Tipo_Ambulancia.ReadOnly = true;
-            // 
-            // Cant_Ambulancias
-            // 
-            this.Cant_Ambulancias.HeaderText = "Cant. Ambulancias";
-            this.Cant_Ambulancias.Name = "Cant_Ambulancias";
-            this.Cant_Ambulancias.ReadOnly = true;
-            // 
-            // Punto_Origen
-            // 
-            this.Punto_Origen.HeaderText = "PuntoOrigen";
-            this.Punto_Origen.Name = "Punto_Origen";
-            this.Punto_Origen.ReadOnly = true;
-            // 
-            // Punto_Destino
-            // 
-            this.Punto_Destino.HeaderText = "Punto Destino";
-            this.Punto_Destino.Name = "Punto_Destino";
-            this.Punto_Destino.ReadOnly = true;
-            // 
-            // Condicion
-            // 
-            this.Condicion.HeaderText = "Condición";
-            this.Condicion.Name = "Condicion";
-            this.Condicion.ReadOnly = true;
-            // 
             // Frm_Asignacion_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,12 +281,5 @@ namespace Visual
         private System.Windows.Forms.DataGridView dgvAmb_Cond;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnGuardar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Ambulancia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cant_Ambulancias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Punto_Origen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Punto_Destino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Condicion;
     }
 }

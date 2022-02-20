@@ -99,13 +99,8 @@ namespace Control
 
         internal void llenarTablaPeticion(DataGridView dgvPeticion)
         {
-            /*consultarPeticionBD();
-            int i = 1;
-            foreach (Peticion x in Lista)
-            {
-                dgvPeticion.Rows.Add(i, x.Id, x.Vendedor.Nombre, x.Cliente.Nombre, x.Juego.Nombre, x.Juego.Precio, x.Cant, x.Total, x.Fecha.ToShortDateString());
-                i++;
-            }*/
+            dgvPeticion.Refresh();
+            dgvPeticion.DataSource = datosPeticion.listarPeticionesPendientes();
         }
 
         /*--------------------------Enviar a Base de Datos-------------------------------*/

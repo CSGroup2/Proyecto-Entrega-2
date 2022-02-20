@@ -94,5 +94,26 @@ namespace Datos
             }
             return msj;
         }
+
+        public object listarPeticionesPendientes()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection conexion = con.abrir_conexion();
+            try
+            {
+                using (SqlCommand comando = new SqlCommand("sp_listar_peticiones_pendientes", conexion))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(comando);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                dt = null;
+                Console.WriteLine("Error al listar las peticiones " + ex.Message);
+            }
+            return dt;
+        }
     }
 }

@@ -26,7 +26,14 @@ namespace Visual
 
         private void btnConductor_Click(object sender, EventArgs e)
         {
+            Frm_Asignar_Conductor frm = new Frm_Asignar_Conductor();
+            frm.ShowDialog();
+        }
 
+        private void btnAmbulancia_Click(object sender, EventArgs e)
+        {
+            Frm_Asignar_Ambulancia frm = new Frm_Asignar_Ambulancia();
+            frm.ShowDialog();
         }
     }
 }
