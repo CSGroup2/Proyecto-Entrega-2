@@ -16,22 +16,22 @@ namespace Datos {
             //List<Object> lstClien = new List<Object> ();
             Usuario_Cache usuarioCache = new Usuario_Cache ();
             string sentencia = "select * from (select 'Gerente' as tipo, ge.ID_GERENTE as id_tipo, pers.NOMBRE_1 as nombre, pers.APELLIDO_1 as apellido, " +
-                "us.USUARIO, us.CORREO, us.CONTRASENIA " +
+                "us.NOMBRE_USUARIO, us.CORREO, us.CONTRASENIA " +
                 "from GERENTE as ge inner join PERSONA as pers " +
                 "on pers.ID_PERSONA = ge.ID_PERSONA " +
                 "inner join USUARIO as us " +
                 "on us.ID_USUARIO = ge.ID_USUARIO " +
                 "UNION " +
-                "select 'Cliente', cl.ID_CLIENTE,  pers.NOMBRE_1, pers.APELLIDO_1, us.USUARIO, us.CORREO, us.CONTRASENIA from CLIENTE as cl " +
+                "select 'Cliente', cl.ID_CLIENTE,  pers.NOMBRE_1, pers.APELLIDO_1, us.NOMBRE_USUARIO, us.CORREO, us.CONTRASENIA from CLIENTE as cl " +
                 "inner join PERSONA as pers " +
                 "on pers.ID_PERSONA = cl.ID_PERSONA " +
                 "inner join USUARIO as us " +
                 "on us.ID_USUARIO = cl.ID_USUARIO) as resul " +
-                "where resul.USUARIO = @usuario and resul.CONTRASENIA = @contraseña ";
+                "where resul.NOMBRE_USUARIO = @nombre_usuario and resul.CONTRASENIA = @contrasenia ";
 
             SqlCommand comando = new SqlCommand (sentencia, c1); //Para ejecutar 
-            comando.Parameters.AddWithValue ("@usuario", usuario);
-            comando.Parameters.AddWithValue ("@contraseña", contraseña);
+            comando.Parameters.AddWithValue ("@nombre_usuario", usuario);
+            comando.Parameters.AddWithValue ("@contrasenia", contraseña);
             SqlDataReader registros = comando.ExecuteReader ();
             if (registros.HasRows) {
                 while (registros.Read ()) {
@@ -52,7 +52,7 @@ namespace Datos {
 
         public string RecuperarPassword (string userrequesting) {
             SqlConnection c1 = conn.abrir_conexion ();
-            string sentencia = "select * from USUARIO where usuario=@usuario or correo=@correo";
+            string sentencia = "select * from USUARIO where nombre_usuario=@usuario or correo=@correo";
             SqlCommand comando = new SqlCommand (sentencia, c1); //Para ejecutar 
             comando.Parameters.AddWithValue ("@usuario", userrequesting);
             comando.Parameters.AddWithValue ("@correo", userrequesting);
