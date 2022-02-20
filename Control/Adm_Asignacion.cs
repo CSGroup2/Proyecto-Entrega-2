@@ -62,5 +62,13 @@ namespace Control {
         {
             admP.llenarTablaPeticion(dgvPeticion);
         }
+
+
+        /*--------------------------Frm_Asignar_Ambulancia-------------------------------*/
+
+        public void llenarTablaAmbulanciaAsignar(DataGridView dgvAmbulancia)
+        {
+            admA.ListarAmbulanciasDisponibles(dgvAmbulancia);
+        }
     }
 }

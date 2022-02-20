@@ -181,5 +181,11 @@ namespace Control
             dgvAmbulancias.Refresh();
             dgvAmbulancias.DataSource = dAmbulancia.ListarAmbulancias();
         }
+
+        internal void ListarAmbulanciasDisponibles(DataGridView dgvAmbulancia)
+        {
+            dgvAmbulancia.Refresh();
+            dgvAmbulancia.DataSource = dAmbulancia.ListarAmbulanciasDisponibles();
+        }
     }
 }

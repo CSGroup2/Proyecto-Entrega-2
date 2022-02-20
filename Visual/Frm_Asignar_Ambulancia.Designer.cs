@@ -53,6 +53,7 @@ namespace Visual
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnElegir
             // 
@@ -75,6 +76,7 @@ namespace Visual
             // 
             // dgvAmbulancia
             // 
+            this.dgvAmbulancia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAmbulancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAmbulancia.Location = new System.Drawing.Point(34, 25);
             this.dgvAmbulancia.Name = "dgvAmbulancia";
@@ -93,6 +95,7 @@ namespace Visual
             this.Controls.Add(this.dgvAmbulancia);
             this.DoubleBuffered = true;
             this.Name = "Frm_Asignar_Ambulancia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Elegir_Ambulancia";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancia)).EndInit();
             this.ResumeLayout(false);
