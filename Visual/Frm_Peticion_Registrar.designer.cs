@@ -54,7 +54,7 @@ namespace Visual {
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.BackgroundImage = global::Visual.Properties.Resources._8;
+            this.panel2.BackgroundImage = global::Visual.Properties.Resources._9;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.btnguardar);
             this.panel2.Controls.Add(this.btncancelar);
@@ -63,7 +63,7 @@ namespace Visual {
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(662, 402);
+            this.panel2.Size = new System.Drawing.Size(662, 496);
             this.panel2.TabIndex = 5;
             // 
             // btnguardar
@@ -75,7 +75,7 @@ namespace Visual {
             this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.btnguardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnguardar.Location = new System.Drawing.Point(449, 74);
+            this.btnguardar.Location = new System.Drawing.Point(452, 145);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnguardar.Size = new System.Drawing.Size(183, 52);
@@ -94,7 +94,7 @@ namespace Visual {
             this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
             this.btncancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btncancelar.Location = new System.Drawing.Point(449, 154);
+            this.btncancelar.Location = new System.Drawing.Point(452, 220);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btncancelar.Size = new System.Drawing.Size(186, 52);
@@ -113,7 +113,7 @@ namespace Visual {
             this.btnlimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
             this.btnlimpiar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnlimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnlimpiar.Location = new System.Drawing.Point(449, 247);
+            this.btnlimpiar.Location = new System.Drawing.Point(452, 300);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnlimpiar.Size = new System.Drawing.Size(183, 52);
@@ -140,24 +140,25 @@ namespace Visual {
             this.pncontenido.Controls.Add(this.label1);
             this.pncontenido.Controls.Add(this.txt_Origen);
             this.pncontenido.Controls.Add(this.label5);
-            this.pncontenido.Location = new System.Drawing.Point(12, 53);
+            this.pncontenido.Location = new System.Drawing.Point(12, 87);
             this.pncontenido.Name = "pncontenido";
-            this.pncontenido.Size = new System.Drawing.Size(409, 294);
+            this.pncontenido.Size = new System.Drawing.Size(409, 303);
             this.pncontenido.TabIndex = 14;
             // 
             // cmb_TAmb
             // 
-            this.cmb_TAmb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_TAmb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_TAmb.FormattingEnabled = true;
             this.cmb_TAmb.Location = new System.Drawing.Point(183, 162);
             this.cmb_TAmb.Name = "cmb_TAmb";
-            this.cmb_TAmb.Size = new System.Drawing.Size(177, 29);
+            this.cmb_TAmb.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmb_TAmb.Size = new System.Drawing.Size(177, 27);
             this.cmb_TAmb.TabIndex = 23;
             // 
             // nud_Ambulancia
             // 
             this.nud_Ambulancia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nud_Ambulancia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nud_Ambulancia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nud_Ambulancia.Location = new System.Drawing.Point(283, 129);
             this.nud_Ambulancia.Minimum = new decimal(new int[] {
             1,
@@ -265,11 +266,14 @@ namespace Visual {
             // 
             this.txt_Destino.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Destino.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Destino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Destino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Destino.Location = new System.Drawing.Point(166, 239);
+            this.txt_Destino.MaxLength = 25;
             this.txt_Destino.Name = "txt_Destino";
             this.txt_Destino.Size = new System.Drawing.Size(194, 26);
             this.txt_Destino.TabIndex = 11;
+            this.txt_Destino.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Destino.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Destino_KeyPress);
             // 
             // label6
             // 
@@ -299,11 +303,14 @@ namespace Visual {
             // 
             this.txt_Origen.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Origen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Origen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Origen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Origen.Location = new System.Drawing.Point(166, 202);
+            this.txt_Origen.MaxLength = 25;
             this.txt_Origen.Name = "txt_Origen";
             this.txt_Origen.Size = new System.Drawing.Size(194, 26);
             this.txt_Origen.TabIndex = 8;
+            this.txt_Origen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Origen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Origen_KeyPress);
             // 
             // label5
             // 
@@ -345,7 +352,7 @@ namespace Visual {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 482);
+            this.ClientSize = new System.Drawing.Size(662, 576);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

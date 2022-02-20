@@ -127,17 +127,17 @@
     <Compile Include="Frm_Conductor_Registrar.designer.cs">
       <DependentUpon>Frm_Conductor_Registrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Elegir_Ambulancia.cs">
+    <Compile Include="Frm_Asignar_Ambulancia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Elegir_Ambulancia.Designer.cs">
-      <DependentUpon>Frm_Elegir_Ambulancia.cs</DependentUpon>
+    <Compile Include="Frm_Asignar_Ambulancia.Designer.cs">
+      <DependentUpon>Frm_Asignar_Ambulancia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Elegir_Conductor.cs">
+    <Compile Include="Frm_Asignar_Conductor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Elegir_Conductor.Designer.cs">
-      <DependentUpon>Frm_Elegir_Conductor.cs</DependentUpon>
+    <Compile Include="Frm_Asignar_Conductor.Designer.cs">
+      <DependentUpon>Frm_Asignar_Conductor.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
@@ -201,11 +201,11 @@
     <EmbeddedResource Include="Frm_Conductor_Registrar.resx">
       <DependentUpon>Frm_Conductor_Registrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Elegir_Ambulancia.resx">
-      <DependentUpon>Frm_Elegir_Ambulancia.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Asignar_Ambulancia.resx">
+      <DependentUpon>Frm_Asignar_Ambulancia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Elegir_Conductor.resx">
-      <DependentUpon>Frm_Elegir_Conductor.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Asignar_Conductor.resx">
+      <DependentUpon>Frm_Asignar_Conductor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>

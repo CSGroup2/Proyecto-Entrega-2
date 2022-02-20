@@ -80,11 +80,12 @@ namespace Control
             admA.LlenarComboTipoAmbulancia(cmb_TAmb);
         }
 
-        public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino)
+        public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino, ComboBox cmb_TAmb)
         {
             nud_Ambulancia.Value=1;
             txt_Origen.Text = "";
             txt_Destino.Text = "";
+            cmb_TAmb.SelectedIndex = 0;
         }
 
         public string CedulaUsuario()
@@ -92,6 +93,19 @@ namespace Control
             string cedula = "";
             cedula = datosPeticion.consultarCedula(admL.IdUsuario());
             return cedula;
+        }
+
+        /*--------------------------Frm_Peticion_Consultar-------------------------------*/
+
+        internal void llenarTablaPeticion(DataGridView dgvPeticion)
+        {
+            /*consultarPeticionBD();
+            int i = 1;
+            foreach (Peticion x in Lista)
+            {
+                dgvPeticion.Rows.Add(i, x.Id, x.Vendedor.Nombre, x.Cliente.Nombre, x.Juego.Nombre, x.Juego.Precio, x.Cant, x.Total, x.Fecha.ToShortDateString());
+                i++;
+            }*/
         }
 
         /*--------------------------Enviar a Base de Datos-------------------------------*/
