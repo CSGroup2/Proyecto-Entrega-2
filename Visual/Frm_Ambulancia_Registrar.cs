@@ -57,7 +57,7 @@ namespace Visual {
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string placa = txtPlaca.Text, modelo = txtModelo.Text, observacion = txtObservacion.Text;
+            string placa = txtPlaca.Text.ToUpper(), modelo = txtModelo.Text, observacion = txtObservacion.Text;
             int capacidad = Int32.Parse(txtCapacidad.Text), tipoA = cmbTipo.SelectedIndex;
             if (admA.Validar(txtPlaca, txtModelo, cmbTipo, txtCapacidad, txtObservacion, errorP))
             {

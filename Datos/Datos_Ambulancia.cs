@@ -154,8 +154,6 @@ namespace Datos
 
         public DataTable ListarAmbulancias()
         {
-            List<Ambulancia> listaA = new List<Ambulancia>();
-            Ambulancia a = null;
             DataTable dt = new DataTable();
             SqlConnection c1 = con.abrir_conexion();
             try
