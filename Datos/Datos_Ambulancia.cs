@@ -52,12 +52,12 @@ namespace Datos
                     comando.Parameters.Add(param_capacity);
 
                     SqlParameter param_observacion = new SqlParameter();
-                    param_observacion.ParameterName = "@capacidad";
+                    param_observacion.ParameterName = "@observacion";
                     param_observacion.SqlDbType = SqlDbType.VarChar;
                     param_observacion.Value = a.Observacion;
                     comando.Parameters.Add(param_observacion);
-
-                    msj = comando.ExecuteNonQuery() == 1 ? "Ok" : "No se ingreso el registro";
+                    comando.ExecuteNonQuery();
+                    msj =  "1";
                 }    
             }
             catch (Exception ex)
@@ -88,14 +88,41 @@ namespace Datos
             catch (Exception ex)
             {
                 DtResultado = null;
-                //MessageBox.Show("Eroor: " + ex);
+                Console.WriteLine("Error al consultar en el tipo de ambulancia " + ex.Message);
             }
             return DtResultado;
         }
 
-        public bool ConsultarPlaca(string text)
+        public bool ConsultarPlaca(string placa)
         {
-            throw new NotImplementedException();
+            bool flag = true;
+            SqlConnection c1 = con.abrir_conexion();
+            try
+            {
+                //comando
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = c1;
+                comando.CommandText = "sp_consultar_placa";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter param_placa = new SqlParameter();
+                param_placa.ParameterName = "@placa";
+                param_placa.SqlDbType = SqlDbType.VarChar;
+                param_placa.Value = placa;
+                comando.Parameters.Add(param_placa);
+                comando.ExecuteNonQuery();
+                if (comando.ExecuteNonQuery() == 1)
+                {
+                    flag = true;
+                }
+                flag = false;
+            }
+            catch (Exception ex)
+            {
+                con.cerrar_conexion(c1);
+                Console.WriteLine("Error al consultar en la placa " + ex.Message);
+            }
+            return flag;
         }
     }
 }

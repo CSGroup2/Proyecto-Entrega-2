@@ -28,6 +28,13 @@ namespace Visual {
         #region Efecto boton guardar
         private void btnguardar_MouseMove (object sender, MouseEventArgs e) {
             cbtn.activaboton (sender);
+            string placa = txtPlaca.Text, modelo = txtModelo.Text, observacion = txtObservacion.Text;
+            int capacidad = Int32.Parse(txtCapacidad.Text), tipoA = cmbTipo.SelectedIndex;
+            if (admA.Validar(txtPlaca, txtModelo, cmbTipo, txtCapacidad, txtObservacion, errorP))
+            {
+                errorP.Clear();
+                admA.Guardar(1, placa, modelo, tipoA, capacidad, observacion, 1);
+            }
         }
 
         private void btnguardar_MouseLeave (object sender, EventArgs e) {
