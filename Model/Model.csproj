@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Ambulancia.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Conductor.cs" />
+    <Compile Include="Persona.cs" />
     <Compile Include="Peticion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario_Cache.cs" />
