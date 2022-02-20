@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class Frm_Elegir_Ambulancia : Form
+    public partial class Frm_Asignar_Ambulancia : Form
     {
-        public Frm_Elegir_Ambulancia()
+        public Frm_Asignar_Ambulancia()
         {
             InitializeComponent();
         }

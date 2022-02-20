@@ -1,7 +1,7 @@
 ﻿
 namespace Visual
 {
-    partial class Frm_Elegir_Ambulancia
+    partial class Frm_Asignar_Ambulancia
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@ namespace Visual
             this.btnElegir.FlatAppearance.BorderSize = 0;
             this.btnElegir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnElegir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnElegir.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnElegir.IconChar = FontAwesome.Sharp.IconChar.Ambulance;
             this.btnElegir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnElegir.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnElegir.IconSize = 40;
@@ -81,7 +81,7 @@ namespace Visual
             this.dgvAmbulancia.Size = new System.Drawing.Size(732, 201);
             this.dgvAmbulancia.TabIndex = 20;
             // 
-            // Frm_Elegir_Ambulancia
+            // Frm_Asignar_Ambulancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,7 +92,7 @@ namespace Visual
             this.Controls.Add(this.btnElegir);
             this.Controls.Add(this.dgvAmbulancia);
             this.DoubleBuffered = true;
-            this.Name = "Frm_Elegir_Ambulancia";
+            this.Name = "Frm_Asignar_Ambulancia";
             this.Text = "Frm_Elegir_Ambulancia";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancia)).EndInit();
             this.ResumeLayout(false);

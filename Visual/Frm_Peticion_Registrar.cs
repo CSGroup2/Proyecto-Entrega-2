@@ -51,9 +51,22 @@ namespace Visual {
 
         private void txt_Destino_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if () 
-            //{
-            //}
+            char c = e.KeyChar;
+            if (!char.IsLetterOrDigit(c) && (e.KeyChar != Convert.ToChar(Keys.Back)) && !char.IsWhiteSpace(c) && c!='.')
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txt_Origen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = e.KeyChar;
+            if (!char.IsLetterOrDigit(c) && (e.KeyChar != Convert.ToChar(Keys.Back)) && !char.IsWhiteSpace(c) && c != '.')
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
