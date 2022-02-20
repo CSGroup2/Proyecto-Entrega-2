@@ -90,12 +90,5 @@ namespace Control {
         {
             return usuarioCache.Apellidos;
         }
-
-        public string CedulaUsuario() 
-        {
-            //método que me devuelva
-            //la cedula del usuario
-            return "";
-        }
     }
 }

@@ -266,5 +266,10 @@ namespace Visual {
         private void btnregistrar_Click (object sender, EventArgs e) {
             abrirhijoform (new Frm_Peticion_Registrar ());
         }
+
+        private void btnasignar_Click(object sender, EventArgs e)
+        {
+            abrirhijoform(new Frm_Asignacion_Registrar());
+        }
     }
 }

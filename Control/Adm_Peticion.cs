@@ -28,6 +28,7 @@ namespace Control
         List<Peticion> lista = null;
 
         Adm_Login admL = Adm_Login.GetAdm();
+        Adm_Ambulancia admA = Adm_Ambulancia.GetAdm();
 
         public List<Peticion> Lista { get => lista; set => lista = value; }
 
@@ -58,8 +59,8 @@ namespace Control
             cliente.Id_cliente = admL.IdUsuario();
 
             //Validar datos
-            int tAmb = 0;
-            int nAmb = 0; //v.AEntero(cantAmb);
+            int tAmb = v.AEntero(tipo_ambulancia);
+            int nAmb = v.AEntero(cantAmb);
 
             Peticion peticion = new Peticion(cliente, tAmb, nAmb, punto_Origen, punto_Destino, DateTime.Now);
             
@@ -69,16 +70,14 @@ namespace Control
 
         public void datosCliente(Label lbl_cedula, Label lbl_nombre, Label lbl_apellido)
         {
-            lbl_cedula.Text = admL.CedulaUsuario();
+            lbl_cedula.Text = CedulaUsuario();
             lbl_nombre.Text = admL.NombreUsuario();
             lbl_apellido.Text = admL.ApellidoUsuario();
         }
 
         public void llenarTipoAmb(ComboBox cmb_TAmb)
         {
-            cmb_TAmb.DataSource = datosPeticion.cargarTipoAmb();
-            cmb_TAmb.DisplayMember = "nombre_cliente";
-            cmb_TAmb.ValueMember = "id_Cliente";
+            admA.LlenarComboTipoAmbulancia(cmb_TAmb);
         }
 
         public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino)
@@ -88,6 +87,13 @@ namespace Control
             txt_Destino.Text = "";
         }
 
+        public string CedulaUsuario()
+        {
+            string cedula = "";
+            cedula = datosPeticion.consultarCedula(admL.IdUsuario());
+            return cedula;
+        }
+
         /*--------------------------Enviar a Base de Datos-------------------------------*/
 
         Datos_Peticion datosPeticion = new Datos_Peticion();
@@ -95,12 +101,12 @@ namespace Control
         // Guardar la petición en la Base de Datos
         private void guardarPeticionBDD(Peticion peticion)
         {
-            /*string mensaje = "";
+            string mensaje = "";
             mensaje = datosPeticion.insetar(peticion);
             if (mensaje[0] == '1')
                 MessageBox.Show("Su petición fue ingresada correctamente.");
             else
-                MessageBox.Show("Error: " + mensaje);*/
+                MessageBox.Show("Error: " + mensaje);
         }
     }
 }
