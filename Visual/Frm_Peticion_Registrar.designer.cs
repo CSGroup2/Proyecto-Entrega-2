@@ -310,6 +310,7 @@ namespace Visual {
             this.txt_Origen.Size = new System.Drawing.Size(194, 26);
             this.txt_Origen.TabIndex = 8;
             this.txt_Origen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Origen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Origen_KeyPress);
             // 
             // label5
             // 

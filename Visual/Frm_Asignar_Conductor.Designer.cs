@@ -1,7 +1,7 @@
 ﻿
 namespace Visual
 {
-    partial class Frm_Elegir_Conductor
+    partial class Frm_Asignar_Conductor
     {
         /// <summary>
         /// Required designer variable.
