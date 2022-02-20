@@ -48,5 +48,12 @@ namespace Visual {
         {
             MessageBox.Show(mensaje, "Faltan Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void txt_Destino_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if () 
+            //{
+            //}
+        }
     }
 }

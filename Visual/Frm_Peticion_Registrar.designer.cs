@@ -268,10 +268,12 @@ namespace Visual {
             this.txt_Destino.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Destino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Destino.Location = new System.Drawing.Point(166, 239);
+            this.txt_Destino.MaxLength = 25;
             this.txt_Destino.Name = "txt_Destino";
             this.txt_Destino.Size = new System.Drawing.Size(194, 26);
             this.txt_Destino.TabIndex = 11;
             this.txt_Destino.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Destino.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Destino_KeyPress);
             // 
             // label6
             // 
@@ -303,6 +305,7 @@ namespace Visual {
             this.txt_Origen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Origen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Origen.Location = new System.Drawing.Point(166, 202);
+            this.txt_Origen.MaxLength = 25;
             this.txt_Origen.Name = "txt_Origen";
             this.txt_Origen.Size = new System.Drawing.Size(194, 26);
             this.txt_Origen.TabIndex = 8;
