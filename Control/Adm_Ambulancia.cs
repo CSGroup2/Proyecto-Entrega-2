@@ -98,7 +98,7 @@ namespace Control
             if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
                 a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
-                Ambulancias.Add(a); // Ambulancias.add(a);
+                Ambulancias.Add(a); 
                 GuardarBD(a);
             }
             else
