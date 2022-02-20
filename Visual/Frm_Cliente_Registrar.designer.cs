@@ -259,7 +259,7 @@ namespace Visual {
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label7.Location = new System.Drawing.Point(16, 178);
+            this.label7.Location = new System.Drawing.Point(16, 181);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 18);
             this.label7.TabIndex = 6;
@@ -271,7 +271,7 @@ namespace Visual {
             this.oprmasculino.BackColor = System.Drawing.Color.Transparent;
             this.oprmasculino.Checked = true;
             this.oprmasculino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oprmasculino.Location = new System.Drawing.Point(84, 175);
+            this.oprmasculino.Location = new System.Drawing.Point(84, 178);
             this.oprmasculino.Name = "oprmasculino";
             this.oprmasculino.Size = new System.Drawing.Size(102, 24);
             this.oprmasculino.TabIndex = 13;
@@ -284,7 +284,7 @@ namespace Visual {
             this.oprfemenino.AutoSize = true;
             this.oprfemenino.BackColor = System.Drawing.Color.Transparent;
             this.oprfemenino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oprfemenino.Location = new System.Drawing.Point(208, 175);
+            this.oprfemenino.Location = new System.Drawing.Point(208, 178);
             this.oprfemenino.Name = "oprfemenino";
             this.oprfemenino.Size = new System.Drawing.Size(98, 24);
             this.oprfemenino.TabIndex = 14;
@@ -297,7 +297,7 @@ namespace Visual {
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label8.Location = new System.Drawing.Point(15, 209);
+            this.label8.Location = new System.Drawing.Point(15, 214);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(142, 18);
             this.label8.TabIndex = 15;
@@ -306,7 +306,7 @@ namespace Visual {
             // daterfechanac
             // 
             this.daterfechanac.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daterfechanac.Location = new System.Drawing.Point(157, 205);
+            this.daterfechanac.Location = new System.Drawing.Point(157, 210);
             this.daterfechanac.Name = "daterfechanac";
             this.daterfechanac.Size = new System.Drawing.Size(256, 26);
             this.daterfechanac.TabIndex = 16;
@@ -317,7 +317,7 @@ namespace Visual {
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label9.Location = new System.Drawing.Point(335, 145);
+            this.label9.Location = new System.Drawing.Point(335, 148);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 18);
             this.label9.TabIndex = 18;
@@ -328,7 +328,7 @@ namespace Visual {
             this.textBox6.BackColor = System.Drawing.SystemColors.Window;
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(419, 142);
+            this.textBox6.Location = new System.Drawing.Point(419, 145);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(194, 26);
             this.textBox6.TabIndex = 17;
@@ -339,7 +339,7 @@ namespace Visual {
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label10.Location = new System.Drawing.Point(14, 145);
+            this.label10.Location = new System.Drawing.Point(14, 148);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 18);
             this.label10.TabIndex = 20;
@@ -350,7 +350,7 @@ namespace Visual {
             this.textBox7.BackColor = System.Drawing.SystemColors.Window;
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(84, 142);
+            this.textBox7.Location = new System.Drawing.Point(84, 145);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(222, 26);
             this.textBox7.TabIndex = 19;
@@ -384,7 +384,7 @@ namespace Visual {
             this.groupBox2.Controls.Add(this.txtrcontra);
             this.groupBox2.Controls.Add(this.textBox8);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(10, 238);
+            this.groupBox2.Location = new System.Drawing.Point(10, 246);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(622, 95);
             this.groupBox2.TabIndex = 28;

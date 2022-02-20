@@ -27,43 +27,43 @@ namespace Visual {
             this.components = new System.ComponentModel.Container();
             this.pnlateral = new System.Windows.Forms.Panel();
             this.pnsubmenupeticion = new System.Windows.Forms.Panel();
-            this.btnasignar = new FontAwesome.Sharp.IconButton();
-            this.btnregistrar = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btncerrarsesion = new FontAwesome.Sharp.IconButton();
-            this.btnpeticion = new FontAwesome.Sharp.IconButton();
             this.pnsubmconductor = new System.Windows.Forms.Panel();
-            this.btnmodiconductor = new FontAwesome.Sharp.IconButton();
-            this.btnconsulconduc = new FontAwesome.Sharp.IconButton();
-            this.btnregconduc = new FontAwesome.Sharp.IconButton();
-            this.btnconductor = new FontAwesome.Sharp.IconButton();
             this.pnsubmambulancia = new System.Windows.Forms.Panel();
-            this.btnmodifiambulancia = new FontAwesome.Sharp.IconButton();
-            this.btnconsulambulancia = new FontAwesome.Sharp.IconButton();
-            this.btnregambulancia = new FontAwesome.Sharp.IconButton();
-            this.btnambulancia = new FontAwesome.Sharp.IconButton();
             this.pnsubmcliente = new System.Windows.Forms.Panel();
-            this.btnclientemodi = new FontAwesome.Sharp.IconButton();
-            this.btnclienteconsul = new FontAwesome.Sharp.IconButton();
-            this.btnclientereg = new FontAwesome.Sharp.IconButton();
-            this.btncliente = new FontAwesome.Sharp.IconButton();
             this.pnsubmgerente = new System.Windows.Forms.Panel();
-            this.btnmodigerente = new FontAwesome.Sharp.IconButton();
-            this.btnconsulgerente = new FontAwesome.Sharp.IconButton();
-            this.btnreggerente = new FontAwesome.Sharp.IconButton();
-            this.btngerente = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbltipo = new System.Windows.Forms.Label();
             this.lblapellido = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblfecha = new System.Windows.Forms.Label();
             this.lblhora = new System.Windows.Forms.Label();
             this.pnhijo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timerhorafecha = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnasignar = new FontAwesome.Sharp.IconButton();
+            this.btnregistrar = new FontAwesome.Sharp.IconButton();
+            this.btncerrarsesion = new FontAwesome.Sharp.IconButton();
+            this.btnpeticion = new FontAwesome.Sharp.IconButton();
+            this.btnmodiconductor = new FontAwesome.Sharp.IconButton();
+            this.btnconsulconduc = new FontAwesome.Sharp.IconButton();
+            this.btnregconduc = new FontAwesome.Sharp.IconButton();
+            this.btnconductor = new FontAwesome.Sharp.IconButton();
+            this.btnmodifiambulancia = new FontAwesome.Sharp.IconButton();
+            this.btnconsulambulancia = new FontAwesome.Sharp.IconButton();
+            this.btnregambulancia = new FontAwesome.Sharp.IconButton();
+            this.btnambulancia = new FontAwesome.Sharp.IconButton();
+            this.btnclientemodi = new FontAwesome.Sharp.IconButton();
+            this.btnclienteconsul = new FontAwesome.Sharp.IconButton();
+            this.btnclientereg = new FontAwesome.Sharp.IconButton();
+            this.btncliente = new FontAwesome.Sharp.IconButton();
+            this.btnmodigerente = new FontAwesome.Sharp.IconButton();
+            this.btnconsulgerente = new FontAwesome.Sharp.IconButton();
+            this.btnreggerente = new FontAwesome.Sharp.IconButton();
+            this.btngerente = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlateral.SuspendLayout();
             this.pnsubmenupeticion.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,10 +72,10 @@ namespace Visual {
             this.pnsubmcliente.SuspendLayout();
             this.pnsubmgerente.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnhijo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlateral
@@ -97,7 +97,7 @@ namespace Visual {
             this.pnlateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlateral.Location = new System.Drawing.Point(0, 0);
             this.pnlateral.Name = "pnlateral";
-            this.pnlateral.Size = new System.Drawing.Size(234, 631);
+            this.pnlateral.Size = new System.Drawing.Size(259, 631);
             this.pnlateral.TabIndex = 0;
             // 
             // pnsubmenupeticion
@@ -108,8 +108,184 @@ namespace Visual {
             this.pnsubmenupeticion.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmenupeticion.Location = new System.Drawing.Point(0, 918);
             this.pnsubmenupeticion.Name = "pnsubmenupeticion";
-            this.pnsubmenupeticion.Size = new System.Drawing.Size(217, 89);
+            this.pnsubmenupeticion.Size = new System.Drawing.Size(242, 89);
             this.pnsubmenupeticion.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btncerrarsesion);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 1007);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(242, 100);
+            this.panel3.TabIndex = 13;
+            // 
+            // pnsubmconductor
+            // 
+            this.pnsubmconductor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.pnsubmconductor.Controls.Add(this.btnmodiconductor);
+            this.pnsubmconductor.Controls.Add(this.btnconsulconduc);
+            this.pnsubmconductor.Controls.Add(this.btnregconduc);
+            this.pnsubmconductor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnsubmconductor.Location = new System.Drawing.Point(0, 737);
+            this.pnsubmconductor.Name = "pnsubmconductor";
+            this.pnsubmconductor.Size = new System.Drawing.Size(242, 127);
+            this.pnsubmconductor.TabIndex = 10;
+            // 
+            // pnsubmambulancia
+            // 
+            this.pnsubmambulancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.pnsubmambulancia.Controls.Add(this.btnmodifiambulancia);
+            this.pnsubmambulancia.Controls.Add(this.btnconsulambulancia);
+            this.pnsubmambulancia.Controls.Add(this.btnregambulancia);
+            this.pnsubmambulancia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnsubmambulancia.Location = new System.Drawing.Point(0, 556);
+            this.pnsubmambulancia.Name = "pnsubmambulancia";
+            this.pnsubmambulancia.Size = new System.Drawing.Size(242, 127);
+            this.pnsubmambulancia.TabIndex = 9;
+            // 
+            // pnsubmcliente
+            // 
+            this.pnsubmcliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.pnsubmcliente.Controls.Add(this.btnclientemodi);
+            this.pnsubmcliente.Controls.Add(this.btnclienteconsul);
+            this.pnsubmcliente.Controls.Add(this.btnclientereg);
+            this.pnsubmcliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnsubmcliente.Location = new System.Drawing.Point(0, 375);
+            this.pnsubmcliente.Name = "pnsubmcliente";
+            this.pnsubmcliente.Size = new System.Drawing.Size(242, 127);
+            this.pnsubmcliente.TabIndex = 8;
+            // 
+            // pnsubmgerente
+            // 
+            this.pnsubmgerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.pnsubmgerente.Controls.Add(this.btnmodigerente);
+            this.pnsubmgerente.Controls.Add(this.btnconsulgerente);
+            this.pnsubmgerente.Controls.Add(this.btnreggerente);
+            this.pnsubmgerente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnsubmgerente.Location = new System.Drawing.Point(0, 194);
+            this.pnsubmgerente.Name = "pnsubmgerente";
+            this.pnsubmgerente.Size = new System.Drawing.Size(242, 127);
+            this.pnsubmgerente.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbltipo);
+            this.panel2.Controls.Add(this.lblapellido);
+            this.panel2.Controls.Add(this.lblnombres);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(242, 140);
+            this.panel2.TabIndex = 0;
+            // 
+            // lbltipo
+            // 
+            this.lbltipo.AutoSize = true;
+            this.lbltipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltipo.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbltipo.Location = new System.Drawing.Point(95, 95);
+            this.lbltipo.Name = "lbltipo";
+            this.lbltipo.Size = new System.Drawing.Size(52, 24);
+            this.lbltipo.TabIndex = 10;
+            this.lbltipo.Text = "Tipo";
+            // 
+            // lblapellido
+            // 
+            this.lblapellido.AutoSize = true;
+            this.lblapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblapellido.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblapellido.Location = new System.Drawing.Point(95, 65);
+            this.lblapellido.Name = "lblapellido";
+            this.lblapellido.Size = new System.Drawing.Size(79, 24);
+            this.lblapellido.TabIndex = 9;
+            this.lblapellido.Text = "Apellido";
+            // 
+            // lblnombres
+            // 
+            this.lblnombres.AutoSize = true;
+            this.lblnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombres.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblnombres.Location = new System.Drawing.Point(95, 37);
+            this.lblnombres.Name = "lblnombres";
+            this.lblnombres.Size = new System.Drawing.Size(79, 24);
+            this.lblnombres.TabIndex = 8;
+            this.lblnombres.Text = "Nombre";
+            this.lblnombres.Click += new System.EventHandler(this.lblnombres_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
+            this.panel1.Controls.Add(this.lblfecha);
+            this.panel1.Controls.Add(this.lblhora);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(259, 576);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(690, 55);
+            this.panel1.TabIndex = 1;
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.lblfecha.Location = new System.Drawing.Point(209, 8);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(85, 39);
+            this.lblfecha.TabIndex = 2;
+            this.lblfecha.Text = "hora";
+            // 
+            // lblhora
+            // 
+            this.lblhora.AutoSize = true;
+            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.lblhora.Location = new System.Drawing.Point(26, 8);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(149, 39);
+            this.lblhora.TabIndex = 1;
+            this.lblhora.Text = "99:99:99";
+            // 
+            // pnhijo
+            // 
+            this.pnhijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
+            this.pnhijo.Controls.Add(this.label2);
+            this.pnhijo.Controls.Add(this.pictureBox2);
+            this.pnhijo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnhijo.Location = new System.Drawing.Point(259, 0);
+            this.pnhijo.Name = "pnhijo";
+            this.pnhijo.Size = new System.Drawing.Size(690, 576);
+            this.pnhijo.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.Location = new System.Drawing.Point(96, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(465, 55);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Los Rapidos System";
+            // 
+            // timerhorafecha
+            // 
+            this.timerhorafecha.Enabled = true;
+            this.timerhorafecha.Tick += new System.EventHandler(this.timerhorafecha_Tick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.BackgroundImage = global::Visual.Properties.Resources.Logo_Solo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(166, 117);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(364, 333);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // btnasignar
             // 
@@ -124,7 +300,7 @@ namespace Visual {
             this.btnasignar.Location = new System.Drawing.Point(0, 41);
             this.btnasignar.Name = "btnasignar";
             this.btnasignar.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnasignar.Size = new System.Drawing.Size(217, 41);
+            this.btnasignar.Size = new System.Drawing.Size(242, 41);
             this.btnasignar.TabIndex = 5;
             this.btnasignar.Text = "Asignar";
             this.btnasignar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -144,21 +320,12 @@ namespace Visual {
             this.btnregistrar.Location = new System.Drawing.Point(0, 0);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnregistrar.Size = new System.Drawing.Size(217, 41);
+            this.btnregistrar.Size = new System.Drawing.Size(242, 41);
             this.btnregistrar.TabIndex = 3;
             this.btnregistrar.Text = "Registrar";
             this.btnregistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnregistrar.UseVisualStyleBackColor = true;
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btncerrarsesion);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 1007);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(217, 100);
-            this.panel3.TabIndex = 13;
             // 
             // btncerrarsesion
             // 
@@ -197,25 +364,13 @@ namespace Visual {
             this.btnpeticion.Location = new System.Drawing.Point(0, 864);
             this.btnpeticion.Name = "btnpeticion";
             this.btnpeticion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnpeticion.Size = new System.Drawing.Size(217, 54);
+            this.btnpeticion.Size = new System.Drawing.Size(242, 54);
             this.btnpeticion.TabIndex = 11;
             this.btnpeticion.Text = "Peticiones";
             this.btnpeticion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnpeticion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnpeticion.UseVisualStyleBackColor = true;
             this.btnpeticion.Click += new System.EventHandler(this.btnpeticion_Click);
-            // 
-            // pnsubmconductor
-            // 
-            this.pnsubmconductor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.pnsubmconductor.Controls.Add(this.btnmodiconductor);
-            this.pnsubmconductor.Controls.Add(this.btnconsulconduc);
-            this.pnsubmconductor.Controls.Add(this.btnregconduc);
-            this.pnsubmconductor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnsubmconductor.Location = new System.Drawing.Point(0, 737);
-            this.pnsubmconductor.Name = "pnsubmconductor";
-            this.pnsubmconductor.Size = new System.Drawing.Size(217, 127);
-            this.pnsubmconductor.TabIndex = 10;
             // 
             // btnmodiconductor
             // 
@@ -230,7 +385,7 @@ namespace Visual {
             this.btnmodiconductor.Location = new System.Drawing.Point(0, 82);
             this.btnmodiconductor.Name = "btnmodiconductor";
             this.btnmodiconductor.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodiconductor.Size = new System.Drawing.Size(217, 41);
+            this.btnmodiconductor.Size = new System.Drawing.Size(242, 41);
             this.btnmodiconductor.TabIndex = 5;
             this.btnmodiconductor.Text = "Modificar";
             this.btnmodiconductor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,7 +405,7 @@ namespace Visual {
             this.btnconsulconduc.Location = new System.Drawing.Point(0, 41);
             this.btnconsulconduc.Name = "btnconsulconduc";
             this.btnconsulconduc.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulconduc.Size = new System.Drawing.Size(217, 41);
+            this.btnconsulconduc.Size = new System.Drawing.Size(242, 41);
             this.btnconsulconduc.TabIndex = 4;
             this.btnconsulconduc.Text = "Consultar";
             this.btnconsulconduc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -270,7 +425,7 @@ namespace Visual {
             this.btnregconduc.Location = new System.Drawing.Point(0, 0);
             this.btnregconduc.Name = "btnregconduc";
             this.btnregconduc.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnregconduc.Size = new System.Drawing.Size(217, 41);
+            this.btnregconduc.Size = new System.Drawing.Size(242, 41);
             this.btnregconduc.TabIndex = 3;
             this.btnregconduc.Text = "Registrar";
             this.btnregconduc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,25 +446,13 @@ namespace Visual {
             this.btnconductor.Location = new System.Drawing.Point(0, 683);
             this.btnconductor.Name = "btnconductor";
             this.btnconductor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnconductor.Size = new System.Drawing.Size(217, 54);
+            this.btnconductor.Size = new System.Drawing.Size(242, 54);
             this.btnconductor.TabIndex = 10;
             this.btnconductor.Text = "Conductor";
             this.btnconductor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnconductor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnconductor.UseVisualStyleBackColor = true;
             this.btnconductor.Click += new System.EventHandler(this.btnconductor_Click);
-            // 
-            // pnsubmambulancia
-            // 
-            this.pnsubmambulancia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.pnsubmambulancia.Controls.Add(this.btnmodifiambulancia);
-            this.pnsubmambulancia.Controls.Add(this.btnconsulambulancia);
-            this.pnsubmambulancia.Controls.Add(this.btnregambulancia);
-            this.pnsubmambulancia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnsubmambulancia.Location = new System.Drawing.Point(0, 556);
-            this.pnsubmambulancia.Name = "pnsubmambulancia";
-            this.pnsubmambulancia.Size = new System.Drawing.Size(217, 127);
-            this.pnsubmambulancia.TabIndex = 9;
             // 
             // btnmodifiambulancia
             // 
@@ -324,7 +467,7 @@ namespace Visual {
             this.btnmodifiambulancia.Location = new System.Drawing.Point(0, 82);
             this.btnmodifiambulancia.Name = "btnmodifiambulancia";
             this.btnmodifiambulancia.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodifiambulancia.Size = new System.Drawing.Size(217, 41);
+            this.btnmodifiambulancia.Size = new System.Drawing.Size(242, 41);
             this.btnmodifiambulancia.TabIndex = 5;
             this.btnmodifiambulancia.Text = "Modificar";
             this.btnmodifiambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,7 +487,7 @@ namespace Visual {
             this.btnconsulambulancia.Location = new System.Drawing.Point(0, 41);
             this.btnconsulambulancia.Name = "btnconsulambulancia";
             this.btnconsulambulancia.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulambulancia.Size = new System.Drawing.Size(217, 41);
+            this.btnconsulambulancia.Size = new System.Drawing.Size(242, 41);
             this.btnconsulambulancia.TabIndex = 4;
             this.btnconsulambulancia.Text = "Consultar";
             this.btnconsulambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,7 +507,7 @@ namespace Visual {
             this.btnregambulancia.Location = new System.Drawing.Point(0, 0);
             this.btnregambulancia.Name = "btnregambulancia";
             this.btnregambulancia.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnregambulancia.Size = new System.Drawing.Size(217, 41);
+            this.btnregambulancia.Size = new System.Drawing.Size(242, 41);
             this.btnregambulancia.TabIndex = 3;
             this.btnregambulancia.Text = "Registrar";
             this.btnregambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,25 +528,13 @@ namespace Visual {
             this.btnambulancia.Location = new System.Drawing.Point(0, 502);
             this.btnambulancia.Name = "btnambulancia";
             this.btnambulancia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnambulancia.Size = new System.Drawing.Size(217, 54);
+            this.btnambulancia.Size = new System.Drawing.Size(242, 54);
             this.btnambulancia.TabIndex = 9;
             this.btnambulancia.Text = "Ambulancia";
             this.btnambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnambulancia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnambulancia.UseVisualStyleBackColor = true;
             this.btnambulancia.Click += new System.EventHandler(this.btnambulancia_Click);
-            // 
-            // pnsubmcliente
-            // 
-            this.pnsubmcliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.pnsubmcliente.Controls.Add(this.btnclientemodi);
-            this.pnsubmcliente.Controls.Add(this.btnclienteconsul);
-            this.pnsubmcliente.Controls.Add(this.btnclientereg);
-            this.pnsubmcliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnsubmcliente.Location = new System.Drawing.Point(0, 375);
-            this.pnsubmcliente.Name = "pnsubmcliente";
-            this.pnsubmcliente.Size = new System.Drawing.Size(217, 127);
-            this.pnsubmcliente.TabIndex = 8;
             // 
             // btnclientemodi
             // 
@@ -418,7 +549,7 @@ namespace Visual {
             this.btnclientemodi.Location = new System.Drawing.Point(0, 82);
             this.btnclientemodi.Name = "btnclientemodi";
             this.btnclientemodi.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnclientemodi.Size = new System.Drawing.Size(217, 41);
+            this.btnclientemodi.Size = new System.Drawing.Size(242, 41);
             this.btnclientemodi.TabIndex = 5;
             this.btnclientemodi.Text = "Modificar";
             this.btnclientemodi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -438,7 +569,7 @@ namespace Visual {
             this.btnclienteconsul.Location = new System.Drawing.Point(0, 41);
             this.btnclienteconsul.Name = "btnclienteconsul";
             this.btnclienteconsul.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnclienteconsul.Size = new System.Drawing.Size(217, 41);
+            this.btnclienteconsul.Size = new System.Drawing.Size(242, 41);
             this.btnclienteconsul.TabIndex = 4;
             this.btnclienteconsul.Text = "Consultar";
             this.btnclienteconsul.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,7 +589,7 @@ namespace Visual {
             this.btnclientereg.Location = new System.Drawing.Point(0, 0);
             this.btnclientereg.Name = "btnclientereg";
             this.btnclientereg.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnclientereg.Size = new System.Drawing.Size(217, 41);
+            this.btnclientereg.Size = new System.Drawing.Size(242, 41);
             this.btnclientereg.TabIndex = 3;
             this.btnclientereg.Text = "Registrar";
             this.btnclientereg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -479,25 +610,13 @@ namespace Visual {
             this.btncliente.Location = new System.Drawing.Point(0, 321);
             this.btncliente.Name = "btncliente";
             this.btncliente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btncliente.Size = new System.Drawing.Size(217, 54);
+            this.btncliente.Size = new System.Drawing.Size(242, 54);
             this.btncliente.TabIndex = 7;
             this.btncliente.Text = "Cliente";
             this.btncliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncliente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btncliente.UseVisualStyleBackColor = true;
             this.btncliente.Click += new System.EventHandler(this.btncliente_Click);
-            // 
-            // pnsubmgerente
-            // 
-            this.pnsubmgerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.pnsubmgerente.Controls.Add(this.btnmodigerente);
-            this.pnsubmgerente.Controls.Add(this.btnconsulgerente);
-            this.pnsubmgerente.Controls.Add(this.btnreggerente);
-            this.pnsubmgerente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnsubmgerente.Location = new System.Drawing.Point(0, 194);
-            this.pnsubmgerente.Name = "pnsubmgerente";
-            this.pnsubmgerente.Size = new System.Drawing.Size(217, 127);
-            this.pnsubmgerente.TabIndex = 6;
             // 
             // btnmodigerente
             // 
@@ -512,7 +631,7 @@ namespace Visual {
             this.btnmodigerente.Location = new System.Drawing.Point(0, 82);
             this.btnmodigerente.Name = "btnmodigerente";
             this.btnmodigerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodigerente.Size = new System.Drawing.Size(217, 41);
+            this.btnmodigerente.Size = new System.Drawing.Size(242, 41);
             this.btnmodigerente.TabIndex = 2;
             this.btnmodigerente.Text = "Modificar";
             this.btnmodigerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -531,7 +650,7 @@ namespace Visual {
             this.btnconsulgerente.Location = new System.Drawing.Point(0, 41);
             this.btnconsulgerente.Name = "btnconsulgerente";
             this.btnconsulgerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulgerente.Size = new System.Drawing.Size(217, 41);
+            this.btnconsulgerente.Size = new System.Drawing.Size(242, 41);
             this.btnconsulgerente.TabIndex = 1;
             this.btnconsulgerente.Text = "Consultar";
             this.btnconsulgerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -551,7 +670,7 @@ namespace Visual {
             this.btnreggerente.Location = new System.Drawing.Point(0, 0);
             this.btnreggerente.Name = "btnreggerente";
             this.btnreggerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnreggerente.Size = new System.Drawing.Size(217, 41);
+            this.btnreggerente.Size = new System.Drawing.Size(242, 41);
             this.btnreggerente.TabIndex = 0;
             this.btnreggerente.Text = "Registrar";
             this.btnreggerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -572,59 +691,13 @@ namespace Visual {
             this.btngerente.Location = new System.Drawing.Point(0, 140);
             this.btngerente.Name = "btngerente";
             this.btngerente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btngerente.Size = new System.Drawing.Size(217, 54);
+            this.btngerente.Size = new System.Drawing.Size(242, 54);
             this.btngerente.TabIndex = 1;
             this.btngerente.Text = "Gerente";
             this.btngerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btngerente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btngerente.UseVisualStyleBackColor = true;
             this.btngerente.Click += new System.EventHandler(this.btngerente_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbltipo);
-            this.panel2.Controls.Add(this.lblapellido);
-            this.panel2.Controls.Add(this.lblnombres);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(217, 140);
-            this.panel2.TabIndex = 0;
-            // 
-            // lbltipo
-            // 
-            this.lbltipo.AutoSize = true;
-            this.lbltipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltipo.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lbltipo.Location = new System.Drawing.Point(95, 95);
-            this.lbltipo.Name = "lbltipo";
-            this.lbltipo.Size = new System.Drawing.Size(52, 24);
-            this.lbltipo.TabIndex = 10;
-            this.lbltipo.Text = "Tipo";
-            // 
-            // lblapellido
-            // 
-            this.lblapellido.AutoSize = true;
-            this.lblapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapellido.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblapellido.Location = new System.Drawing.Point(95, 65);
-            this.lblapellido.Name = "lblapellido";
-            this.lblapellido.Size = new System.Drawing.Size(79, 24);
-            this.lblapellido.TabIndex = 9;
-            this.lblapellido.Text = "Apellido";
-            // 
-            // lblnombres
-            // 
-            this.lblnombres.AutoSize = true;
-            this.lblnombres.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombres.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblnombres.Location = new System.Drawing.Point(95, 37);
-            this.lblnombres.Name = "lblnombres";
-            this.lblnombres.Size = new System.Drawing.Size(79, 24);
-            this.lblnombres.TabIndex = 8;
-            this.lblnombres.Text = "Nombre";
-            this.lblnombres.Click += new System.EventHandler(this.lblnombres_Click);
             // 
             // pictureBox1
             // 
@@ -636,84 +709,11 @@ namespace Visual {
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(67)))), ((int)(((byte)(120)))));
-            this.panel1.Controls.Add(this.lblfecha);
-            this.panel1.Controls.Add(this.lblhora);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(234, 576);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(690, 55);
-            this.panel1.TabIndex = 1;
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.lblfecha.Location = new System.Drawing.Point(209, 8);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(85, 39);
-            this.lblfecha.TabIndex = 2;
-            this.lblfecha.Text = "hora";
-            // 
-            // lblhora
-            // 
-            this.lblhora.AutoSize = true;
-            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblhora.Location = new System.Drawing.Point(26, 8);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(149, 39);
-            this.lblhora.TabIndex = 1;
-            this.lblhora.Text = "99:99:99";
-            // 
-            // pnhijo
-            // 
-            this.pnhijo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
-            this.pnhijo.Controls.Add(this.label2);
-            this.pnhijo.Controls.Add(this.pictureBox2);
-            this.pnhijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnhijo.Location = new System.Drawing.Point(234, 0);
-            this.pnhijo.Name = "pnhijo";
-            this.pnhijo.Size = new System.Drawing.Size(690, 576);
-            this.pnhijo.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.label2.Location = new System.Drawing.Point(96, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(465, 55);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Los Rapidos System";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = global::Visual.Properties.Resources.Logo_Solo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(166, 117);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(364, 333);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // timerhorafecha
-            // 
-            this.timerhorafecha.Enabled = true;
-            this.timerhorafecha.Tick += new System.EventHandler(this.timerhorafecha_Tick);
-            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 631);
+            this.ClientSize = new System.Drawing.Size(949, 631);
             this.Controls.Add(this.pnhijo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlateral);
@@ -730,12 +730,12 @@ namespace Visual {
             this.pnsubmgerente.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnhijo.ResumeLayout(false);
             this.pnhijo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
