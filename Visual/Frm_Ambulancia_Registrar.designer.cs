@@ -80,6 +80,7 @@ namespace Visual {
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             this.btnGuardar.MouseLeave += new System.EventHandler(this.btnguardar_MouseLeave);
             this.btnGuardar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnguardar_MouseMove);
             // 
@@ -225,6 +226,7 @@ namespace Visual {
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             this.btnCancelar.MouseLeave += new System.EventHandler(this.btncancelar_MouseLeave);
             this.btnCancelar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btncancelar_MouseMove);
             // 
@@ -244,6 +246,7 @@ namespace Visual {
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             this.btnLimpiar.MouseLeave += new System.EventHandler(this.btnlimpiar_MouseLeave);
             this.btnLimpiar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnlimpiar_MouseMove);
             // 
