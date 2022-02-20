@@ -1,7 +1,7 @@
 ﻿
 namespace Visual
 {
-    partial class Frm_Elegir_Conductor
+    partial class Frm_Elegir_Ambulancia
     {
         /// <summary>
         /// Required designer variable.
@@ -29,38 +29,11 @@ namespace Visual
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvConductores = new System.Windows.Forms.DataGridView();
-            this.btnElegir = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).BeginInit();
+            this.btnElegir = new FontAwesome.Sharp.IconButton();
+            this.dgvAmbulancia = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancia)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvConductores
-            // 
-            this.dgvConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConductores.Location = new System.Drawing.Point(35, 25);
-            this.dgvConductores.Name = "dgvConductores";
-            this.dgvConductores.Size = new System.Drawing.Size(732, 201);
-            this.dgvConductores.TabIndex = 0;
-            // 
-            // btnElegir
-            // 
-            this.btnElegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnElegir.FlatAppearance.BorderSize = 0;
-            this.btnElegir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElegir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnElegir.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnElegir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnElegir.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnElegir.IconSize = 40;
-            this.btnElegir.Location = new System.Drawing.Point(459, 251);
-            this.btnElegir.Name = "btnElegir";
-            this.btnElegir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnElegir.Size = new System.Drawing.Size(141, 41);
-            this.btnElegir.TabIndex = 18;
-            this.btnElegir.Text = "Elegir";
-            this.btnElegir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnElegir.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -72,16 +45,43 @@ namespace Visual
             this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(165, 251);
+            this.btnCancelar.Location = new System.Drawing.Point(164, 251);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCancelar.Size = new System.Drawing.Size(170, 41);
-            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // Frm_Elegir_Conductor
+            // btnElegir
+            // 
+            this.btnElegir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnElegir.FlatAppearance.BorderSize = 0;
+            this.btnElegir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnElegir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnElegir.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnElegir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnElegir.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnElegir.IconSize = 40;
+            this.btnElegir.Location = new System.Drawing.Point(458, 251);
+            this.btnElegir.Name = "btnElegir";
+            this.btnElegir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnElegir.Size = new System.Drawing.Size(141, 41);
+            this.btnElegir.TabIndex = 21;
+            this.btnElegir.Text = "Elegir";
+            this.btnElegir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnElegir.UseVisualStyleBackColor = true;
+            // 
+            // dgvAmbulancia
+            // 
+            this.dgvAmbulancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAmbulancia.Location = new System.Drawing.Point(34, 25);
+            this.dgvAmbulancia.Name = "dgvAmbulancia";
+            this.dgvAmbulancia.Size = new System.Drawing.Size(732, 201);
+            this.dgvAmbulancia.TabIndex = 20;
+            // 
+            // Frm_Elegir_Ambulancia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,19 +90,19 @@ namespace Visual
             this.ClientSize = new System.Drawing.Size(800, 316);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnElegir);
-            this.Controls.Add(this.dgvConductores);
+            this.Controls.Add(this.dgvAmbulancia);
             this.DoubleBuffered = true;
-            this.Name = "Frm_Elegir_Conductor";
-            this.Text = "Frm_Elegir_Conductor";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConductores)).EndInit();
+            this.Name = "Frm_Elegir_Ambulancia";
+            this.Text = "Frm_Elegir_Ambulancia";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancia)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvConductores;
-        private FontAwesome.Sharp.IconButton btnElegir;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnElegir;
+        private System.Windows.Forms.DataGridView dgvAmbulancia;
     }
 }

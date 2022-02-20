@@ -19,7 +19,12 @@ namespace Control
 
         public List<Ambulancia> Ambulancias { get => ambulancias; set => ambulancias = value; }
         public Ambulancia A { get => a; set => a = value; }
-    
+
+        public Adm_Ambulancia()
+        {
+            ambulancias = new List<Ambulancia>();
+        }
+
         public static Adm_Ambulancia GetAdm()
         {
             if(adm == null)
@@ -43,12 +48,13 @@ namespace Control
         {
             bool no_error = true;
             string placa = txtPlaca.Text;
+            var regex = new Regex("[a-zA-Z]{3}[0-9]{3}|[a-zA-Z]{3}[0-9]{4}");
             if (String.IsNullOrEmpty(txtPlaca.Text.Trim()))
             {
                 errorP.SetError(txtPlaca, "Ingrese la placa");
                 no_error = false;
             }
-            if (!Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{3}$") || !Regex.IsMatch(placa, "^[A-Z]{3}[0-9]{4}$"))
+            if (!regex.IsMatch(placa))
             {
                 errorP.SetError(txtPlaca, "La placa debe contener de 3 letras y 3-4 dígitos");
                 no_error = false;
@@ -63,7 +69,7 @@ namespace Control
                 errorP.SetError(txtModelo, "Ingrese el modelo de la ambulancia");
                 no_error = false;
             }
-            if (cmbTipo.Text == "--Seleccionar--")
+            if (cmbTipo.Text == "--Seleccione--")
             {
                 errorP.SetError(cmbTipo, "Seleccione un tipo de ambulancia");
                 no_error = false;
@@ -87,12 +93,12 @@ namespace Control
         }
 
         //
-        public void Guardar(int id_ambulancia, string placa, string modelo, string tipoA, int capacidad, string observacion)
+        public void Guardar(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
             Ambulancia a = null;
             if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
-                a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, "disponible");
+                a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
                 ambulancias.Add(a);
                 GuardarBD(a);
             }
@@ -107,16 +113,15 @@ namespace Control
             string mensaje = "";
             mensaje = dAmbulancia.InsertarAmbulancia(a);
             if (mensaje[0] == '1')
+            {
                 MessageBox.Show("Ingreso de datos correctamente");
+            }
             else
+            {
                 MessageBox.Show("Error: " + mensaje);
+            }
+                
         }
 
-
-        public void Agregar(TextBox txtRegistro)
-        {
-            if (ambulancias.Count != 0)
-                txtRegistro.Text += Ambulancias[Ambulancias.Count - 1].ToString() + "\r\n";
-        }
     }
 }

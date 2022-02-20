@@ -24,6 +24,7 @@ namespace Visual {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent () {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.pncontenido = new System.Windows.Forms.Panel();
@@ -41,9 +42,11 @@ namespace Visual {
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorP = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.pncontenido.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -268,6 +271,10 @@ namespace Visual {
             this.label2.TabIndex = 1;
             this.label2.Text = "Registro de Ambulancias";
             // 
+            // errorP
+            // 
+            this.errorP.ContainerControl = this;
+            // 
             // Frm_Ambulancia_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +291,7 @@ namespace Visual {
             this.pncontenido.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,5 +315,6 @@ namespace Visual {
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtObservacion;
         private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.ErrorProvider errorP;
     }
 }

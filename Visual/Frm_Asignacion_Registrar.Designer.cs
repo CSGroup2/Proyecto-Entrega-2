@@ -29,29 +29,29 @@ namespace Visual
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPeticion = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.lbl_conductor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Placa = new System.Windows.Forms.Label();
             this.btnConductor = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnAmbulancia = new FontAwesome.Sharp.IconButton();
+            this.btnAsignar = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.lblAmb_Restantes = new System.Windows.Forms.Label();
+            this.dgvAmb_Cond = new System.Windows.Forms.DataGridView();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeticion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmb_Cond)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPeticion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 27);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(587, 128);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPeticion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeticion.Location = new System.Drawing.Point(32, 27);
+            this.dgvPeticion.Name = "dgvPeticion";
+            this.dgvPeticion.Size = new System.Drawing.Size(587, 128);
+            this.dgvPeticion.TabIndex = 0;
             // 
             // label5
             // 
@@ -76,7 +76,6 @@ namespace Visual
             this.lbl_conductor.Name = "lbl_conductor";
             this.lbl_conductor.Size = new System.Drawing.Size(194, 26);
             this.lbl_conductor.TabIndex = 16;
-            this.lbl_conductor.Text = "Juan Perez";
             this.lbl_conductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -102,7 +101,6 @@ namespace Visual
             this.lbl_Placa.Name = "lbl_Placa";
             this.lbl_Placa.Size = new System.Drawing.Size(194, 26);
             this.lbl_Placa.TabIndex = 16;
-            this.lbl_Placa.Text = "123";
             this.lbl_Placa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnConductor
@@ -124,43 +122,43 @@ namespace Visual
             this.btnConductor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnConductor.UseVisualStyleBackColor = true;
             // 
-            // iconButton1
+            // btnAmbulancia
             // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Ambulance;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(439, 218);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(141, 41);
-            this.iconButton1.TabIndex = 17;
-            this.iconButton1.Text = "Elegir";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnAmbulancia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAmbulancia.FlatAppearance.BorderSize = 0;
+            this.btnAmbulancia.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAmbulancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnAmbulancia.IconChar = FontAwesome.Sharp.IconChar.Ambulance;
+            this.btnAmbulancia.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnAmbulancia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAmbulancia.IconSize = 40;
+            this.btnAmbulancia.Location = new System.Drawing.Point(439, 218);
+            this.btnAmbulancia.Name = "btnAmbulancia";
+            this.btnAmbulancia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAmbulancia.Size = new System.Drawing.Size(141, 41);
+            this.btnAmbulancia.TabIndex = 17;
+            this.btnAmbulancia.Text = "Elegir";
+            this.btnAmbulancia.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAmbulancia.UseVisualStyleBackColor = true;
             // 
-            // iconButton2
+            // btnAsignar
             // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Check;
-            this.iconButton2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 40;
-            this.iconButton2.Location = new System.Drawing.Point(370, 505);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(170, 41);
-            this.iconButton2.TabIndex = 17;
-            this.iconButton2.Text = "Asignar";
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton2.UseVisualStyleBackColor = true;
+            this.btnAsignar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAsignar.FlatAppearance.BorderSize = 0;
+            this.btnAsignar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnAsignar.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnAsignar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnAsignar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAsignar.IconSize = 40;
+            this.btnAsignar.Location = new System.Drawing.Point(370, 505);
+            this.btnAsignar.Name = "btnAsignar";
+            this.btnAsignar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnAsignar.Size = new System.Drawing.Size(170, 41);
+            this.btnAsignar.TabIndex = 17;
+            this.btnAsignar.Text = "Asignar";
+            this.btnAsignar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAsignar.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -174,46 +172,45 @@ namespace Visual
             this.label2.TabIndex = 10;
             this.label2.Text = "Ambulancias Restantes:";
             // 
-            // label3
+            // lblAmb_Restantes
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label3.Location = new System.Drawing.Point(297, 268);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 26);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "3";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAmb_Restantes.BackColor = System.Drawing.Color.Transparent;
+            this.lblAmb_Restantes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAmb_Restantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblAmb_Restantes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmb_Restantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lblAmb_Restantes.Location = new System.Drawing.Point(297, 268);
+            this.lblAmb_Restantes.Name = "lblAmb_Restantes";
+            this.lblAmb_Restantes.Size = new System.Drawing.Size(46, 26);
+            this.lblAmb_Restantes.TabIndex = 16;
+            this.lblAmb_Restantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView2
+            // dgvAmb_Cond
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(32, 316);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(587, 171);
-            this.dataGridView2.TabIndex = 18;
+            this.dgvAmb_Cond.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAmb_Cond.Location = new System.Drawing.Point(32, 316);
+            this.dgvAmb_Cond.Name = "dgvAmb_Cond";
+            this.dgvAmb_Cond.Size = new System.Drawing.Size(587, 171);
+            this.dgvAmb_Cond.TabIndex = 18;
             // 
-            // iconButton3
+            // btnCancelar
             // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 40;
-            this.iconButton3.Location = new System.Drawing.Point(104, 505);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(170, 41);
-            this.iconButton3.TabIndex = 17;
-            this.iconButton3.Text = "Cancelar";
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.iconButton3.UseVisualStyleBackColor = true;
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.IconSize = 40;
+            this.btnCancelar.Location = new System.Drawing.Point(104, 505);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCancelar.Size = new System.Drawing.Size(170, 41);
+            this.btnCancelar.TabIndex = 17;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // Frm_Asignacion_Registrar
             // 
@@ -222,24 +219,24 @@ namespace Visual
             this.BackgroundImage = global::Visual.Properties.Resources._9;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(662, 576);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.dgvAmb_Cond);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAsignar);
+            this.Controls.Add(this.btnAmbulancia);
             this.Controls.Add(this.btnConductor);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblAmb_Restantes);
             this.Controls.Add(this.lbl_Placa);
             this.Controls.Add(this.lbl_conductor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPeticion);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Asignacion_Registrar";
             this.Text = "Frm_Asignacion_Registrar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeticion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAmb_Cond)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,17 +244,17 @@ namespace Visual
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPeticion;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbl_conductor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Placa;
         private FontAwesome.Sharp.IconButton btnConductor;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton btnAmbulancia;
+        private FontAwesome.Sharp.IconButton btnAsignar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.Label lblAmb_Restantes;
+        private System.Windows.Forms.DataGridView dgvAmb_Cond;
+        private FontAwesome.Sharp.IconButton btnCancelar;
     }
 }
