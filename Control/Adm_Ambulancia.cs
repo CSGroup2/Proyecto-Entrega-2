@@ -34,6 +34,7 @@ namespace Control
             return adm;
         }
 
+        //método para cargar los datos al combobox de Tipo Ambulancia
         public void LlenarComboTipoAmbulancia(ComboBox cmbTipo)
         {
             cmbTipo.Items.Clear();
@@ -92,7 +93,7 @@ namespace Control
             return no_error;
         }
 
-        //
+        //método para receptar los datos y guardar temporalmente en una lista
         public void Guardar(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
             Ambulancia a = null;
@@ -108,6 +109,7 @@ namespace Control
             }
         }
 
+        //método para insertar los datos de la lista en la BD
         public void GuardarBD(Ambulancia a)
         {
             string mensaje = "";
@@ -123,6 +125,7 @@ namespace Control
                 
         }
 
+        //método para limpiar campos
         public void LimpiarCampos(TextBox txtPlaca, TextBox txtModelo, ComboBox cmbTipo, TextBox txtCapacidad, TextBox txtObservacion)
         {
             txtPlaca.Text = "";
@@ -131,6 +134,8 @@ namespace Control
             txtCapacidad.Text = "";
             txtObservacion.Text = "";
         }
+
+        //
 
     }
 }
