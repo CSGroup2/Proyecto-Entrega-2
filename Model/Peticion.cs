@@ -13,20 +13,21 @@ namespace Model
         private int n_ambulancia;
         private string punto_origen;
         private string punto_destino;
+        private string condicion;
         private DateTime fecha_registro;
 
         public Peticion()
         {
         }
 
-        public Peticion(Cliente cliente, int id_tipo_ambulancia, int n_ambulancia, string punto_origen, string punto_destino, DateTime fecha_registro)
+        public Peticion(Cliente cliente, int id_tipo_ambulancia, int n_ambulancia, string punto_origen, string punto_destino, string condicion)
         {
             this.cliente = cliente;
             this.id_tipo_ambulancia = id_tipo_ambulancia;
             this.n_ambulancia = n_ambulancia;
             this.punto_origen = punto_origen;
             this.punto_destino = punto_destino;
-            this.fecha_registro = fecha_registro;
+            this.condicion = condicion;
         }
 
         public int Id_peticion { get => id_peticion; set => id_peticion = value; }
@@ -36,5 +37,6 @@ namespace Model
         public string Punto_origen { get => punto_origen; set => punto_origen = value; }
         public string Punto_destino { get => punto_destino; set => punto_destino = value; }
         public DateTime Fecha_registro { get => fecha_registro; set => fecha_registro = value; }
+        public string Condicion { get => condicion; set => condicion = value; }
     }
 }
