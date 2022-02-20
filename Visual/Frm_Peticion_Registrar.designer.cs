@@ -54,7 +54,7 @@ namespace Visual {
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
-            this.panel2.BackgroundImage = global::Visual.Properties.Resources._8;
+            this.panel2.BackgroundImage = global::Visual.Properties.Resources._9;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.btnguardar);
             this.panel2.Controls.Add(this.btncancelar);
@@ -147,18 +147,18 @@ namespace Visual {
             // 
             // cmb_TAmb
             // 
-            this.cmb_TAmb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_TAmb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_TAmb.FormattingEnabled = true;
             this.cmb_TAmb.Location = new System.Drawing.Point(183, 162);
             this.cmb_TAmb.Name = "cmb_TAmb";
             this.cmb_TAmb.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cmb_TAmb.Size = new System.Drawing.Size(177, 29);
+            this.cmb_TAmb.Size = new System.Drawing.Size(177, 27);
             this.cmb_TAmb.TabIndex = 23;
             // 
             // nud_Ambulancia
             // 
             this.nud_Ambulancia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nud_Ambulancia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nud_Ambulancia.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nud_Ambulancia.Location = new System.Drawing.Point(283, 129);
             this.nud_Ambulancia.Minimum = new decimal(new int[] {
             1,
@@ -266,11 +266,12 @@ namespace Visual {
             // 
             this.txt_Destino.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Destino.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Destino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Destino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Destino.Location = new System.Drawing.Point(166, 239);
             this.txt_Destino.Name = "txt_Destino";
             this.txt_Destino.Size = new System.Drawing.Size(194, 26);
             this.txt_Destino.TabIndex = 11;
+            this.txt_Destino.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -300,11 +301,12 @@ namespace Visual {
             // 
             this.txt_Origen.BackColor = System.Drawing.SystemColors.Window;
             this.txt_Origen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Origen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Origen.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Origen.Location = new System.Drawing.Point(166, 202);
             this.txt_Origen.Name = "txt_Origen";
             this.txt_Origen.Size = new System.Drawing.Size(194, 26);
             this.txt_Origen.TabIndex = 8;
+            this.txt_Origen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
