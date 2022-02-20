@@ -125,5 +125,14 @@ namespace Control
                 
         }
 
+        public void LimpiarCampos(TextBox txtPlaca, TextBox txtModelo, ComboBox cmbTipo, TextBox txtCapacidad, TextBox txtObservacion)
+        {
+            txtPlaca.Text = "";
+            txtModelo.Text = "";
+            cmbTipo.SelectedIndex = 0;
+            txtCapacidad.Text = "";
+            txtObservacion.Text = "";
+        }
+
     }
 }
