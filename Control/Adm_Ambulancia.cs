@@ -20,7 +20,7 @@ namespace Control
 
         //Tienes que llamar a estos que tienen letra mauscula revisa mi Adm_Peticion en el guardar
         public List<Ambulancia> Ambulancias { get => ambulancias; set => ambulancias = value; }
-        public Ambulancia A { get => a; set => a = value; }
+        public Ambulancia A { get => a; set => a = value; }//ta por gusto
 
         public Adm_Ambulancia()
         {
