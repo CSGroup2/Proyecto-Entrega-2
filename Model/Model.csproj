@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ambulancia.cs" />
+    <Compile Include="Asignacion_Cabecera.cs" />
+    <Compile Include="Asignacion_Detalle.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Conductor.cs" />
     <Compile Include="Persona.cs" />
