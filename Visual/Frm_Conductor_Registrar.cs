@@ -65,22 +65,24 @@ namespace Visual {
 
         private void txt_Cedula_KeyPress (object sender, KeyPressEventArgs e) {
             // Only allows numbers on press
-            admConductor.Leer_Numeros_KeyPress (sender, e);
+            admConductor.validarSoloNumerosKeyPress (sender, e);
         }
 
         private void txt_Nombre1_KeyPress (object sender, KeyPressEventArgs e) {
             // Only allows alphabetic characters
-            admConductor.Leer_Lettras_KeyPress (sender, e);
+            admConductor.validarSoloLettrasKeyPress (sender, e);
         }
 
         private void txt_Correo_KeyPress (object sender, KeyPressEventArgs e) {
             // Only allows eamil characters
-            admConductor.Leer_Correo_Keypress (sender, e);
+            admConductor.validarSoloCorreoKeypress (sender, e);
         }
 
         private void btn_Guardar_Click (object sender, EventArgs e) {
-            admConductor.GuardarConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
-            admConductor.LimpiarCampos (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
+            string mensaje = admConductor.guardarDatosConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
+            if (mensaje[0] != '¡') {
+                admConductor.limpiarCamposGuardarConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
+            }            
         }
 
         private void btn_Cancelar_Click (object sender, EventArgs e) {
@@ -88,7 +90,7 @@ namespace Visual {
         }
 
         private void btn_Limpiar_Click (object sender, EventArgs e) {
-            admConductor.LimpiarCampos (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
+            admConductor.limpiarCamposGuardarConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
         }
 
     }

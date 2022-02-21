@@ -10,11 +10,11 @@ namespace Datos {
     public class Datos_Conductor {
 
         /*----------------------Frm_Conductor_Editar-------------------------------------*/
-        public string Insertar_Datos_Conductor (Conductor conductor) {
+        public string insertarDatosConductor (Conductor conductor) {
             Conexion conexion = null;
             SqlConnection sql_conexion = null;
             SqlCommand sql_comando = null;
-            string message = "";
+            string mensaje = "";
             string query = "sp_insertar_conductor";  // Stored Procedure name
             try {
                 conexion = new Conexion ();
@@ -32,15 +32,20 @@ namespace Datos {
                     sql_comando.Parameters.AddWithValue ("@fecha_nac", conductor.Fecha_nac);
                     sql_comando.Parameters.AddWithValue ("@telefono", conductor.Telefono);
                     sql_comando.Parameters.AddWithValue ("@fecha_contrato", conductor.Fecha_contrato);
-                    sql_comando.ExecuteNonQuery ();
-                    message = "DATOS GUARDADOS CORRECTAMENTE.";
+                    //sql_comando.ExecuteNonQuery ();
+                    mensaje = Convert.ToString (sql_comando.ExecuteNonQuery ());
+                    if (mensaje == "-1") {
+                        mensaje = "¡DATOS NO GUARDADOS!";
+                    } else {
+                        mensaje = "DATOS GUARDADOS CORRECTAMENTE.";
+                    }
                 }
             } catch (Exception ex) {
-                message = "OCURRIO UN ERROR. \n" + ex.Message;
+                mensaje = "OCURRIO UN ERROR. \n" + ex.Message;
             } finally {
                 conexion.cerrar_conexion (sql_conexion);
             }
-            return message;
+            return mensaje;
         }
 
 

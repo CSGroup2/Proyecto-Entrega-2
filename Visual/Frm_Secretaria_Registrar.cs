@@ -15,5 +15,17 @@ namespace Visual
         {
             InitializeComponent();
         }
+
+        private void btnguardar_Click (object sender, EventArgs e) {
+
+        }
+
+        private void btncancelar_Click (object sender, EventArgs e) {
+
+        }
+
+        private void btnlimpiar_Click (object sender, EventArgs e) {
+
+        }
     }
 }

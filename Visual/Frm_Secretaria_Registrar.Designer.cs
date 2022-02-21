@@ -34,6 +34,8 @@ namespace Visual
             this.btncancelar = new FontAwesome.Sharp.IconButton();
             this.btnlimpiar = new FontAwesome.Sharp.IconButton();
             this.pncontenido = new System.Windows.Forms.Panel();
+            this.dtp_FechaContrato = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -64,8 +66,6 @@ namespace Visual
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtp_FechaContrato = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.pncontenido.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -106,6 +106,7 @@ namespace Visual
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // btncancelar
             // 
@@ -124,6 +125,7 @@ namespace Visual
             this.btncancelar.Text = "Cancelar";
             this.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // btnlimpiar
             // 
@@ -142,6 +144,7 @@ namespace Visual
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // pncontenido
             // 
@@ -166,6 +169,26 @@ namespace Visual
             this.pncontenido.Name = "pncontenido";
             this.pncontenido.Size = new System.Drawing.Size(639, 384);
             this.pncontenido.TabIndex = 14;
+            // 
+            // dtp_FechaContrato
+            // 
+            this.dtp_FechaContrato.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_FechaContrato.Location = new System.Drawing.Point(157, 237);
+            this.dtp_FechaContrato.Name = "dtp_FechaContrato";
+            this.dtp_FechaContrato.Size = new System.Drawing.Size(256, 26);
+            this.dtp_FechaContrato.TabIndex = 30;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label13.Location = new System.Drawing.Point(15, 241);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(120, 18);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Fech. Contrato:";
             // 
             // groupBox2
             // 
@@ -507,26 +530,6 @@ namespace Visual
             this.label2.Size = new System.Drawing.Size(492, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "Registro de Secretaria";
-            // 
-            // dtp_FechaContrato
-            // 
-            this.dtp_FechaContrato.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_FechaContrato.Location = new System.Drawing.Point(157, 237);
-            this.dtp_FechaContrato.Name = "dtp_FechaContrato";
-            this.dtp_FechaContrato.Size = new System.Drawing.Size(256, 26);
-            this.dtp_FechaContrato.TabIndex = 30;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.label13.Location = new System.Drawing.Point(15, 241);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 18);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Fech. Contrato:";
             // 
             // Frm_Secretaria_Registrar
             // 

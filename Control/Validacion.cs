@@ -23,63 +23,63 @@ namespace Control {
         /*-----------------------Frm_Conductor_Registrar-------------------------------*/
 
         #region Validation: Frm_Conductor_Registrar - errorprovider emtpy fields & incorrect email
-        internal bool EsCorrectoGuardar (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
-            bool output = true;
-            string mensage = "Campo obligatorio.";
+        internal bool esCorrectoDatosConductor (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
+            bool salida = true;
+            string mensaje = "Campo obligatorio.";
             string correo = txt_Correo.Text.Trim ();
             if (txt_Cedula.Text.Trim () == "") {
-                errorProvider1.SetError (txt_Cedula, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Cedula, mensaje);
+                salida = false;
             }
             if (txt_Nombre1.Text.Trim () == "") {
-                errorProvider1.SetError (txt_Nombre1, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Nombre1, mensaje);
+                salida = false;
             }
             if (txt_Nombre2.Text.Trim () == "") {
-                errorProvider1.SetError (txt_Nombre2, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Nombre2, mensaje);
+                salida = false;
             }
             if (txt_Apellido1.Text.Trim () == "") {
-                errorProvider1.SetError (txt_Apellido1, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Apellido1, mensaje);
+                salida = false;
             }
             if (txt_Apellido2.Text.Trim () == "") {
-                errorProvider1.SetError (txt_Apellido2, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Apellido2, mensaje);
+                salida = false;
             }
             if (correo == "") {
-                errorProvider1.SetError (txt_Correo, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Correo, mensaje);
+                salida = false;
             } else {
                 try {
                     var addr = new System.Net.Mail.MailAddress (correo);
                     //return addr.Address == correo;
                 } catch {
                     errorProvider1.SetError (txt_Correo, "Correo no valido.");
-                    output = false;
+                    salida = false;
                 }
             }
             if (txt_Telefono.Text.Trim () == "") {
-                errorProvider1.SetError (txt_Telefono, mensage);
-                output = false;
+                errorProvider1.SetError (txt_Telefono, mensaje);
+                salida = false;
             }
             if (rdb_Femenino.Checked == rdb_Masculino.Checked) {
-                errorProvider1.SetError (rdb_Femenino, mensage);
-                output = false;
+                errorProvider1.SetError (rdb_Femenino, mensaje);
+                salida = false;
             }
             if (dtp_FechaNac.Text == null) {
-                errorProvider1.SetError (dtp_FechaNac, mensage);
-                output = false;
+                errorProvider1.SetError (dtp_FechaNac, mensaje);
+                salida = false;
             }
 
             if (dtp_FechaContrato.Text == null) {
-                errorProvider1.SetError (dtp_FechaContrato, mensage);
-                output = false;
+                errorProvider1.SetError (dtp_FechaContrato, mensaje);
+                salida = false;
             }
-            return output;
+            return salida;
         }
 
-        internal string EsSexo (RadioButton rdb_Masculino, RadioButton rdb_Femenino) {
+        internal string esSexo (RadioButton rdb_Masculino, RadioButton rdb_Femenino) {
             string sexo = "";
             if (rdb_Masculino.Checked) {
                 sexo = "Masculino";
@@ -89,7 +89,7 @@ namespace Control {
             return sexo;
         }
 
-        internal void Validar_Numeros_KeyPress (object sender, KeyPressEventArgs e) {
+        internal void validarSoloNumerosKeyPress (object sender, KeyPressEventArgs e) {
             char c = e.KeyChar;
             if (!char.IsControl (c) && !char.IsDigit (c)) {
                 e.Handled = true;
@@ -97,7 +97,7 @@ namespace Control {
             }
         }
 
-        internal void Validar_Letras_KeyPress (object sender, KeyPressEventArgs e) {
+        internal void validarSoloLettrasKeyPress (object sender, KeyPressEventArgs e) {
             char c = e.KeyChar;
             if (!char.IsLetter (c) && c != ' ' && (c != Convert.ToChar (Keys.Back))) {
                 e.Handled = true;
@@ -105,7 +105,7 @@ namespace Control {
             }
         }
 
-        internal void Validar_Correo_KeyPress (object sender, KeyPressEventArgs e) {
+        internal void validarSoloCorreoKeypress (object sender, KeyPressEventArgs e) {
             char c = e.KeyChar;
             if (!char.IsLetter (c) && !char.IsDigit (e.KeyChar) && (c != '.') && (c != '@') && (c != '-') && (c != '_') && (c != Convert.ToChar (Keys.Back))) {
                 e.Handled = true;

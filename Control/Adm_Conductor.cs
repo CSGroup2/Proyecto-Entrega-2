@@ -17,35 +17,30 @@ namespace Control {
            3.2.Verificar si atributo es null, si es así, crearlo.
        */
 
-        private static Adm_Conductor adm = null;    // 1.
-        List<Conductor> lista_conductor = null;
-        Conductor conductor = null;
-        Validacion v = null;
-        Persona persona = null;
-        Datos_Conductor datos_conductor = null;
-
-
-        Datos_Conductor dConductor = new Datos_Conductor ();
+        private static Adm_Conductor adm_conductor = null;    // 1.
+        List<Conductor> Lista_Conductor = null;
+        Conductor Conductor = null;
+        Datos_Conductor Datos_Conductor = null;
+        Validacion Validacion = null;
+        //Persona Persona = null;
 
         //public Usuario_Cache UsuarioCache { get => usuarioCache; set => usuarioCache = value; }
 
         // Constructor: Adm_Login
         private Adm_Conductor () {                  // 2.
-            lista_conductor = new List<Conductor> ();
-            conductor = new Conductor ();
-            v = new Validacion ();
-            datos_conductor = new Datos_Conductor ();
+            Lista_Conductor = new List<Conductor> ();
+            Conductor = new Conductor ();
+            Datos_Conductor = new Datos_Conductor ();
+            Validacion = new Validacion ();
         }
 
         // Getter: GetAdm
         public static Adm_Conductor GetAdm () {     // 3.1.
-            if (adm == null) {                  //3.2
-                adm = new Adm_Conductor ();
+            if (adm_conductor == null) {                  //3.2
+                adm_conductor = new Adm_Conductor ();
             }
-            return adm;
+            return adm_conductor;
         }
-
-
 
         /*---------------------Frm_Conductor_Consultar---------------------------------*/
 
@@ -64,26 +59,26 @@ namespace Control {
         #region Frm_Conductor_Registrar
 
         // Methods for KeyPress
-        public void Leer_Numeros_KeyPress (object sender, KeyPressEventArgs e) {
+        public void validarSoloNumerosKeyPress (object sender, KeyPressEventArgs e) {
             // Only allows numbers on press
-            v.Validar_Numeros_KeyPress (sender, e);
+            Validacion.validarSoloNumerosKeyPress (sender, e);
         }
 
-        public void Leer_Lettras_KeyPress (object sender, KeyPressEventArgs e) {
+        public void validarSoloLettrasKeyPress (object sender, KeyPressEventArgs e) {
             // Only allows alphabetic characters
-            v.Validar_Letras_KeyPress (sender, e);
+            Validacion.validarSoloLettrasKeyPress (sender, e);
         }
 
-        public void Leer_Correo_Keypress (object sender, KeyPressEventArgs e) {
+        public void validarSoloCorreoKeypress (object sender, KeyPressEventArgs e) {
             // Only allows eamil characters
-            v.Validar_Correo_KeyPress (sender, e);
+            Validacion.validarSoloCorreoKeypress (sender, e);
         }
 
         // Methods for Buttons
-        public string GuardarConductor (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
-            string message = "";
+        public string guardarDatosConductor (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
+            string mensaje = "¡";
             errorProvider1.Clear ();
-            if (v.EsCorrectoGuardar (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1)) {
+            if (Validacion.esCorrectoDatosConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1)) {
                 string
                     cedula = txt_Cedula.Text.Trim (),
                     nombre1 = txt_Nombre1.Text.Trim (),
@@ -92,18 +87,18 @@ namespace Control {
                     apellido2 = txt_Apellido2.Text.Trim (),
                     correo = txt_Correo.Text.Trim (),
                     telefono = txt_Telefono.Text.Trim (), 
-                    sexo = v.EsSexo (rdb_Masculino, rdb_Femenino);
+                    sexo = Validacion.esSexo (rdb_Masculino, rdb_Femenino);
                 DateTime
                     fecha_nac = dtp_FechaNac.Value.Date,
                     fecha_contrato = dtp_FechaContrato.Value.Date;
-                conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
-                message = datos_conductor.Insertar_Datos_Conductor (conductor);
-                MessageBox.Show (message, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
+                mensaje = Datos_Conductor.insertarDatosConductor (Conductor);
+                MessageBox.Show (mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            return message;
+            return mensaje;
         }
 
-        public void LimpiarCampos (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
+        public void limpiarCamposGuardarConductor (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
             errorProvider1.Clear ();
             txt_Cedula.Clear ();
             txt_Nombre1.Clear ();
@@ -123,7 +118,8 @@ namespace Control {
         /*- Billy ------------------------------------------------------*/
         internal void ListarConductoresDisponibles (DataGridView dgvConductores) {
             dgvConductores.Refresh ();
-            dgvConductores.DataSource = dConductor.ListarConductoresDisponibles ();
+            Datos_Conductor = new Datos_Conductor ();
+            dgvConductores.DataSource = Datos_Conductor.ListarConductoresDisponibles ();
         }
 
 
