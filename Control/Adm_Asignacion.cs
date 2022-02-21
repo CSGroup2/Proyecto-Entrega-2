@@ -87,13 +87,16 @@ namespace Control {
         {
             int id_P = v.AEntero(id_peticion), id_C=v.AEntero(id_conductor), id_A=v.AEntero(id_ambulancia);
 
+            p = new Peticion();
+            p.Id_peticion = id_P;
+
             co = new Conductor();
             co.Id_conductor = id_C;
 
             a = new Ambulancia();
             a.Id_ambulancia = id_A;
 
-            ad = new Asignacion_Detalle(co,a);
+            ad = new Asignacion_Detalle(p, co, a);
             ListaD.Add(ad);
         }
 
@@ -119,7 +122,7 @@ namespace Control {
         private void guardarAsignacionBD(Asignacion_Cabecera ac)
         {
             string mensaje = "";
-            mensaje = datosAsignacion.insetarAsignacion(ac);
+            mensaje = datosAsignacion.insetarAsignacion(ac,ad);
             if (mensaje[0] == '1')
                 MessageBox.Show("La Asignación fue ingresada correctamente.");
             else
