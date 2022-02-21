@@ -130,6 +130,7 @@ namespace Visual {
             this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtModelo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(160, 56);
+            this.txtModelo.MaxLength = 40;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(169, 26);
             this.txtModelo.TabIndex = 13;
@@ -161,6 +162,7 @@ namespace Visual {
             // txtObservacion
             // 
             this.txtObservacion.Location = new System.Drawing.Point(41, 207);
+            this.txtObservacion.MaxLength = 150;
             this.txtObservacion.Multiline = true;
             this.txtObservacion.Name = "txtObservacion";
             this.txtObservacion.Size = new System.Drawing.Size(288, 84);
@@ -172,6 +174,7 @@ namespace Visual {
             this.txtCapacidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCapacidad.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCapacidad.Location = new System.Drawing.Point(160, 138);
+            this.txtCapacidad.MaxLength = 2;
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(89, 26);
             this.txtCapacidad.TabIndex = 8;
@@ -194,6 +197,7 @@ namespace Visual {
             this.txtPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPlaca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.Location = new System.Drawing.Point(160, 14);
+            this.txtPlaca.MaxLength = 7;
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(169, 26);
             this.txtPlaca.TabIndex = 6;
