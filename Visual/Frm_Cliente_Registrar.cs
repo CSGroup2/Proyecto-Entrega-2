@@ -11,8 +11,8 @@ using System.Windows.Forms;
 
 namespace Visual {
     public partial class Frm_Cliente_Registrar : Form {
-        Adm_Login admLogin = Adm_Login.GetAdm ();
 
+        Adm_Cliente admclient = Adm_Cliente.GetAdm();
         Btn_Comportamiento cbtn = new Btn_Comportamiento ();
 
         public Frm_Cliente_Registrar () {
@@ -21,6 +21,7 @@ namespace Visual {
 
         private void FrmClienteReg_Load (object sender, EventArgs e) {
             this.pncontenido.BackColor = Color.FromArgb (200, 255, 255, 255);
+            admclient.LlenarComboHospitales(cbxhospitales);
 
         }
 
@@ -53,5 +54,32 @@ namespace Visual {
             cbtn.desactivaboton (sender);
         }
         #endregion
+
+        
+
+        private void txt_soloNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            admclient.validarSoloNumerosKeyPress(sender, e);
+        }
+
+        private void txt_sololetras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            admclient.validarSoloLettrasKeyPress(sender, e);
+        }
+
+        private void txt_formatocorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            admclient.validarSoloCorreoKeypress(sender, e);
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            int Id_hospital = Int16.Parse(cbxhospitales.SelectedValue.ToString());
+            string mensaje = admclient.guardarDatosCliente(txt_cedula, cbxhospitales, Id_hospital, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac ,txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
+            if (mensaje[0] != '¡')
+            {
+                admclient.limpiarCamposGuardarCliente(txt_cedula, cbxhospitales, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac, txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
+            }
+        }
     }
 }
