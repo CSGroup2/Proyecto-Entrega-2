@@ -31,6 +31,8 @@ namespace Control {
             Validacion = new Validacion ();
         }
 
+       
+
         // Getter: GetAdm
         public static Adm_Secretaria GetAdm () {        // 3.1.
             if (adm_secretaria == null) {               //3.2
@@ -39,8 +41,38 @@ namespace Control {
             return adm_secretaria;
         }
 
+        /*----------------------Frm_Secretaria_Registrar-------------------------------*/
 
-        /*-----------------------------------------------------*/
+        #region Frm_Secretaria_Registrar
+
+        // Methods for KeyPress
+        public void validarSoloNumerosKeyPress (object sender, KeyPressEventArgs e) {
+            // Only allows numbers on press
+            Validacion.validarSoloNumerosKeyPress (sender, e);
+        }
+
+        public void validarSoloLettrasKeyPress (object sender, KeyPressEventArgs e) {
+            // Only allows alphabetic characters
+            Validacion.validarSoloLettrasKeyPress (sender, e);
+        }
+
+        public void validarSoloCorreoKeypress (object sender, KeyPressEventArgs e) {
+            // Only allows eamil characters
+            Validacion.validarSoloCorreoKeypress (sender, e);
+        }
+
+
+        public string guardarDatosSecretaria (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1) {
+            string mensaje = "¡";
+            
+            
+
+            return mensaje;
+        }
+
+        #endregion
+
+
 
     }
 }

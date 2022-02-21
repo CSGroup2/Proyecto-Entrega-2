@@ -32,7 +32,6 @@ namespace Datos {
                     sql_comando.Parameters.AddWithValue ("@fecha_nac", conductor.Fecha_nac);
                     sql_comando.Parameters.AddWithValue ("@telefono", conductor.Telefono);
                     sql_comando.Parameters.AddWithValue ("@fecha_contrato", conductor.Fecha_contrato);
-                    //sql_comando.ExecuteNonQuery ();
                     mensaje = Convert.ToString (sql_comando.ExecuteNonQuery ());
                     if (mensaje == "-1") {
                         mensaje = "¡DATOS NO GUARDADOS!";
