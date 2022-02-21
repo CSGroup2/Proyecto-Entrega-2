@@ -8,7 +8,7 @@ namespace SGAR_TEST
     [TestClass]
     public class Adm_Ambulancia_Test
     {
-        /*[TestMethod]
+        [TestMethod]
         public void InsertarDatosAmbulancia_AmbulanciaExistente()
         {
             var admA = new Adm_Ambulancia();
@@ -33,7 +33,7 @@ namespace SGAR_TEST
 
 
             Assert.AreEqual("Los datos se insertaron exitosamente", msj);
-        }*/
+        }
 
         [TestMethod]
         public void ConsultarAmbulancia_NoExistenRegistros()
