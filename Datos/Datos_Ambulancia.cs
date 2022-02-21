@@ -100,6 +100,7 @@ namespace Datos
             try
             {
                 //comando
+                SqlDataReader dr = null;
                 SqlCommand comando = new SqlCommand();
                 comando.Connection = c1;
                 comando.CommandText = "sp_consultar_placa";
@@ -110,9 +111,16 @@ namespace Datos
                 param_placa.SqlDbType = SqlDbType.VarChar;
                 param_placa.Value = placa;
                 comando.Parameters.Add(param_placa);
-                comando.ExecuteNonQuery();
-                comando.ExecuteNonQuery();
-                flag = true;
+                dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    flag = true;
+                }
+                else
+                {
+                    flag = false;
+                }
+
             }
             catch (Exception ex)
             {

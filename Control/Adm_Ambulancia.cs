@@ -92,7 +92,7 @@ namespace Control
         public string InsertarDatosAmbulancia(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
             string msj = "";
-            if (dAmbulancia.ConsultarPlaca(placa) == true)
+            if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
                 a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
                 Ambulancias.Add(a);
