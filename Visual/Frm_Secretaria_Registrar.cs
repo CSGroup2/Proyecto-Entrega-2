@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class Frm_Elegir_Conductor : Form
+    public partial class Frm_Secretaria_Registrar : Form
     {
-        public Frm_Elegir_Conductor()
+        public Frm_Secretaria_Registrar()
         {
             InitializeComponent();
         }

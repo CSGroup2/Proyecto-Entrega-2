@@ -95,6 +95,14 @@ namespace Control
             return cedula;
         }
 
+        /*--------------------------Frm_Peticion_Consultar-------------------------------*/
+
+        internal void llenarTablaPeticion(DataGridView dgvPeticion)
+        {
+            dgvPeticion.Refresh();
+            dgvPeticion.DataSource = datosPeticion.listarPeticionesPendientes();
+        }
+
         /*--------------------------Enviar a Base de Datos-------------------------------*/
 
         Datos_Peticion datosPeticion = new Datos_Peticion();

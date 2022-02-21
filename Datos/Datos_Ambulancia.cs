@@ -124,5 +124,76 @@ namespace Datos
             }
             return flag;
         }
+
+        public DataTable ConsultarAmbulancias(string dato, int tipo_ambulancia, int disponibilidad, int buscarOb, int buscarOp)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection c1 = con.abrir_conexion();
+            try
+            {
+                using (SqlCommand comando = new SqlCommand("sp_consultar_ambulancias", c1))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.Add(new SqlParameter("@opcionA", buscarOb));
+                    comando.Parameters.Add(new SqlParameter("@opcionB", buscarOp));
+                    comando.Parameters.Add(new SqlParameter("@dato", dato));
+                    comando.Parameters.Add(new SqlParameter("@tipo_ambulancia", tipo_ambulancia));
+                    comando.Parameters.Add(new SqlParameter("@disponibilidad", disponibilidad));
+                    SqlDataAdapter da = new SqlDataAdapter(comando);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                dt = null;
+                Console.WriteLine("Error al consultar las ambulancias " + ex.Message);
+            }
+            
+            return dt;
+        }
+
+        public DataTable ListarAmbulancias()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection c1 = con.abrir_conexion();
+            try
+            {
+                using (SqlCommand comando = new SqlCommand("sp_listar_ambulancias", c1))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(comando);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                dt = null;
+                Console.WriteLine("Error al listar las ambulancias " + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public object ListarAmbulanciasDisponibles()
+        {
+            DataTable dt = new DataTable();
+            SqlConnection c1 = con.abrir_conexion();
+            try
+            {
+                using (SqlCommand comando = new SqlCommand("sp_listar_ambulancias_disponibles", c1))
+                {
+                    comando.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(comando);
+                    da.Fill(dt);
+                }
+            }
+            catch (Exception ex)
+            {
+                dt = null;
+                Console.WriteLine("Error al listar las ambulancias " + ex.Message);
+            }
+
+            return dt;
+        }
     }
 }
