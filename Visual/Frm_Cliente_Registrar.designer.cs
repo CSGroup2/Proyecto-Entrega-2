@@ -523,6 +523,7 @@ namespace Visual {
             this.btnguardar.Text = "Guardar";
             this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             this.btnguardar.MouseLeave += new System.EventHandler(this.btnguardar_MouseLeave);
             this.btnguardar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnguardar_MouseMove);
             // 

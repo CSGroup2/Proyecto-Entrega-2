@@ -74,17 +74,18 @@ namespace Datos
                 if (cliente != null)
                 {
                     // Adding values to paramerters to SqlCommand below
-                    sql_comando.Parameters.AddWithValue("@cedula", secretaria.Cedula);
-                    sql_comando.Parameters.AddWithValue("@nombre_1", secretaria.Nombre_1);
-                    sql_comando.Parameters.AddWithValue("@nombre_2", secretaria.Nombre_2);
-                    sql_comando.Parameters.AddWithValue("@apellido_1", secretaria.Apellido_1);
-                    sql_comando.Parameters.AddWithValue("@apellido_2", secretaria.Apellido_2);
-                    sql_comando.Parameters.AddWithValue("@sexo", secretaria.Sexo);
-                    sql_comando.Parameters.AddWithValue("@fecha_nac", secretaria.Fecha_nac);
-                    sql_comando.Parameters.AddWithValue("@telefono", secretaria.Telefono);
-                    sql_comando.Parameters.AddWithValue("@nombre_usuario", secretaria.Usuario.Nombre_usuario);
-                    sql_comando.Parameters.AddWithValue("@correo", secretaria.Usuario.Correo);
-                    sql_comando.Parameters.AddWithValue("@contrasenia", secretaria.Usuario.Contrasenia);
+                    sql_comando.Parameters.AddWithValue("@cedula", cliente.Cedula);
+                    sql_comando.Parameters.AddWithValue("@nombre_1", cliente.Nombre_1);
+                    sql_comando.Parameters.AddWithValue("@nombre_2", cliente.Nombre_2);
+                    sql_comando.Parameters.AddWithValue("@apellido_1", cliente.Apellido_1);
+                    sql_comando.Parameters.AddWithValue("@apellido_2", cliente.Apellido_2);
+                    sql_comando.Parameters.AddWithValue("@sexo", cliente.Sexo);
+                    sql_comando.Parameters.AddWithValue("@fecha_nac", cliente.Fecha_nac);
+                    sql_comando.Parameters.AddWithValue("@telefono", cliente.Telefono);
+                    sql_comando.Parameters.AddWithValue("@nombre_usuario", cliente.Usuario.Nombre_usuario);
+                    sql_comando.Parameters.AddWithValue("@correo", cliente.Usuario.Correo);
+                    sql_comando.Parameters.AddWithValue("@contrasenia", cliente.Usuario.Contrasenia);
+                    sql_comando.Parameters.AddWithValue("@id_hospital", cliente.Id_hospital);
                     mensaje = Convert.ToString(sql_comando.ExecuteNonQuery());
                     if (mensaje == "-1")
                     {

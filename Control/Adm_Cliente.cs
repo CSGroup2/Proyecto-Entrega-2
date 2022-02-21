@@ -101,10 +101,11 @@ namespace Control
             return mensaje;
         }
 
-        public void limpiarCamposGuardarCliente(TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1)
+        public void limpiarCamposGuardarCliente(TextBox txt_Cedula, ComboBox cbxhospital ,TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1)
         {
             errorProvider1.Clear();
             txt_Cedula.Clear();
+            cbxhospital.SelectedIndex = 0;
             txt_Nombre1.Clear();
             txt_Nombre2.Clear();
             txt_Apellido1.Clear();

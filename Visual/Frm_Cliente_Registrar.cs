@@ -71,5 +71,15 @@ namespace Visual {
         {
             admclient.validarSoloCorreoKeypress(sender, e);
         }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            int Id_hospital = Int16.Parse(cbxhospitales.SelectedValue.ToString());
+            string mensaje = admclient.guardarDatosCliente(txt_cedula, cbxhospitales, Id_hospital, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac ,txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
+            if (mensaje[0] != '¡')
+            {
+                admclient.limpiarCamposGuardarCliente(txt_cedula, cbxhospitales, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac, txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
+            }
+        }
     }
 }
