@@ -105,7 +105,7 @@ namespace Control
             return msj;
         }
 
-        //método para limpiar campos
+        //método para limpiar campos del formulario de registro de ambulancias
         public void LimpiarCampos(TextBox txtPlaca, TextBox txtModelo, ComboBox cmbTipo, TextBox txtCapacidad, TextBox txtObservacion)
         {
             txtPlaca.Text = "";
@@ -115,6 +115,7 @@ namespace Control
             txtObservacion.Text = "";
         }
 
+        // método para validar los campos de formulario consultar ambulancias
         public bool ValidarC(RadioButton rdbPlaca, TextBox txtDato, CheckBox chbTipo, ComboBox cmbTipo, ErrorProvider errorP)
         {
             bool no_error = true;
@@ -145,10 +146,10 @@ namespace Control
             return no_error;
         }
 
-        //
-        public void ConsultarAmbulancias(DataGridView dgvAmbulancias, TextBox txtDato, ComboBox cmbTipo, CheckBox chbDisponibilidad, int buscarOb, int buscarOp)
+        // método para consultar ambulancias por filtros
+        public string ConsultarAmbulancias(DataGridView dgvAmbulancias, TextBox txtDato, ComboBox cmbTipo, CheckBox chbDisponibilidad, int buscarOb, int buscarOp)
         {
-            string dato = txtDato.Text;
+            string dato = txtDato.Text, msj = "";
             int disponibilidad = 0, tipo = cmbTipo.SelectedIndex ;
             if (chbDisponibilidad.Checked)
             {
@@ -156,14 +157,25 @@ namespace Control
             }
             dgvAmbulancias.Refresh();
             dgvAmbulancias.DataSource = dAmbulancia.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
+            if(dgvAmbulancias == null)
+            {
+                msj = "No hay ambulancias con esos datos";
+            }
+            else
+            {
+                msj = "Consulta exitosa";
+            }
+            return msj;
         }
 
+        // método para listar todas las ambulancias registradas
         public void ListarAmbulancias(DataGridView dgvAmbulancias)
         {
             dgvAmbulancias.Refresh();
             dgvAmbulancias.DataSource = dAmbulancia.ListarAmbulancias();
         }
 
+        // método para listar sólo las ambulancias disponibles para poder asignarle a un conductor (Adm_Asignacion)
         internal void ListarAmbulanciasDisponibles(DataGridView dgvAmbulancia)
         {
             dgvAmbulancia.Refresh();
