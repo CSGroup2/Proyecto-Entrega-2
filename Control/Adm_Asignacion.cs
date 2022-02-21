@@ -83,7 +83,7 @@ namespace Control {
             admCo.ListarConductoresDisponibles(dgvConductores);
         }
 
-        public void enlistarCond_AmbAsignados(string id_peticion, string id_conductor, string id_ambulancia)
+        public void enlistarCond_AmbAsignados(string id_peticion, string id_conductor, string id_ambulancia, DataGridView dgvAmb_Cond)
         {
             int id_P = v.AEntero(id_peticion), id_C=v.AEntero(id_conductor), id_A=v.AEntero(id_ambulancia);
 
@@ -98,6 +98,16 @@ namespace Control {
 
             ad = new Asignacion_Detalle(p, co, a);
             ListaD.Add(ad);
+            llenarDgvCA(dgvAmb_Cond,ListaD);
+        }
+
+        private void llenarDgvCA(DataGridView dgvAmb_Cond, List<Asignacion_Detalle> listaD)
+        {
+            dgvAmb_Cond.Rows.Clear();
+            foreach (Asignacion_Detalle x in listaD) 
+            {
+                dgvAmb_Cond.Rows.Add(x.Peticion.Id_peticion, x.Conductor.Id_conductor, x.Ambulancia.Id_ambulancia);
+            }
         }
 
         public void guardarAsignacion(string id_peticion)
@@ -114,12 +124,12 @@ namespace Control {
             ac = new Asignacion_Cabecera(p, s, "En Progreso", ListaD);
             
             ListaC.Add(ac);
-            guardarAsignacionBD(ac);
+            guardarAsignacionBD(ListaC,ListaD);
         }
 
         Datos_Asignacion datosAsignacion = new Datos_Asignacion();
 
-        private void guardarAsignacionBD(Asignacion_Cabecera ac)
+        private void guardarAsignacionBD(List<Asignacion_Cabecera> ac,List<Asignacion_Detalle> ad)
         {
             string mensaje = "";
             mensaje = datosAsignacion.insetarAsignacion(ac,ad);

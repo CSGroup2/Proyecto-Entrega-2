@@ -16,8 +16,8 @@ namespace Visual
         public Frm_Asignacion_Registrar()
         {
             InitializeComponent();
-            lbl_id_ambulancia.Visible = false;
-            lbl_id_conductor.Visible = false;
+            lbl_id_ambulancia.Visible = true;
+            lbl_id_conductor.Visible = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -45,8 +45,8 @@ namespace Visual
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
-            string id_conductor = lbl_id_conductor.Text, id_ambulancia = lbl_id_ambulancia.Text, id_peticion = lblIdPeticion.Text;
-            adm.enlistarCond_AmbAsignados(id_peticion,id_conductor,id_ambulancia);
+            string id_conductor = lbl_id_conductor.Text.ToString(), id_ambulancia = lbl_id_ambulancia.Text.ToString(), id_peticion = lblIdPeticion.Text.ToString();
+            adm.enlistarCond_AmbAsignados(id_peticion,id_conductor,id_ambulancia,dgvAmb_Cond);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
