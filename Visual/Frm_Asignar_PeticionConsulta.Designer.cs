@@ -1,7 +1,7 @@
 ﻿
 namespace Visual
 {
-    partial class Frm_Asignar_Ambulancia
+    partial class Frm_Asignar_PeticionConsulta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,22 @@ namespace Visual
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgvPeticion = new System.Windows.Forms.DataGridView();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnElegir = new FontAwesome.Sharp.IconButton();
-            this.dgvAmbulancia = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeticion)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgvPeticion
+            // 
+            this.dgvPeticion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPeticion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeticion.Location = new System.Drawing.Point(30, 26);
+            this.dgvPeticion.Name = "dgvPeticion";
+            this.dgvPeticion.ReadOnly = true;
+            this.dgvPeticion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPeticion.Size = new System.Drawing.Size(900, 322);
+            this.dgvPeticion.TabIndex = 1;
             // 
             // btnCancelar
             // 
@@ -45,11 +56,11 @@ namespace Visual
             this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(164, 251);
+            this.btnCancelar.Location = new System.Drawing.Point(262, 379);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCancelar.Size = new System.Drawing.Size(170, 41);
-            this.btnCancelar.TabIndex = 22;
+            this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -61,54 +72,42 @@ namespace Visual
             this.btnElegir.FlatAppearance.BorderSize = 0;
             this.btnElegir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnElegir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnElegir.IconChar = FontAwesome.Sharp.IconChar.Ambulance;
+            this.btnElegir.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnElegir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
             this.btnElegir.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnElegir.IconSize = 40;
-            this.btnElegir.Location = new System.Drawing.Point(458, 251);
+            this.btnElegir.Location = new System.Drawing.Point(556, 379);
             this.btnElegir.Name = "btnElegir";
             this.btnElegir.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnElegir.Size = new System.Drawing.Size(141, 41);
-            this.btnElegir.TabIndex = 21;
+            this.btnElegir.TabIndex = 20;
             this.btnElegir.Text = "Elegir";
             this.btnElegir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnElegir.UseVisualStyleBackColor = true;
             this.btnElegir.Click += new System.EventHandler(this.btnElegir_Click);
             // 
-            // dgvAmbulancia
-            // 
-            this.dgvAmbulancia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAmbulancia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAmbulancia.Location = new System.Drawing.Point(34, 25);
-            this.dgvAmbulancia.Name = "dgvAmbulancia";
-            this.dgvAmbulancia.ReadOnly = true;
-            this.dgvAmbulancia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAmbulancia.Size = new System.Drawing.Size(732, 201);
-            this.dgvAmbulancia.TabIndex = 20;
-            // 
-            // Frm_Asignar_Ambulancia
+            // Frm_Asignar_PeticionConsulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Visual.Properties.Resources._8;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 316);
+            this.ClientSize = new System.Drawing.Size(965, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnElegir);
-            this.Controls.Add(this.dgvAmbulancia);
+            this.Controls.Add(this.dgvPeticion);
             this.DoubleBuffered = true;
-            this.Name = "Frm_Asignar_Ambulancia";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Elegir_Ambulancia";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAmbulancia)).EndInit();
+            this.Name = "Frm_Asignar_PeticionConsulta";
+            this.Text = "Frm_Asignar_PeticionConsulta";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeticion)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dgvPeticion;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnElegir;
-        private System.Windows.Forms.DataGridView dgvAmbulancia;
     }
 }

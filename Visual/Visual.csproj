@@ -91,6 +91,12 @@
     <Compile Include="Frm_Asignacion_Registrar.Designer.cs">
       <DependentUpon>Frm_Asignacion_Registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Asignar_PeticionConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Asignar_PeticionConsulta.Designer.cs">
+      <DependentUpon>Frm_Asignar_PeticionConsulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Cliente_Consultar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Asignacion_Registrar.resx">
       <DependentUpon>Frm_Asignacion_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Asignar_PeticionConsulta.resx">
+      <DependentUpon>Frm_Asignar_PeticionConsulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Cliente_Consultar.resx">
       <DependentUpon>Frm_Cliente_Consultar.cs</DependentUpon>

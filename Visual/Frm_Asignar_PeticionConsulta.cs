@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace Visual
 {
-    public partial class Frm_Asignar_Ambulancia : Form
+    public partial class Frm_Asignar_PeticionConsulta : Form
     {
         Frm_Asignacion_Registrar frm;
         Adm_Asignacion adm = Adm_Asignacion.GetAdm();
-        public Frm_Asignar_Ambulancia(Frm_Asignacion_Registrar frmA)
+
+        public Frm_Asignar_PeticionConsulta(Frm_Asignacion_Registrar frmA)
         {
             InitializeComponent();
-            adm.llenarTablaAmbulanciaAsignar(dgvAmbulancia);
+            adm.llenarTablaPeticion(dgvPeticion);
             this.frm = frmA;
         }
 
-        private static string GetValorCelda(DataGridView dgv, int num)
+        public static string GetValorCelda(DataGridView dgv, int num)
         {
             string valor = "";
 
@@ -37,8 +38,11 @@ namespace Visual
 
         private void btnElegir_Click(object sender, EventArgs e)
         {
-            string id_ambulancia = GetValorCelda(dgvAmbulancia, 0);
-            frm.lbl_Placa.Text = GetValorCelda(dgvAmbulancia, 2);
+            frm.lblIdPeticion.Text = GetValorCelda(dgvPeticion,0);
+            frm.lblCliente.Text = GetValorCelda(dgvPeticion, 1);
+            frm.lbl_TipoAmbulancia.Text = GetValorCelda(dgvPeticion,2);
+            frm.lbl_cantAmbulancia.Text = GetValorCelda(dgvPeticion,3);
+            frm.lblAmb_Restantes.Text = GetValorCelda(dgvPeticion,3);
             this.Close();
         }
     }

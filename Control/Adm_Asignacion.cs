@@ -35,6 +35,11 @@ namespace Control {
         public List<Asignacion_Cabecera> ListaC { get => listaC; set => listaC = value; }
         public List<Asignacion_Detalle> ListaD { get => listaD; set => listaD = value; }
 
+        public void GetId_Conductor(string id_conductor)
+        {
+            throw new NotImplementedException();
+        }
+
         private Adm_Asignacion() 
         {
             v = new Validacion();

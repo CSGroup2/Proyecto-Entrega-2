@@ -41,6 +41,8 @@ namespace Visual
             this.dgvConductores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConductores.Location = new System.Drawing.Point(35, 25);
             this.dgvConductores.Name = "dgvConductores";
+            this.dgvConductores.ReadOnly = true;
+            this.dgvConductores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConductores.Size = new System.Drawing.Size(732, 201);
             this.dgvConductores.TabIndex = 0;
             // 
@@ -62,6 +64,7 @@ namespace Visual
             this.btnElegir.Text = "Elegir";
             this.btnElegir.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnElegir.UseVisualStyleBackColor = true;
+            this.btnElegir.Click += new System.EventHandler(this.btnElegir_Click);
             // 
             // btnCancelar
             // 

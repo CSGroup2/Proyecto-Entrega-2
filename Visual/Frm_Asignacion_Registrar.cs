@@ -16,7 +16,6 @@ namespace Visual
         public Frm_Asignacion_Registrar()
         {
             InitializeComponent();
-            adm.llenarTablaPeticion(dgvPeticion);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -26,14 +25,25 @@ namespace Visual
 
         private void btnConductor_Click(object sender, EventArgs e)
         {
-            Frm_Asignar_Conductor frm = new Frm_Asignar_Conductor();
+            Frm_Asignar_Conductor frm = new Frm_Asignar_Conductor(this);
             frm.ShowDialog();
         }
 
         private void btnAmbulancia_Click(object sender, EventArgs e)
         {
-            Frm_Asignar_Ambulancia frm = new Frm_Asignar_Ambulancia();
+            Frm_Asignar_Ambulancia frm = new Frm_Asignar_Ambulancia(this);
             frm.ShowDialog();
+        }
+
+        private void btnPeticion_Click(object sender, EventArgs e)
+        {
+            Frm_Asignar_PeticionConsulta frm = new Frm_Asignar_PeticionConsulta(this);
+            frm.ShowDialog();
+        }
+
+        private void btnAsignar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
