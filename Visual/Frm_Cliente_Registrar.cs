@@ -25,6 +25,19 @@ namespace Visual {
 
         }
 
+        #region mensajes emergentes
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "SGAR LOS RAPIDOS S.A", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "SGAR LOS RAPIDOS S.A", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+        #endregion
+
         #region Efectos boton Guardar
         private void btnguardar_MouseMove (object sender, MouseEventArgs e) {
             cbtn.activaboton (sender);
@@ -74,12 +87,33 @@ namespace Visual {
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            int Id_hospital = Int16.Parse(cbxhospitales.SelectedValue.ToString());
-            string mensaje = admclient.guardarDatosCliente(txt_cedula, cbxhospitales, Id_hospital, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac ,txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
-            if (mensaje[0] != '¡')
+            errpvdatoscliente.Clear();
+            if (admclient.validarDatosCliente(txt_cedula, cbxhospitales, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac, txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente))
             {
-                admclient.limpiarCamposGuardarCliente(txt_cedula, cbxhospitales, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac, txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
-            }
+                string cedula = txt_cedula.Text.Trim(),
+                nombre1 = txt_nombre1.Text.Trim(),
+                nombre2 = txt_nombre2.Text.Trim(),
+                apellido1 = txt_apellido1.Text.Trim(),
+                apellido2 = txt_apellido2.Text.Trim(),
+                correo = txt_correo.Text.Trim(),
+                telefono = txt_numtelf.Text.Trim(),
+                sexo = admclient.esSexo(opr_masculino, opr_femenino),
+                usuario = txt_usuario.Text.Trim(),
+                contra = txt_contra.Text.Trim();
+                DateTime fechanac = dtp_fechanac.Value;
+                int Id_hospital = Int16.Parse(cbxhospitales.SelectedValue.ToString());
+                string mensaje = admclient.guardarDatosCliente(cedula, Id_hospital, nombre1, nombre2, apellido1, apellido2, correo, telefono, sexo, fechanac, usuario, contra);
+                if (mensaje.Contains("¡Error "))
+                {
+                    MensajeError(mensaje);
+                }
+                else
+                {
+                    MensajeOk(mensaje);
+                    admclient.limpiarCamposGuardarCliente(txt_cedula, cbxhospitales, txt_nombre1, txt_nombre2, txt_apellido1, txt_apellido2, txt_correo, txt_numtelf, opr_masculino, opr_femenino, dtp_fechanac, txt_usuario, txt_contra, txt_confirmarcontra, errpvdatoscliente);
+                }
+
+            }            
         }
     }
 }

@@ -89,7 +89,7 @@ namespace Datos
                     mensaje = Convert.ToString(sql_comando.ExecuteNonQuery());
                     if (mensaje == "-1")
                     {
-                        mensaje = "¡DATOS NO GUARDADOS!";
+                        mensaje = "¡Error el numero de cedula o usuario ya existen! \n DATOS NO GUARDADOS";
                     }
                     else
                     {
