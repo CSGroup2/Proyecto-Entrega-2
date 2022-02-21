@@ -30,16 +30,18 @@ namespace Visual {
 
         private void btn_Guardar_Click (object sender, EventArgs e) {
             string mensaje = admSecretaria.guardarDatosSecretaria (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, txt_NombreUsuario, txt_Contrasenia1, txt_Contrasenia2, errorProvider1);
+            if (mensaje[0] != '¡') {
+                admSecretaria.limpiarCamposGuardarSecretaria (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, txt_NombreUsuario, txt_Contrasenia1, txt_Contrasenia2, errorProvider1);
+            }
         }
 
         private void btn_Cancelar_Click (object sender, EventArgs e) {
-
+            this.Close ();
         }
 
         private void btn_Limpiar_Click (object sender, EventArgs e) {
-
+            admSecretaria.limpiarCamposGuardarSecretaria (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, txt_NombreUsuario, txt_Contrasenia1, txt_Contrasenia2, errorProvider1);
         }
-
         
 
     }
