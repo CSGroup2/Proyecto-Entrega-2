@@ -51,7 +51,7 @@ namespace Visual {
             this.btnmodigerente = new FontAwesome.Sharp.IconButton();
             this.btnconsulgerente = new FontAwesome.Sharp.IconButton();
             this.btnreggerente = new FontAwesome.Sharp.IconButton();
-            this.btngerente = new FontAwesome.Sharp.IconButton();
+            this.btnsecretaria = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbltipo = new System.Windows.Forms.Label();
             this.lblapellido = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@ namespace Visual {
             this.pnlateral.Controls.Add(this.pnsubmcliente);
             this.pnlateral.Controls.Add(this.btncliente);
             this.pnlateral.Controls.Add(this.pnsubmgerente);
-            this.pnlateral.Controls.Add(this.btngerente);
+            this.pnlateral.Controls.Add(this.btnsecretaria);
             this.pnlateral.Controls.Add(this.panel2);
             this.pnlateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlateral.Location = new System.Drawing.Point(0, 0);
@@ -558,27 +558,27 @@ namespace Visual {
             this.btnreggerente.UseVisualStyleBackColor = true;
             this.btnreggerente.Click += new System.EventHandler(this.btnreggerente_Click);
             // 
-            // btngerente
+            // btnsecretaria
             // 
-            this.btngerente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btngerente.FlatAppearance.BorderSize = 0;
-            this.btngerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btngerente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngerente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btngerente.IconChar = FontAwesome.Sharp.IconChar.UserTie;
-            this.btngerente.IconColor = System.Drawing.Color.Gainsboro;
-            this.btngerente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btngerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btngerente.Location = new System.Drawing.Point(0, 140);
-            this.btngerente.Name = "btngerente";
-            this.btngerente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btngerente.Size = new System.Drawing.Size(242, 54);
-            this.btngerente.TabIndex = 1;
-            this.btngerente.Text = "Gerente";
-            this.btngerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btngerente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btngerente.UseVisualStyleBackColor = true;
-            this.btngerente.Click += new System.EventHandler(this.btngerente_Click);
+            this.btnsecretaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnsecretaria.FlatAppearance.BorderSize = 0;
+            this.btnsecretaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnsecretaria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsecretaria.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnsecretaria.IconChar = FontAwesome.Sharp.IconChar.UserTie;
+            this.btnsecretaria.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnsecretaria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnsecretaria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsecretaria.Location = new System.Drawing.Point(0, 140);
+            this.btnsecretaria.Name = "btnsecretaria";
+            this.btnsecretaria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnsecretaria.Size = new System.Drawing.Size(242, 54);
+            this.btnsecretaria.TabIndex = 1;
+            this.btnsecretaria.Text = "Secretaria";
+            this.btnsecretaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnsecretaria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnsecretaria.UseVisualStyleBackColor = true;
+            this.btnsecretaria.Click += new System.EventHandler(this.btngerente_Click);
             // 
             // panel2
             // 
@@ -744,7 +744,7 @@ namespace Visual {
 
         private System.Windows.Forms.Panel pnlateral;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton btngerente;
+        private FontAwesome.Sharp.IconButton btnsecretaria;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btncliente;
         private System.Windows.Forms.Panel pnsubmgerente;

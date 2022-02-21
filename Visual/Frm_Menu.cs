@@ -139,15 +139,21 @@ namespace Visual {
             //switch (Usuario_Cache.Tipo) {
             switch (admLogin.TipoUsuario ()) {
                 case "Gerente":
-                    btngerente.Visible = false;
-                    btnregistrar.Visible = false;
+                    btnpeticion.Visible = false; 
                     break;
                 case "Cliente":
-                    btngerente.Visible = false;
+                    btnsecretaria.Visible = false;
                     btncliente.Visible = false;
                     btnambulancia.Visible = false;
                     btnconductor.Visible = false;
                     btnasignar.Visible = false;
+                    break;
+                case "Secretaria":
+                    btnsecretaria.Visible = false;
+                    btncliente.Visible = false;
+                    btnambulancia.Visible = false;
+                    btnconductor.Visible = false;
+                    btnregistrar.Visible = false;
                     break;
                 default:
                     break;
