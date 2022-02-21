@@ -60,11 +60,6 @@ namespace Control
                 errorP.SetError(txtPlaca, "La placa debe contener de 3 letras y 3-4 dígitos");
                 no_error = false;
             }
-            if (dAmbulancia.ConsultarPlaca(placa))
-            {
-                errorP.SetError(txtPlaca, "La placa ya está registrada");
-                no_error = false;
-            }
             if (String.IsNullOrEmpty(txtModelo.Text))
             {
                 errorP.SetError(txtModelo, "Ingrese el modelo de la ambulancia");

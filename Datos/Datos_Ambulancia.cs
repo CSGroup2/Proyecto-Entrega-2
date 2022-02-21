@@ -111,16 +111,14 @@ namespace Datos
                 param_placa.Value = placa;
                 comando.Parameters.Add(param_placa);
                 comando.ExecuteNonQuery();
-                if (comando.ExecuteNonQuery() == 1)
-                {
-                    flag = true;
-                }
-                flag = false;
+                comando.ExecuteNonQuery();
+                flag = true;
             }
             catch (Exception ex)
             {
                 con.cerrar_conexion(c1);
                 Console.WriteLine("Error al consultar en la placa " + ex.Message);
+                flag = false;
             }
             return flag;
         }
