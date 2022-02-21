@@ -14,6 +14,7 @@ namespace Visual
     {
         Frm_Asignacion_Registrar frm;
         Adm_Asignacion adm = Adm_Asignacion.GetAdm();
+        //private string id_conductor = "";
 
         public Frm_Asignar_Conductor(Frm_Asignacion_Registrar frmA)
         {
@@ -38,9 +39,8 @@ namespace Visual
 
         private void btnElegir_Click(object sender, EventArgs e)
         {
-            string id_conductor = GetValorCelda(dgvConductores, 0);
+            frm.lbl_id_conductor.Text = GetValorCelda(dgvConductores, 0);
             frm.lbl_conductor.Text = GetValorCelda(dgvConductores,1);
-            adm.GetId_Conductor(id_conductor);
             this.Close();
         }
     }

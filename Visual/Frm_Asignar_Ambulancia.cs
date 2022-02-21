@@ -37,7 +37,7 @@ namespace Visual
 
         private void btnElegir_Click(object sender, EventArgs e)
         {
-            string id_ambulancia = GetValorCelda(dgvAmbulancia, 0);
+            frm.lbl_id_ambulancia.Text = GetValorCelda(dgvAmbulancia, 0);
             frm.lbl_Placa.Text = GetValorCelda(dgvAmbulancia, 2);
             this.Close();
         }

@@ -50,6 +50,9 @@ namespace Visual
             this.btnPeticion = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
             this.lblIdPeticion = new System.Windows.Forms.Label();
+            this.lbl_id_conductor = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbl_id_ambulancia = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmb_Cond)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,6 +236,7 @@ namespace Visual
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // label3
             // 
@@ -354,6 +358,47 @@ namespace Visual
             this.lblIdPeticion.TabIndex = 16;
             this.lblIdPeticion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_id_conductor
+            // 
+            this.lbl_id_conductor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_id_conductor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_id_conductor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_id_conductor.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id_conductor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbl_id_conductor.Location = new System.Drawing.Point(308, 126);
+            this.lbl_id_conductor.Name = "lbl_id_conductor";
+            this.lbl_id_conductor.Size = new System.Drawing.Size(56, 26);
+            this.lbl_id_conductor.TabIndex = 16;
+            this.lbl_id_conductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_id_conductor.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label9.Location = new System.Drawing.Point(733, -41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 26);
+            this.label9.TabIndex = 16;
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_id_ambulancia
+            // 
+            this.lbl_id_ambulancia.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_id_ambulancia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_id_ambulancia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_id_ambulancia.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id_ambulancia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbl_id_ambulancia.Location = new System.Drawing.Point(370, 126);
+            this.lbl_id_ambulancia.Name = "lbl_id_ambulancia";
+            this.lbl_id_ambulancia.Size = new System.Drawing.Size(56, 26);
+            this.lbl_id_ambulancia.TabIndex = 16;
+            this.lbl_id_ambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_id_ambulancia.Visible = false;
+            // 
             // Frm_Asignacion_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,8 +414,11 @@ namespace Visual
             this.Controls.Add(this.btnPeticion);
             this.Controls.Add(this.btnConductor);
             this.Controls.Add(this.lblIdPeticion);
+            this.Controls.Add(this.lbl_id_ambulancia);
             this.Controls.Add(this.lblAmb_Restantes);
             this.Controls.Add(this.lbl_Placa);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lbl_id_conductor);
             this.Controls.Add(this.lbl_cantAmbulancia);
             this.Controls.Add(this.lbl_TipoAmbulancia);
             this.Controls.Add(this.lblCliente);
@@ -414,5 +462,8 @@ namespace Visual
         internal System.Windows.Forms.Label lbl_conductor;
         internal System.Windows.Forms.Label lbl_Placa;
         internal System.Windows.Forms.Label lblAmb_Restantes;
+        internal System.Windows.Forms.Label lbl_id_conductor;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.Label lbl_id_ambulancia;
     }
 }

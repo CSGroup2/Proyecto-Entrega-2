@@ -29,11 +29,15 @@ namespace Visual {
         // Guardar peticion
         private void btnguardar_Click(object sender, EventArgs e)
         {
+            string msj = "";
             string cantAmb = nud_Ambulancia.Value.ToString(), punto_Origen = txt_Origen.Text, 
                 punto_Destino = txt_Destino.Text, tipo_ambulancia = Convert.ToString(cmb_TAmb.SelectedValue);
             //verificamos si los campos están llenos
-            if (txt_Origen.Text != "" && txt_Destino.Text != "" && cmb_TAmb.SelectedIndex!=0)
-                adm.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
+            if (txt_Origen.Text != "" && txt_Destino.Text != "" && cmb_TAmb.SelectedIndex != 0) 
+            {
+                msj = adm.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
+                MessageBox.Show(msj);
+            }
             else
                 MensajeError("Por favor ingrese los datos necesarios.");
         }
