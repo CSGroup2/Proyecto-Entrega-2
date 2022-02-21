@@ -8,21 +8,20 @@ namespace SGAR_TEST
     public class Adm_Peticion_Test
     {
         [TestMethod]
-        public void dfdfsd()
+        public void guardarPeticion_PeticionNueva()
         {
-            var admA = new Adm_Ambulancia();
-            int tipoA = 2, capacidad = 3;
-            string placa = "AAC123", modelo = "modeloxtest", observacion = "NN", msj = "";
-            //
+            /*var admP = new Adm_Peticion();
+            string cantAmb = "2", tipo_ambulancia = "2", punto_Origen = "Clínica Kennedy", punto_Destino = "Hospital del niño", msj = "";
+            
 
-            msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
+            msj = admP.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
 
 
-            Assert.AreEqual("La ambulancia ya está registrada", msj);
+            Assert.AreEqual("Su petición fue ingresada correctamente.", msj);*/
         }
 
-        [TestMethod]
-        public void InsertarDatosAmbulancia_AmbulanciaNueva()
+        /*[TestMethod]
+        public void guardarPeticion_ErrorConsulta()
         {
             var admA = new Adm_Ambulancia();
             int tipoA = 1, capacidad = 2;
@@ -32,6 +31,6 @@ namespace SGAR_TEST
 
 
             Assert.AreEqual("Los datos se insertaron exitosamente", msj);
-        }
+        }*/
     }
 }
