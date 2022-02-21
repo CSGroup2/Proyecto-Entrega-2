@@ -16,7 +16,7 @@ namespace Datos {
             SqlConnection sql_conexion = null;
             SqlCommand sql_comando = null;
             string mensaje = "";
-            string query = "sp_insertar_conductor";  // Stored Procedure name
+            string query = "sp_insertar_secretaria";  // Stored Procedure name
             try {
                 conexion = new Conexion ();
                 sql_conexion = conexion.abrir_conexion ();              // Opens conexion to sql server
@@ -32,6 +32,9 @@ namespace Datos {
                     sql_comando.Parameters.AddWithValue ("@sexo", secretaria.Sexo);
                     sql_comando.Parameters.AddWithValue ("@fecha_nac", secretaria.Fecha_nac);
                     sql_comando.Parameters.AddWithValue ("@telefono", secretaria.Telefono);
+                    sql_comando.Parameters.AddWithValue ("@nombre_usuario", secretaria.Usuario.Nombre_usuario);
+                    sql_comando.Parameters.AddWithValue ("@correo", secretaria.Usuario.Correo);
+                    sql_comando.Parameters.AddWithValue ("@contrasenia", secretaria.Usuario.Contrasenia);
                     sql_comando.Parameters.AddWithValue ("@fecha_contrato", secretaria.Fecha_contrato);
                     mensaje = Convert.ToString (sql_comando.ExecuteNonQuery ());
                     if (mensaje == "-1") {

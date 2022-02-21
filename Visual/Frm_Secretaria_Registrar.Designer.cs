@@ -301,6 +301,7 @@ namespace Visual
             this.txt_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Telefono.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Telefono.Location = new System.Drawing.Point(419, 142);
+            this.txt_Telefono.MaxLength = 10;
             this.txt_Telefono.Name = "txt_Telefono";
             this.txt_Telefono.Size = new System.Drawing.Size(194, 26);
             this.txt_Telefono.TabIndex = 17;
@@ -441,6 +442,7 @@ namespace Visual
             this.txt_Cedula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Cedula.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Cedula.Location = new System.Drawing.Point(138, 15);
+            this.txt_Cedula.MaxLength = 10;
             this.txt_Cedula.Name = "txt_Cedula";
             this.txt_Cedula.Size = new System.Drawing.Size(169, 26);
             this.txt_Cedula.TabIndex = 6;
@@ -543,6 +545,7 @@ namespace Visual
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
             // Frm_Secretaria_Registrar
