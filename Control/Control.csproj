@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Adm_Ambulancia.cs" />
     <Compile Include="Adm_Asignacion.cs" />
+    <Compile Include="Adm_Cliente.cs" />
     <Compile Include="Adm_Conductor.cs" />
     <Compile Include="Adm_Login.cs" />
     <Compile Include="Adm_Peticion.cs" />
