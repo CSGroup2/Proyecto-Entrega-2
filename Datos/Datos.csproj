@@ -43,6 +43,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="Datos_Ambulancia.cs" />
     <Compile Include="Datos_Asignacion.cs" />
+    <Compile Include="Datos_Cliente.cs" />
     <Compile Include="Datos_Conductor.cs" />
     <Compile Include="Datos_Email_Sistema.cs" />
     <Compile Include="Datos_Email_Servidor.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="Datos_Persona2.cs" />
     <Compile Include="Datos_Peticion.cs" />
     <Compile Include="Datos_Secretaria.cs" />
+    <Compile Include="Datos_Usuario2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
