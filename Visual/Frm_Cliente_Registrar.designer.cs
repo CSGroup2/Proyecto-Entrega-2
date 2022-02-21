@@ -205,7 +205,7 @@ namespace Visual {
             this.cbxhospitales.FormattingEnabled = true;
             this.cbxhospitales.Location = new System.Drawing.Point(419, 13);
             this.cbxhospitales.Name = "cbxhospitales";
-            this.cbxhospitales.Size = new System.Drawing.Size(185, 28);
+            this.cbxhospitales.Size = new System.Drawing.Size(194, 28);
             this.cbxhospitales.TabIndex = 27;
             // 
             // label13
