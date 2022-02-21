@@ -80,6 +80,7 @@ namespace Visual {
 
         private void btn_Guardar_Click (object sender, EventArgs e) {
             admConductor.Guardar (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
+            admConductor.LimpiarCampos (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
         }
 
         private void btn_Cancelar_Click (object sender, EventArgs e) {

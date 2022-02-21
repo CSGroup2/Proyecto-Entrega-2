@@ -20,13 +20,9 @@ namespace Control {
             return x;
         }
 
-
-
-
-        /*------------------------------------------------------*/
+        /*-----------------------Frm_Conductor_Registrar-------------------------------*/
 
         #region Validation: Frm_Conductor_Registrar - errorprovider emtpy fields & incorrect email
-
         internal bool EsCorrectoGuardar (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
             bool output = true;
             string mensage = "Campo obligatorio.";
@@ -67,7 +63,7 @@ namespace Control {
                 errorProvider1.SetError (txt_Telefono, mensage);
                 output = false;
             }
-            if (rdb_Femenino.Checked ==  rdb_Masculino.Checked) {
+            if (rdb_Femenino.Checked == rdb_Masculino.Checked) {
                 errorProvider1.SetError (rdb_Femenino, mensage);
                 output = false;
             }
@@ -81,6 +77,16 @@ namespace Control {
                 output = false;
             }
             return output;
+        }
+
+        internal string EsSexo (RadioButton rdb_Masculino, RadioButton rdb_Femenino) {
+            string sexo = "";
+            if (rdb_Masculino.Checked) {
+                sexo = "Masculino";
+            } else if (rdb_Femenino.Checked) {
+                sexo = "Femenino";
+            }
+            return sexo;
         }
 
         internal void Validar_Numeros_KeyPress (object sender, KeyPressEventArgs e) {
@@ -106,7 +112,6 @@ namespace Control {
                 return;
             }
         }
-
         #endregion
 
         /*------------------------------------------------------*/

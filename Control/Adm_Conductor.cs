@@ -90,18 +90,14 @@ namespace Control {
                     apellido1 = txt_Apellido1.Text.Trim (),
                     apellido2 = txt_Apellido2.Text.Trim (),
                     correo = txt_Correo.Text.Trim (),
-                    telefono = txt_Telefono.Text.Trim (), sexo = "";
-                if (rdb_Masculino.Checked) {
-                    sexo = "Masculino";
-                } else if (rdb_Femenino.Checked) {
-                    sexo = "Femenino";
-                }
+                    telefono = txt_Telefono.Text.Trim (), 
+                    sexo = v.EsSexo (rdb_Masculino, rdb_Femenino);
                 DateTime
                     fecha_nac = dtp_FechaNac.Value.Date,
                     fecha_contrato = dtp_FechaContrato.Value.Date;
                 conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
                 string mensaje = datos_conductor.Insertar_Datos_Conductor (conductor);
-
+                MessageBox.Show (mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
