@@ -53,8 +53,9 @@ namespace Control
 
         /*--------------------------Frm_Peticion_Registrar-------------------------------*/
 
-        public void guardarPeticion(string cantAmb, string tipo_ambulancia,string punto_Origen, string punto_Destino)
+        public string guardarPeticion(string cantAmb, string tipo_ambulancia,string punto_Origen, string punto_Destino)
         {
+            string mensaje = "",msj="";
             cliente = new Cliente();
             cliente.Id_cliente = admL.IdUsuario();
 
@@ -64,8 +65,14 @@ namespace Control
 
             peticion = new Peticion(cliente, tAmb, nAmb, punto_Origen, punto_Destino,"En Progreso");
             
-            Lista.Add(peticion);            //Añadir la peticion a la lista
-            guardarPeticionBDD(peticion);   //Mandar la peticion a la base de datos
+            Lista.Add(peticion);                                 //Añadir la peticion a la lista
+            mensaje = datosPeticion.insetarPeticion(peticion);   //Mandar la peticion a la base de datos
+
+            if (mensaje[0] == '1')
+                msj="Su petición fue ingresada correctamente.";
+            else
+                msj="Error: " + mensaje;
+            return msj;
         }
 
         public void datosCliente(Label lbl_cedula, Label lbl_nombre, Label lbl_apellido)
@@ -106,16 +113,5 @@ namespace Control
         /*--------------------------Enviar a Base de Datos-------------------------------*/
 
         Datos_Peticion datosPeticion = new Datos_Peticion();
-
-        // Guardar la petición en la Base de Datos
-        private void guardarPeticionBDD(Peticion peticion)
-        {
-            string mensaje = "";
-            mensaje = datosPeticion.insetar(peticion);
-            if (mensaje[0] == '1')
-                MessageBox.Show("Su petición fue ingresada correctamente.");
-            else
-                MessageBox.Show("Error: " + mensaje);
-        }
     }
 }

@@ -7,9 +7,11 @@ namespace Model {
     public class Secretaria : Persona{
 
         // Variables
+        private int id_secretaria;
         private Usuario usuario;
 
         public Secretaria () : base () {
+            this.id_secretaria = 0;
             this.usuario = null;
         }
 
@@ -18,6 +20,7 @@ namespace Model {
         }
 
         public Usuario Usuario { get => usuario; set => usuario = value; }
+        public int Id_secretaria { get => id_secretaria; set => id_secretaria = value; }
 
         public override string ToString () {
             return

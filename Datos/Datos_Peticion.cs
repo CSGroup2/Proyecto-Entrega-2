@@ -33,7 +33,7 @@ namespace Datos
             return ced;
         }
 
-        public string insetar(Peticion peticion)
+        public string insetarPeticion(Peticion peticion)
         {
             string msj = "";
             SqlConnection conexion = con.abrir_conexion();

@@ -23,8 +23,7 @@ namespace Model {
         }
 
         // Constructor: Parameterized
-        public Asignacion_Cabecera (int id_asignacion_cabecera, Peticion peticion, Secretaria secretaria, string condicion, List<Asignacion_Detalle> asignacion_detalle) {
-            this.id_asignacion_cabecera = id_asignacion_cabecera;
+        public Asignacion_Cabecera (Peticion peticion, Secretaria secretaria, string condicion,List<Asignacion_Detalle> asignacion_detalle) {
             this.peticion = peticion;
             this.secretaria = secretaria;
             this.condicion = condicion;
