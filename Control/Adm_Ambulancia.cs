@@ -60,11 +60,6 @@ namespace Control
                 errorP.SetError(txtPlaca, "La placa debe contener de 3 letras y 3-4 dígitos");
                 no_error = false;
             }
-            if (dAmbulancia.ConsultarPlaca(placa))
-            {
-                errorP.SetError(txtPlaca, "La placa ya está registrada");
-                no_error = false;
-            }
             if (String.IsNullOrEmpty(txtModelo.Text))
             {
                 errorP.SetError(txtModelo, "Ingrese el modelo de la ambulancia");
@@ -97,7 +92,7 @@ namespace Control
         public string InsertarDatosAmbulancia(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
             string msj = "";
-            if (dAmbulancia.ConsultarPlaca(placa) == true)
+            if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
                 a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
                 Ambulancias.Add(a);
