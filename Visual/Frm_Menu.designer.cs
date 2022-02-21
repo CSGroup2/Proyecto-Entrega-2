@@ -48,9 +48,9 @@ namespace Visual {
             this.btnclientereg = new FontAwesome.Sharp.IconButton();
             this.btncliente = new FontAwesome.Sharp.IconButton();
             this.pnsubmgerente = new System.Windows.Forms.Panel();
-            this.btnmodigerente = new FontAwesome.Sharp.IconButton();
-            this.btnconsulgerente = new FontAwesome.Sharp.IconButton();
-            this.btnreggerente = new FontAwesome.Sharp.IconButton();
+            this.btnmodisecretaria = new FontAwesome.Sharp.IconButton();
+            this.btnconsulsecretaria = new FontAwesome.Sharp.IconButton();
+            this.btnregsecretaria = new FontAwesome.Sharp.IconButton();
             this.btnsecretaria = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbltipo = new System.Windows.Forms.Label();
@@ -490,73 +490,72 @@ namespace Visual {
             // pnsubmgerente
             // 
             this.pnsubmgerente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
-            this.pnsubmgerente.Controls.Add(this.btnmodigerente);
-            this.pnsubmgerente.Controls.Add(this.btnconsulgerente);
-            this.pnsubmgerente.Controls.Add(this.btnreggerente);
+            this.pnsubmgerente.Controls.Add(this.btnmodisecretaria);
+            this.pnsubmgerente.Controls.Add(this.btnconsulsecretaria);
+            this.pnsubmgerente.Controls.Add(this.btnregsecretaria);
             this.pnsubmgerente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmgerente.Location = new System.Drawing.Point(0, 194);
             this.pnsubmgerente.Name = "pnsubmgerente";
             this.pnsubmgerente.Size = new System.Drawing.Size(242, 127);
             this.pnsubmgerente.TabIndex = 6;
             // 
-            // btnmodigerente
+            // btnmodisecretaria
             // 
-            this.btnmodigerente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnmodigerente.FlatAppearance.BorderSize = 0;
-            this.btnmodigerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmodigerente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmodigerente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnmodigerente.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnmodigerente.IconColor = System.Drawing.Color.Black;
-            this.btnmodigerente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnmodigerente.Location = new System.Drawing.Point(0, 82);
-            this.btnmodigerente.Name = "btnmodigerente";
-            this.btnmodigerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodigerente.Size = new System.Drawing.Size(242, 41);
-            this.btnmodigerente.TabIndex = 2;
-            this.btnmodigerente.Text = "Modificar";
-            this.btnmodigerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmodigerente.UseVisualStyleBackColor = true;
+            this.btnmodisecretaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnmodisecretaria.FlatAppearance.BorderSize = 0;
+            this.btnmodisecretaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmodisecretaria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmodisecretaria.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnmodisecretaria.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnmodisecretaria.IconColor = System.Drawing.Color.Black;
+            this.btnmodisecretaria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnmodisecretaria.Location = new System.Drawing.Point(0, 82);
+            this.btnmodisecretaria.Name = "btnmodisecretaria";
+            this.btnmodisecretaria.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnmodisecretaria.Size = new System.Drawing.Size(242, 41);
+            this.btnmodisecretaria.TabIndex = 2;
+            this.btnmodisecretaria.Text = "Modificar";
+            this.btnmodisecretaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmodisecretaria.UseVisualStyleBackColor = true;
             // 
-            // btnconsulgerente
+            // btnconsulsecretaria
             // 
-            this.btnconsulgerente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnconsulgerente.FlatAppearance.BorderSize = 0;
-            this.btnconsulgerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconsulgerente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconsulgerente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnconsulgerente.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnconsulgerente.IconColor = System.Drawing.Color.Black;
-            this.btnconsulgerente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnconsulgerente.Location = new System.Drawing.Point(0, 41);
-            this.btnconsulgerente.Name = "btnconsulgerente";
-            this.btnconsulgerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulgerente.Size = new System.Drawing.Size(242, 41);
-            this.btnconsulgerente.TabIndex = 1;
-            this.btnconsulgerente.Text = "Consultar";
-            this.btnconsulgerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnconsulgerente.UseVisualStyleBackColor = true;
-            this.btnconsulgerente.Click += new System.EventHandler(this.btnconsulgerente_Click);
+            this.btnconsulsecretaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnconsulsecretaria.FlatAppearance.BorderSize = 0;
+            this.btnconsulsecretaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnconsulsecretaria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnconsulsecretaria.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnconsulsecretaria.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnconsulsecretaria.IconColor = System.Drawing.Color.Black;
+            this.btnconsulsecretaria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnconsulsecretaria.Location = new System.Drawing.Point(0, 41);
+            this.btnconsulsecretaria.Name = "btnconsulsecretaria";
+            this.btnconsulsecretaria.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnconsulsecretaria.Size = new System.Drawing.Size(242, 41);
+            this.btnconsulsecretaria.TabIndex = 1;
+            this.btnconsulsecretaria.Text = "Consultar";
+            this.btnconsulsecretaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnconsulsecretaria.UseVisualStyleBackColor = true;
             // 
-            // btnreggerente
+            // btnregsecretaria
             // 
-            this.btnreggerente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnreggerente.FlatAppearance.BorderSize = 0;
-            this.btnreggerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnreggerente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnreggerente.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnreggerente.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnreggerente.IconColor = System.Drawing.Color.Black;
-            this.btnreggerente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnreggerente.Location = new System.Drawing.Point(0, 0);
-            this.btnreggerente.Name = "btnreggerente";
-            this.btnreggerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnreggerente.Size = new System.Drawing.Size(242, 41);
-            this.btnreggerente.TabIndex = 0;
-            this.btnreggerente.Text = "Registrar";
-            this.btnreggerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnreggerente.UseVisualStyleBackColor = true;
-            this.btnreggerente.Click += new System.EventHandler(this.btnreggerente_Click);
+            this.btnregsecretaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnregsecretaria.FlatAppearance.BorderSize = 0;
+            this.btnregsecretaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregsecretaria.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregsecretaria.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnregsecretaria.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnregsecretaria.IconColor = System.Drawing.Color.Black;
+            this.btnregsecretaria.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnregsecretaria.Location = new System.Drawing.Point(0, 0);
+            this.btnregsecretaria.Name = "btnregsecretaria";
+            this.btnregsecretaria.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
+            this.btnregsecretaria.Size = new System.Drawing.Size(242, 41);
+            this.btnregsecretaria.TabIndex = 0;
+            this.btnregsecretaria.Text = "Registrar";
+            this.btnregsecretaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnregsecretaria.UseVisualStyleBackColor = true;
+            this.btnregsecretaria.Click += new System.EventHandler(this.btnregsecretaria_Click);
             // 
             // btnsecretaria
             // 
@@ -578,7 +577,7 @@ namespace Visual {
             this.btnsecretaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnsecretaria.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnsecretaria.UseVisualStyleBackColor = true;
-            this.btnsecretaria.Click += new System.EventHandler(this.btngerente_Click);
+            this.btnsecretaria.Click += new System.EventHandler(this.btnsecretaria_Click);
             // 
             // panel2
             // 
@@ -748,9 +747,9 @@ namespace Visual {
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton btncliente;
         private System.Windows.Forms.Panel pnsubmgerente;
-        private FontAwesome.Sharp.IconButton btnmodigerente;
-        private FontAwesome.Sharp.IconButton btnconsulgerente;
-        private FontAwesome.Sharp.IconButton btnreggerente;
+        private FontAwesome.Sharp.IconButton btnmodisecretaria;
+        private FontAwesome.Sharp.IconButton btnconsulsecretaria;
+        private FontAwesome.Sharp.IconButton btnregsecretaria;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnhijo;
         private FontAwesome.Sharp.IconButton btnambulancia;
