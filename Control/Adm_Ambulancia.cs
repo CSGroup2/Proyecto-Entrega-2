@@ -89,12 +89,12 @@ namespace Control
         }
 
         //método para receptar los datos y guardar en la BD
-        public string InsertarDatosAmbulancia(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
+        public string InsertarDatosAmbulancia(string placa, string modelo, int tipoA, int capacidad, string observacion)
         {
             string msj = "";
             if (dAmbulancia.ConsultarPlaca(placa) == false)
             {
-                a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
+                a = new Ambulancia(1, placa, modelo, tipoA, capacidad, observacion, 1);
                 Ambulancias.Add(a);
                 msj = dAmbulancia.InsertarAmbulancia(a);
             }

@@ -139,42 +139,28 @@ namespace Visual {
             //switch (Usuario_Cache.Tipo) {
             switch (admLogin.TipoUsuario ()) {
                 case "Gerente":
-                    btngerente.Visible = false;
-                    btnregistrar.Visible = false;
+                    btnpeticion.Visible = false; 
                     break;
                 case "Cliente":
-                    btngerente.Visible = false;
+                    btnsecretaria.Visible = false;
                     btncliente.Visible = false;
                     btnambulancia.Visible = false;
                     btnconductor.Visible = false;
                     btnasignar.Visible = false;
+                    break;
+                case "Secretaria":
+                    btnsecretaria.Visible = false;
+                    btncliente.Visible = false;
+                    btnambulancia.Visible = false;
+                    btnconductor.Visible = false;
+                    btnregistrar.Visible = false;
                     break;
                 default:
                     break;
             }
         }
 
-        private void btngerente_Click (object sender, EventArgs e) {
-            showsubmenu (pnsubmgerente);
-            ActivarBoton (sender, RGBCOLORS.azulbajo);
-        }
-
-        private void btnreggerente_Click (object sender, EventArgs e) {
-            //abrirhijoform (new FrmGerenteReg ());
-            /*
-             codigo pa abrir los demas form
-             */
-            hidesubmenu ();
-        }
-
-        private void btnconsulgerente_Click (object sender, EventArgs e) {
-            //abrirhijoform (new FrmGerenteConsul ());
-            /*
-             codigo pa abrir los demas form
-             */
-            hidesubmenu ();
-        }
-
+    
         private void btncliente_Click (object sender, EventArgs e) {
             showsubmenu (pnsubmcliente);
             ActivarBoton (sender, RGBCOLORS.azulbajo);
@@ -270,6 +256,17 @@ namespace Visual {
         private void btnasignar_Click(object sender, EventArgs e)
         {
             abrirhijoform(new Frm_Asignacion_Registrar());
+        }
+
+        private void btnsecretaria_Click(object sender, EventArgs e)
+        {
+            showsubmenu(pnsubmgerente);
+            ActivarBoton(sender, RGBCOLORS.azulbajo);
+        }
+
+        private void btnregsecretaria_Click(object sender, EventArgs e)
+        {
+            abrirhijoform(new Frm_Secretaria_Registrar());
         }
     }
 }

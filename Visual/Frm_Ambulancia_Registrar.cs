@@ -63,7 +63,7 @@ namespace Visual {
                 string placa = txtPlaca.Text.ToUpper(), modelo = txtModelo.Text, observacion = txtObservacion.Text;
                 int capacidad = Int32.Parse(txtCapacidad.Text), tipoA = cmbTipo.SelectedIndex;
                 errorP.Clear();
-                msj = admA.InsertarDatosAmbulancia(1, placa, modelo, tipoA, capacidad, observacion, 1);
+                msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
                 MessageBox.Show(msj);
             }
 

@@ -26,7 +26,12 @@ namespace Datos {
                 "inner join PERSONA as pers " +
                 "on pers.ID_PERSONA = cl.ID_PERSONA " +
                 "inner join USUARIO as us " +
-                "on us.ID_USUARIO = cl.ID_USUARIO) as resul " +
+                "on us.ID_USUARIO = cl.ID_USUARIO " +
+                "UNION " +
+                "select 'Secretaria', sctria.ID_SECRETARIA,  pers.NOMBRE_1, pers.APELLIDO_1, us.NOMBRE_USUARIO, us.CORREO, us.CONTRASENIA " +
+                "from SECRETARIA as sctria " +
+                "inner join PERSONA as pers on pers.ID_PERSONA = sctria.ID_PERSONA " +
+                "inner join USUARIO as us on us.ID_USUARIO = sctria.ID_USUARIO ) as resul " +
                 "where resul.NOMBRE_USUARIO = @nombre_usuario and resul.CONTRASENIA = @contrasenia ";
 
             SqlCommand comando = new SqlCommand (sentencia, c1); //Para ejecutar 

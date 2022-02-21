@@ -8,30 +8,29 @@ namespace SGAR_TEST
     public class Adm_Peticion_Test
     {
         [TestMethod]
-        public void dfdfsd()
+        public void guardarPeticion_PeticionNueva()
         {
-            var admA = new Adm_Ambulancia();
-            int id_ambulancia = 1, tipoA = 2, capacidad = 3, disponibilidad = 1;
-            string placa = "AAC123", modelo = "modeloxtest", observacion = "NN", msj = "";
-            //
+            /*var admP = new Adm_Peticion();
+            string cantAmb = "2", tipo_ambulancia = "2", punto_Origen = "Clínica Kennedy", punto_Destino = "Hospital del niño", msj = "";
+            
 
-            msj = admA.InsertarDatosAmbulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
+            msj = admP.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
 
 
-            Assert.AreEqual("La ambulancia ya está registrada", msj);
+            Assert.AreEqual("Su petición fue ingresada correctamente.", msj);*/
         }
 
-        [TestMethod]
-        public void InsertarDatosAmbulancia_AmbulanciaNueva()
+        /*[TestMethod]
+        public void guardarPeticion_ErrorConsulta()
         {
             var admA = new Adm_Ambulancia();
-            int id_ambulancia = 1, tipoA = 1, capacidad = 2, disponibilidad = 1;
-            string placa = "ABC234", modelo = "modeloxtest2", observacion = "NN", msj = "";
+            int tipoA = 1, capacidad = 2;
+            string placa = "ABC567", modelo = "modeloxtest2", observacion = "NN", msj = "";
 
-            msj = admA.InsertarDatosAmbulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
+            msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
 
 
             Assert.AreEqual("Los datos se insertaron exitosamente", msj);
-        }
+        }*/
     }
 }
