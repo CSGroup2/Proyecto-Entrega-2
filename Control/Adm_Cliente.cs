@@ -42,6 +42,17 @@ namespace Control
             return adm_client;
         }
 
+        public void LlenarComboTipoAmbulancia(ComboBox cmbTipo)
+        {
+            cmbTipo.Items.Clear();
+            cmbTipo.DataSource = dAmbulancia.ConsultarTipo();
+            cmbTipo.ValueMember = "ID_TIPO_AMBULANCIA";
+            cmbTipo.DisplayMember = "NOMBRE_TIPO_AMBULANCIA";
+
+        }
+
+
+        #region Validaciones
         // Methods for KeyPress
         public void validarSoloNumerosKeyPress(object sender, KeyPressEventArgs e)
         {
@@ -60,7 +71,7 @@ namespace Control
             // Only allows eamil characters
             validacion.validarSoloCorreoKeypress(sender, e);
         }
-
+        #endregion 
 
 
     }
