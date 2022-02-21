@@ -97,7 +97,7 @@ namespace Visual {
             this.pnlateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlateral.Location = new System.Drawing.Point(0, 0);
             this.pnlateral.Name = "pnlateral";
-            this.pnlateral.Size = new System.Drawing.Size(234, 631);
+            this.pnlateral.Size = new System.Drawing.Size(259, 631);
             this.pnlateral.TabIndex = 0;
             // 
             // pnsubmenupeticion
@@ -108,7 +108,7 @@ namespace Visual {
             this.pnsubmenupeticion.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmenupeticion.Location = new System.Drawing.Point(0, 918);
             this.pnsubmenupeticion.Name = "pnsubmenupeticion";
-            this.pnsubmenupeticion.Size = new System.Drawing.Size(217, 89);
+            this.pnsubmenupeticion.Size = new System.Drawing.Size(242, 89);
             this.pnsubmenupeticion.TabIndex = 14;
             // 
             // panel3
@@ -117,7 +117,7 @@ namespace Visual {
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 1007);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(217, 100);
+            this.panel3.Size = new System.Drawing.Size(242, 100);
             this.panel3.TabIndex = 13;
             // 
             // pnsubmconductor
@@ -129,7 +129,7 @@ namespace Visual {
             this.pnsubmconductor.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmconductor.Location = new System.Drawing.Point(0, 737);
             this.pnsubmconductor.Name = "pnsubmconductor";
-            this.pnsubmconductor.Size = new System.Drawing.Size(217, 127);
+            this.pnsubmconductor.Size = new System.Drawing.Size(242, 127);
             this.pnsubmconductor.TabIndex = 10;
             // 
             // pnsubmambulancia
@@ -141,7 +141,7 @@ namespace Visual {
             this.pnsubmambulancia.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmambulancia.Location = new System.Drawing.Point(0, 556);
             this.pnsubmambulancia.Name = "pnsubmambulancia";
-            this.pnsubmambulancia.Size = new System.Drawing.Size(217, 127);
+            this.pnsubmambulancia.Size = new System.Drawing.Size(242, 127);
             this.pnsubmambulancia.TabIndex = 9;
             // 
             // pnsubmcliente
@@ -153,7 +153,7 @@ namespace Visual {
             this.pnsubmcliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmcliente.Location = new System.Drawing.Point(0, 375);
             this.pnsubmcliente.Name = "pnsubmcliente";
-            this.pnsubmcliente.Size = new System.Drawing.Size(217, 127);
+            this.pnsubmcliente.Size = new System.Drawing.Size(242, 127);
             this.pnsubmcliente.TabIndex = 8;
             // 
             // pnsubmgerente
@@ -165,7 +165,7 @@ namespace Visual {
             this.pnsubmgerente.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnsubmgerente.Location = new System.Drawing.Point(0, 194);
             this.pnsubmgerente.Name = "pnsubmgerente";
-            this.pnsubmgerente.Size = new System.Drawing.Size(217, 127);
+            this.pnsubmgerente.Size = new System.Drawing.Size(242, 127);
             this.pnsubmgerente.TabIndex = 6;
             // 
             // panel2
@@ -177,7 +177,7 @@ namespace Visual {
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(217, 140);
+            this.panel2.Size = new System.Drawing.Size(242, 140);
             this.panel2.TabIndex = 0;
             // 
             // lbltipo
@@ -220,9 +220,9 @@ namespace Visual {
             this.panel1.Controls.Add(this.lblfecha);
             this.panel1.Controls.Add(this.lblhora);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(234, 576);
+            this.panel1.Location = new System.Drawing.Point(259, 576);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 55);
+            this.panel1.Size = new System.Drawing.Size(690, 55);
             this.panel1.TabIndex = 1;
             // 
             // lblfecha
@@ -253,9 +253,9 @@ namespace Visual {
             this.pnhijo.Controls.Add(this.label2);
             this.pnhijo.Controls.Add(this.pictureBox2);
             this.pnhijo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnhijo.Location = new System.Drawing.Point(234, 0);
+            this.pnhijo.Location = new System.Drawing.Point(259, 0);
             this.pnhijo.Name = "pnhijo";
-            this.pnhijo.Size = new System.Drawing.Size(662, 576);
+            this.pnhijo.Size = new System.Drawing.Size(690, 576);
             this.pnhijo.TabIndex = 2;
             // 
             // label2
@@ -283,7 +283,7 @@ namespace Visual {
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(166, 117);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(336, 333);
+            this.pictureBox2.Size = new System.Drawing.Size(364, 333);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
@@ -300,7 +300,7 @@ namespace Visual {
             this.btnasignar.Location = new System.Drawing.Point(0, 41);
             this.btnasignar.Name = "btnasignar";
             this.btnasignar.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnasignar.Size = new System.Drawing.Size(217, 41);
+            this.btnasignar.Size = new System.Drawing.Size(242, 41);
             this.btnasignar.TabIndex = 5;
             this.btnasignar.Text = "Asignar";
             this.btnasignar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,7 +320,7 @@ namespace Visual {
             this.btnregistrar.Location = new System.Drawing.Point(0, 0);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnregistrar.Size = new System.Drawing.Size(217, 41);
+            this.btnregistrar.Size = new System.Drawing.Size(242, 41);
             this.btnregistrar.TabIndex = 3;
             this.btnregistrar.Text = "Registrar";
             this.btnregistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -364,7 +364,7 @@ namespace Visual {
             this.btnpeticion.Location = new System.Drawing.Point(0, 864);
             this.btnpeticion.Name = "btnpeticion";
             this.btnpeticion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnpeticion.Size = new System.Drawing.Size(217, 54);
+            this.btnpeticion.Size = new System.Drawing.Size(242, 54);
             this.btnpeticion.TabIndex = 11;
             this.btnpeticion.Text = "Peticiones";
             this.btnpeticion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -385,7 +385,7 @@ namespace Visual {
             this.btnmodiconductor.Location = new System.Drawing.Point(0, 82);
             this.btnmodiconductor.Name = "btnmodiconductor";
             this.btnmodiconductor.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodiconductor.Size = new System.Drawing.Size(217, 41);
+            this.btnmodiconductor.Size = new System.Drawing.Size(242, 41);
             this.btnmodiconductor.TabIndex = 5;
             this.btnmodiconductor.Text = "Modificar";
             this.btnmodiconductor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -405,7 +405,7 @@ namespace Visual {
             this.btnconsulconduc.Location = new System.Drawing.Point(0, 41);
             this.btnconsulconduc.Name = "btnconsulconduc";
             this.btnconsulconduc.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulconduc.Size = new System.Drawing.Size(217, 41);
+            this.btnconsulconduc.Size = new System.Drawing.Size(242, 41);
             this.btnconsulconduc.TabIndex = 4;
             this.btnconsulconduc.Text = "Consultar";
             this.btnconsulconduc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -425,7 +425,7 @@ namespace Visual {
             this.btnregconduc.Location = new System.Drawing.Point(0, 0);
             this.btnregconduc.Name = "btnregconduc";
             this.btnregconduc.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnregconduc.Size = new System.Drawing.Size(217, 41);
+            this.btnregconduc.Size = new System.Drawing.Size(242, 41);
             this.btnregconduc.TabIndex = 3;
             this.btnregconduc.Text = "Registrar";
             this.btnregconduc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -446,7 +446,7 @@ namespace Visual {
             this.btnconductor.Location = new System.Drawing.Point(0, 683);
             this.btnconductor.Name = "btnconductor";
             this.btnconductor.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnconductor.Size = new System.Drawing.Size(217, 54);
+            this.btnconductor.Size = new System.Drawing.Size(242, 54);
             this.btnconductor.TabIndex = 10;
             this.btnconductor.Text = "Conductor";
             this.btnconductor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -467,7 +467,7 @@ namespace Visual {
             this.btnmodifiambulancia.Location = new System.Drawing.Point(0, 82);
             this.btnmodifiambulancia.Name = "btnmodifiambulancia";
             this.btnmodifiambulancia.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodifiambulancia.Size = new System.Drawing.Size(217, 41);
+            this.btnmodifiambulancia.Size = new System.Drawing.Size(242, 41);
             this.btnmodifiambulancia.TabIndex = 5;
             this.btnmodifiambulancia.Text = "Modificar";
             this.btnmodifiambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -487,7 +487,7 @@ namespace Visual {
             this.btnconsulambulancia.Location = new System.Drawing.Point(0, 41);
             this.btnconsulambulancia.Name = "btnconsulambulancia";
             this.btnconsulambulancia.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulambulancia.Size = new System.Drawing.Size(217, 41);
+            this.btnconsulambulancia.Size = new System.Drawing.Size(242, 41);
             this.btnconsulambulancia.TabIndex = 4;
             this.btnconsulambulancia.Text = "Consultar";
             this.btnconsulambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -507,7 +507,7 @@ namespace Visual {
             this.btnregambulancia.Location = new System.Drawing.Point(0, 0);
             this.btnregambulancia.Name = "btnregambulancia";
             this.btnregambulancia.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnregambulancia.Size = new System.Drawing.Size(217, 41);
+            this.btnregambulancia.Size = new System.Drawing.Size(242, 41);
             this.btnregambulancia.TabIndex = 3;
             this.btnregambulancia.Text = "Registrar";
             this.btnregambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -528,7 +528,7 @@ namespace Visual {
             this.btnambulancia.Location = new System.Drawing.Point(0, 502);
             this.btnambulancia.Name = "btnambulancia";
             this.btnambulancia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnambulancia.Size = new System.Drawing.Size(217, 54);
+            this.btnambulancia.Size = new System.Drawing.Size(242, 54);
             this.btnambulancia.TabIndex = 9;
             this.btnambulancia.Text = "Ambulancia";
             this.btnambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -549,7 +549,7 @@ namespace Visual {
             this.btnclientemodi.Location = new System.Drawing.Point(0, 82);
             this.btnclientemodi.Name = "btnclientemodi";
             this.btnclientemodi.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnclientemodi.Size = new System.Drawing.Size(217, 41);
+            this.btnclientemodi.Size = new System.Drawing.Size(242, 41);
             this.btnclientemodi.TabIndex = 5;
             this.btnclientemodi.Text = "Modificar";
             this.btnclientemodi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -569,7 +569,7 @@ namespace Visual {
             this.btnclienteconsul.Location = new System.Drawing.Point(0, 41);
             this.btnclienteconsul.Name = "btnclienteconsul";
             this.btnclienteconsul.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnclienteconsul.Size = new System.Drawing.Size(217, 41);
+            this.btnclienteconsul.Size = new System.Drawing.Size(242, 41);
             this.btnclienteconsul.TabIndex = 4;
             this.btnclienteconsul.Text = "Consultar";
             this.btnclienteconsul.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -589,7 +589,7 @@ namespace Visual {
             this.btnclientereg.Location = new System.Drawing.Point(0, 0);
             this.btnclientereg.Name = "btnclientereg";
             this.btnclientereg.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnclientereg.Size = new System.Drawing.Size(217, 41);
+            this.btnclientereg.Size = new System.Drawing.Size(242, 41);
             this.btnclientereg.TabIndex = 3;
             this.btnclientereg.Text = "Registrar";
             this.btnclientereg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -610,7 +610,7 @@ namespace Visual {
             this.btncliente.Location = new System.Drawing.Point(0, 321);
             this.btncliente.Name = "btncliente";
             this.btncliente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btncliente.Size = new System.Drawing.Size(217, 54);
+            this.btncliente.Size = new System.Drawing.Size(242, 54);
             this.btncliente.TabIndex = 7;
             this.btncliente.Text = "Cliente";
             this.btncliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -631,7 +631,7 @@ namespace Visual {
             this.btnmodigerente.Location = new System.Drawing.Point(0, 82);
             this.btnmodigerente.Name = "btnmodigerente";
             this.btnmodigerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnmodigerente.Size = new System.Drawing.Size(217, 41);
+            this.btnmodigerente.Size = new System.Drawing.Size(242, 41);
             this.btnmodigerente.TabIndex = 2;
             this.btnmodigerente.Text = "Modificar";
             this.btnmodigerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -650,7 +650,7 @@ namespace Visual {
             this.btnconsulgerente.Location = new System.Drawing.Point(0, 41);
             this.btnconsulgerente.Name = "btnconsulgerente";
             this.btnconsulgerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnconsulgerente.Size = new System.Drawing.Size(217, 41);
+            this.btnconsulgerente.Size = new System.Drawing.Size(242, 41);
             this.btnconsulgerente.TabIndex = 1;
             this.btnconsulgerente.Text = "Consultar";
             this.btnconsulgerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -670,7 +670,7 @@ namespace Visual {
             this.btnreggerente.Location = new System.Drawing.Point(0, 0);
             this.btnreggerente.Name = "btnreggerente";
             this.btnreggerente.Padding = new System.Windows.Forms.Padding(55, 0, 0, 0);
-            this.btnreggerente.Size = new System.Drawing.Size(217, 41);
+            this.btnreggerente.Size = new System.Drawing.Size(242, 41);
             this.btnreggerente.TabIndex = 0;
             this.btnreggerente.Text = "Registrar";
             this.btnreggerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -691,7 +691,7 @@ namespace Visual {
             this.btngerente.Location = new System.Drawing.Point(0, 140);
             this.btngerente.Name = "btngerente";
             this.btngerente.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btngerente.Size = new System.Drawing.Size(217, 54);
+            this.btngerente.Size = new System.Drawing.Size(242, 54);
             this.btngerente.TabIndex = 1;
             this.btngerente.Text = "Gerente";
             this.btngerente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -713,7 +713,7 @@ namespace Visual {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 631);
+            this.ClientSize = new System.Drawing.Size(949, 631);
             this.Controls.Add(this.pnhijo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlateral);

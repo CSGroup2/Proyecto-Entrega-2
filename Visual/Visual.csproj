@@ -175,6 +175,12 @@
     <Compile Include="Frm_Login_Saludo.designer.cs">
       <DependentUpon>Frm_Login_Saludo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Secretaria_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Secretaria_Registrar.Designer.cs">
+      <DependentUpon>Frm_Secretaria_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Ambulancia_Consulta.resx">
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login_Saludo.resx">
       <DependentUpon>Frm_Login_Saludo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Secretaria_Registrar.resx">
+      <DependentUpon>Frm_Secretaria_Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

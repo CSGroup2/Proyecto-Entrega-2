@@ -18,8 +18,12 @@ namespace Control {
        */
 
         private static Adm_Conductor adm = null;    // 1.
-        Validacion v = null;
+        List<Conductor> lista_conductor = null;
         Conductor conductor = null;
+        Validacion v = null;
+        Persona persona = null;
+        Datos_Conductor datos_conductor = null;
+
 
         Datos_Conductor dConductor = new Datos_Conductor();
 
@@ -27,8 +31,10 @@ namespace Control {
 
         // Constructor: Adm_Login
         private Adm_Conductor () {                  // 2.
+            lista_conductor = new List<Conductor> ();
             conductor = new Conductor ();
             v = new Validacion ();
+            datos_conductor = new Datos_Conductor ();
         }
 
         // Getter: GetAdm
@@ -38,6 +44,8 @@ namespace Control {
             }
             return adm;
         }
+
+
 
         /*---------------------Frm_Conductor_Consultar---------------------------------*/
 
@@ -63,7 +71,7 @@ namespace Control {
 
         public void Leer_Lettras_KeyPress (object sender, KeyPressEventArgs e) {
             // Only allows alphabetic characters
-            v.Validar_Letras_KeyPress (sender, e);  
+            v.Validar_Letras_KeyPress (sender, e);
         }
 
         public void Leer_Correo_Keypress (object sender, KeyPressEventArgs e) {
@@ -75,6 +83,24 @@ namespace Control {
         public void Guardar (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
             errorProvider1.Clear ();
             if (v.EsCorrectoGuardar (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1)) {
+                string
+                    cedula = txt_Cedula.Text.Trim (),
+                    nombre1 = txt_Nombre1.Text.Trim (),
+                    nombre2 = txt_Nombre2.Text.Trim (),
+                    apellido1 = txt_Apellido1.Text.Trim (),
+                    apellido2 = txt_Apellido2.Text.Trim (),
+                    correo = txt_Correo.Text.Trim (),
+                    telefono = txt_Telefono.Text.Trim (), sexo = "";
+                if (rdb_Masculino.Checked) {
+                    sexo = "Masculino";
+                } else if (rdb_Femenino.Checked) {
+                    sexo = "Femenino";
+                }
+                DateTime
+                    fecha_nac = dtp_FechaNac.Value.Date,
+                    fecha_contrato = dtp_FechaContrato.Value.Date;
+                conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
+                string mensaje = datos_conductor.Insertar_Datos_Conductor (conductor);
 
             }
         }
