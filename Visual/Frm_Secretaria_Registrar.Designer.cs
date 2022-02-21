@@ -29,49 +29,52 @@ namespace Visual
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnguardar = new FontAwesome.Sharp.IconButton();
-            this.btncancelar = new FontAwesome.Sharp.IconButton();
-            this.btnlimpiar = new FontAwesome.Sharp.IconButton();
+            this.btn_Guardar = new FontAwesome.Sharp.IconButton();
+            this.btn_Cancelar = new FontAwesome.Sharp.IconButton();
+            this.btn_Limpiar = new FontAwesome.Sharp.IconButton();
             this.pncontenido = new System.Windows.Forms.Panel();
             this.dtp_FechaContrato = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_Contrasenia2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtrcontra = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txt_Contrasenia1 = new System.Windows.Forms.TextBox();
+            this.txt_NombreUsuario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txt_Correo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_Telefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.daterfechanac = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaNac = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
-            this.oprfemenino = new System.Windows.Forms.RadioButton();
-            this.oprmasculino = new System.Windows.Forms.RadioButton();
+            this.rdb_Femenino = new System.Windows.Forms.RadioButton();
+            this.rdb_Masculino = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_Apellido2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_Apellido1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_Cedula = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gboxnombres = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_Nombre2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Nombre1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel2.SuspendLayout();
             this.pncontenido.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gboxnombres.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,9 +82,9 @@ namespace Visual
             this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.BackgroundImage = global::Visual.Properties.Resources._8;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.btnguardar);
-            this.panel2.Controls.Add(this.btncancelar);
-            this.panel2.Controls.Add(this.btnlimpiar);
+            this.panel2.Controls.Add(this.btn_Guardar);
+            this.panel2.Controls.Add(this.btn_Cancelar);
+            this.panel2.Controls.Add(this.btn_Limpiar);
             this.panel2.Controls.Add(this.pncontenido);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 85);
@@ -89,62 +92,62 @@ namespace Visual
             this.panel2.Size = new System.Drawing.Size(690, 491);
             this.panel2.TabIndex = 5;
             // 
-            // btnguardar
+            // btn_Guardar
             // 
-            this.btnguardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnguardar.FlatAppearance.BorderSize = 0;
-            this.btnguardar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnguardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            this.btnguardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnguardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnguardar.Location = new System.Drawing.Point(24, 416);
-            this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnguardar.Size = new System.Drawing.Size(183, 52);
-            this.btnguardar.TabIndex = 15;
-            this.btnguardar.Text = "Guardar";
-            this.btnguardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnguardar.UseVisualStyleBackColor = true;
-            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
+            this.btn_Guardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Guardar.FlatAppearance.BorderSize = 0;
+            this.btn_Guardar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Guardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btn_Guardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btn_Guardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btn_Guardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Guardar.Location = new System.Drawing.Point(24, 416);
+            this.btn_Guardar.Name = "btn_Guardar";
+            this.btn_Guardar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Guardar.Size = new System.Drawing.Size(183, 52);
+            this.btn_Guardar.TabIndex = 15;
+            this.btn_Guardar.Text = "Guardar";
+            this.btn_Guardar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
-            // btncancelar
+            // btn_Cancelar
             // 
-            this.btncancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btncancelar.FlatAppearance.BorderSize = 0;
-            this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
-            this.btncancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btncancelar.Location = new System.Drawing.Point(240, 416);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btncancelar.Size = new System.Drawing.Size(214, 52);
-            this.btncancelar.TabIndex = 12;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btncancelar.UseVisualStyleBackColor = true;
-            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            this.btn_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btn_Cancelar.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btn_Cancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btn_Cancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Cancelar.Location = new System.Drawing.Point(240, 416);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Cancelar.Size = new System.Drawing.Size(214, 52);
+            this.btn_Cancelar.TabIndex = 12;
+            this.btn_Cancelar.Text = "Cancelar";
+            this.btn_Cancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // btnlimpiar
+            // btn_Limpiar
             // 
-            this.btnlimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnlimpiar.FlatAppearance.BorderSize = 0;
-            this.btnlimpiar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnlimpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
-            this.btnlimpiar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
-            this.btnlimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnlimpiar.Location = new System.Drawing.Point(479, 416);
-            this.btnlimpiar.Name = "btnlimpiar";
-            this.btnlimpiar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnlimpiar.Size = new System.Drawing.Size(183, 52);
-            this.btnlimpiar.TabIndex = 11;
-            this.btnlimpiar.Text = "Limpiar";
-            this.btnlimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnlimpiar.UseVisualStyleBackColor = true;
-            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
+            this.btn_Limpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Limpiar.FlatAppearance.BorderSize = 0;
+            this.btn_Limpiar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Limpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btn_Limpiar.IconChar = FontAwesome.Sharp.IconChar.Eraser;
+            this.btn_Limpiar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btn_Limpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_Limpiar.Location = new System.Drawing.Point(479, 416);
+            this.btn_Limpiar.Name = "btn_Limpiar";
+            this.btn_Limpiar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btn_Limpiar.Size = new System.Drawing.Size(183, 52);
+            this.btn_Limpiar.TabIndex = 11;
+            this.btn_Limpiar.Text = "Limpiar";
+            this.btn_Limpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btn_Limpiar.UseVisualStyleBackColor = true;
+            this.btn_Limpiar.Click += new System.EventHandler(this.btn_Limpiar_Click);
             // 
             // pncontenido
             // 
@@ -152,17 +155,17 @@ namespace Visual
             this.pncontenido.Controls.Add(this.dtp_FechaContrato);
             this.pncontenido.Controls.Add(this.label13);
             this.pncontenido.Controls.Add(this.groupBox2);
-            this.pncontenido.Controls.Add(this.textBox7);
+            this.pncontenido.Controls.Add(this.txt_Correo);
             this.pncontenido.Controls.Add(this.label10);
-            this.pncontenido.Controls.Add(this.textBox6);
+            this.pncontenido.Controls.Add(this.txt_Telefono);
             this.pncontenido.Controls.Add(this.label9);
-            this.pncontenido.Controls.Add(this.daterfechanac);
+            this.pncontenido.Controls.Add(this.dtp_FechaNac);
             this.pncontenido.Controls.Add(this.label8);
-            this.pncontenido.Controls.Add(this.oprfemenino);
-            this.pncontenido.Controls.Add(this.oprmasculino);
+            this.pncontenido.Controls.Add(this.rdb_Femenino);
+            this.pncontenido.Controls.Add(this.rdb_Masculino);
             this.pncontenido.Controls.Add(this.label7);
             this.pncontenido.Controls.Add(this.groupBox1);
-            this.pncontenido.Controls.Add(this.textBox3);
+            this.pncontenido.Controls.Add(this.txt_Cedula);
             this.pncontenido.Controls.Add(this.label5);
             this.pncontenido.Controls.Add(this.gboxnombres);
             this.pncontenido.Location = new System.Drawing.Point(23, 15);
@@ -192,11 +195,11 @@ namespace Visual
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.txt_Contrasenia2);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtrcontra);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txt_Contrasenia1);
+            this.groupBox2.Controls.Add(this.txt_NombreUsuario);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Location = new System.Drawing.Point(10, 274);
             this.groupBox2.Name = "groupBox2";
@@ -205,14 +208,14 @@ namespace Visual
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cuenta";
             // 
-            // textBox10
+            // txt_Contrasenia2
             // 
-            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(403, 55);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.PasswordChar = '*';
-            this.textBox10.Size = new System.Drawing.Size(191, 26);
-            this.textBox10.TabIndex = 36;
+            this.txt_Contrasenia2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contrasenia2.Location = new System.Drawing.Point(403, 55);
+            this.txt_Contrasenia2.Name = "txt_Contrasenia2";
+            this.txt_Contrasenia2.PasswordChar = '*';
+            this.txt_Contrasenia2.Size = new System.Drawing.Size(191, 26);
+            this.txt_Contrasenia2.TabIndex = 36;
             // 
             // label14
             // 
@@ -238,24 +241,24 @@ namespace Visual
             this.label12.TabIndex = 33;
             this.label12.Text = "Contraseña:";
             // 
-            // txtrcontra
+            // txt_Contrasenia1
             // 
-            this.txtrcontra.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtrcontra.Location = new System.Drawing.Point(105, 55);
-            this.txtrcontra.Name = "txtrcontra";
-            this.txtrcontra.PasswordChar = '*';
-            this.txtrcontra.Size = new System.Drawing.Size(185, 26);
-            this.txtrcontra.TabIndex = 32;
+            this.txt_Contrasenia1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Contrasenia1.Location = new System.Drawing.Point(105, 55);
+            this.txt_Contrasenia1.Name = "txt_Contrasenia1";
+            this.txt_Contrasenia1.PasswordChar = '*';
+            this.txt_Contrasenia1.Size = new System.Drawing.Size(185, 26);
+            this.txt_Contrasenia1.TabIndex = 32;
             // 
-            // textBox8
+            // txt_NombreUsuario
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(105, 19);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(185, 26);
-            this.textBox8.TabIndex = 29;
+            this.txt_NombreUsuario.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_NombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_NombreUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NombreUsuario.Location = new System.Drawing.Point(105, 19);
+            this.txt_NombreUsuario.Name = "txt_NombreUsuario";
+            this.txt_NombreUsuario.Size = new System.Drawing.Size(185, 26);
+            this.txt_NombreUsuario.TabIndex = 29;
             // 
             // label11
             // 
@@ -269,15 +272,16 @@ namespace Visual
             this.label11.TabIndex = 30;
             this.label11.Text = "Usuario:";
             // 
-            // textBox7
+            // txt_Correo
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(84, 142);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(222, 26);
-            this.textBox7.TabIndex = 19;
+            this.txt_Correo.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Correo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Correo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Correo.Location = new System.Drawing.Point(84, 142);
+            this.txt_Correo.Name = "txt_Correo";
+            this.txt_Correo.Size = new System.Drawing.Size(222, 26);
+            this.txt_Correo.TabIndex = 19;
+            this.txt_Correo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Correo_KeyPress);
             // 
             // label10
             // 
@@ -291,15 +295,16 @@ namespace Visual
             this.label10.TabIndex = 20;
             this.label10.Text = "Correo:";
             // 
-            // textBox6
+            // txt_Telefono
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(419, 142);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(194, 26);
-            this.textBox6.TabIndex = 17;
+            this.txt_Telefono.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Telefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Telefono.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Telefono.Location = new System.Drawing.Point(419, 142);
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(194, 26);
+            this.txt_Telefono.TabIndex = 17;
+            this.txt_Telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cedula_KeyPress);
             // 
             // label9
             // 
@@ -313,13 +318,13 @@ namespace Visual
             this.label9.TabIndex = 18;
             this.label9.Text = "Num. Telf:";
             // 
-            // daterfechanac
+            // dtp_FechaNac
             // 
-            this.daterfechanac.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.daterfechanac.Location = new System.Drawing.Point(157, 205);
-            this.daterfechanac.Name = "daterfechanac";
-            this.daterfechanac.Size = new System.Drawing.Size(256, 26);
-            this.daterfechanac.TabIndex = 16;
+            this.dtp_FechaNac.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_FechaNac.Location = new System.Drawing.Point(157, 205);
+            this.dtp_FechaNac.Name = "dtp_FechaNac";
+            this.dtp_FechaNac.Size = new System.Drawing.Size(256, 26);
+            this.dtp_FechaNac.TabIndex = 16;
             // 
             // label8
             // 
@@ -333,31 +338,31 @@ namespace Visual
             this.label8.TabIndex = 15;
             this.label8.Text = "Fech. Nacimiento:";
             // 
-            // oprfemenino
+            // rdb_Femenino
             // 
-            this.oprfemenino.AutoSize = true;
-            this.oprfemenino.BackColor = System.Drawing.Color.Transparent;
-            this.oprfemenino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oprfemenino.Location = new System.Drawing.Point(208, 175);
-            this.oprfemenino.Name = "oprfemenino";
-            this.oprfemenino.Size = new System.Drawing.Size(98, 24);
-            this.oprfemenino.TabIndex = 14;
-            this.oprfemenino.Text = "Femenino";
-            this.oprfemenino.UseVisualStyleBackColor = false;
+            this.rdb_Femenino.AutoSize = true;
+            this.rdb_Femenino.BackColor = System.Drawing.Color.Transparent;
+            this.rdb_Femenino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_Femenino.Location = new System.Drawing.Point(208, 175);
+            this.rdb_Femenino.Name = "rdb_Femenino";
+            this.rdb_Femenino.Size = new System.Drawing.Size(98, 24);
+            this.rdb_Femenino.TabIndex = 14;
+            this.rdb_Femenino.Text = "Femenino";
+            this.rdb_Femenino.UseVisualStyleBackColor = false;
             // 
-            // oprmasculino
+            // rdb_Masculino
             // 
-            this.oprmasculino.AutoSize = true;
-            this.oprmasculino.BackColor = System.Drawing.Color.Transparent;
-            this.oprmasculino.Checked = true;
-            this.oprmasculino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oprmasculino.Location = new System.Drawing.Point(84, 175);
-            this.oprmasculino.Name = "oprmasculino";
-            this.oprmasculino.Size = new System.Drawing.Size(102, 24);
-            this.oprmasculino.TabIndex = 13;
-            this.oprmasculino.TabStop = true;
-            this.oprmasculino.Text = "Masculino";
-            this.oprmasculino.UseVisualStyleBackColor = false;
+            this.rdb_Masculino.AutoSize = true;
+            this.rdb_Masculino.BackColor = System.Drawing.Color.Transparent;
+            this.rdb_Masculino.Checked = true;
+            this.rdb_Masculino.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdb_Masculino.Location = new System.Drawing.Point(84, 175);
+            this.rdb_Masculino.Name = "rdb_Masculino";
+            this.rdb_Masculino.Size = new System.Drawing.Size(102, 24);
+            this.rdb_Masculino.TabIndex = 13;
+            this.rdb_Masculino.TabStop = true;
+            this.rdb_Masculino.Text = "Masculino";
+            this.rdb_Masculino.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -374,9 +379,9 @@ namespace Visual
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txt_Apellido2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txt_Apellido1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(330, 51);
@@ -386,14 +391,15 @@ namespace Visual
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Apellidos";
             // 
-            // textBox4
+            // txt_Apellido2
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(146, 47);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(137, 26);
-            this.textBox4.TabIndex = 4;
+            this.txt_Apellido2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Apellido2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Apellido2.Location = new System.Drawing.Point(146, 47);
+            this.txt_Apellido2.Name = "txt_Apellido2";
+            this.txt_Apellido2.Size = new System.Drawing.Size(137, 26);
+            this.txt_Apellido2.TabIndex = 4;
+            this.txt_Apellido2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nombre1_KeyPress);
             // 
             // label1
             // 
@@ -407,14 +413,15 @@ namespace Visual
             this.label1.TabIndex = 5;
             this.label1.Text = "Segundo Apellido:";
             // 
-            // textBox5
+            // txt_Apellido1
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(146, 17);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(137, 26);
-            this.textBox5.TabIndex = 0;
+            this.txt_Apellido1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Apellido1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Apellido1.Location = new System.Drawing.Point(146, 17);
+            this.txt_Apellido1.Name = "txt_Apellido1";
+            this.txt_Apellido1.Size = new System.Drawing.Size(137, 26);
+            this.txt_Apellido1.TabIndex = 0;
+            this.txt_Apellido1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nombre1_KeyPress);
             // 
             // label6
             // 
@@ -428,15 +435,16 @@ namespace Visual
             this.label6.TabIndex = 3;
             this.label6.Text = "Primer Apellido:";
             // 
-            // textBox3
+            // txt_Cedula
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(138, 15);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 26);
-            this.textBox3.TabIndex = 6;
+            this.txt_Cedula.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_Cedula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Cedula.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Cedula.Location = new System.Drawing.Point(138, 15);
+            this.txt_Cedula.Name = "txt_Cedula";
+            this.txt_Cedula.Size = new System.Drawing.Size(169, 26);
+            this.txt_Cedula.TabIndex = 6;
+            this.txt_Cedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Cedula_KeyPress);
             // 
             // label5
             // 
@@ -453,9 +461,9 @@ namespace Visual
             // gboxnombres
             // 
             this.gboxnombres.BackColor = System.Drawing.Color.Transparent;
-            this.gboxnombres.Controls.Add(this.textBox2);
+            this.gboxnombres.Controls.Add(this.txt_Nombre2);
             this.gboxnombres.Controls.Add(this.label3);
-            this.gboxnombres.Controls.Add(this.textBox1);
+            this.gboxnombres.Controls.Add(this.txt_Nombre1);
             this.gboxnombres.Controls.Add(this.label4);
             this.gboxnombres.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxnombres.Location = new System.Drawing.Point(10, 51);
@@ -465,14 +473,15 @@ namespace Visual
             this.gboxnombres.TabStop = false;
             this.gboxnombres.Text = "Nombres";
             // 
-            // textBox2
+            // txt_Nombre2
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(147, 47);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 26);
-            this.textBox2.TabIndex = 4;
+            this.txt_Nombre2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Nombre2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre2.Location = new System.Drawing.Point(147, 47);
+            this.txt_Nombre2.Name = "txt_Nombre2";
+            this.txt_Nombre2.Size = new System.Drawing.Size(149, 26);
+            this.txt_Nombre2.TabIndex = 4;
+            this.txt_Nombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nombre1_KeyPress);
             // 
             // label3
             // 
@@ -486,14 +495,15 @@ namespace Visual
             this.label3.TabIndex = 5;
             this.label3.Text = "Segundo Nombre:";
             // 
-            // textBox1
+            // txt_Nombre1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 26);
-            this.textBox1.TabIndex = 0;
+            this.txt_Nombre1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Nombre1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Nombre1.Location = new System.Drawing.Point(147, 15);
+            this.txt_Nombre1.Name = "txt_Nombre1";
+            this.txt_Nombre1.Size = new System.Drawing.Size(149, 26);
+            this.txt_Nombre1.TabIndex = 0;
+            this.txt_Nombre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nombre1_KeyPress);
             // 
             // label4
             // 
@@ -531,6 +541,10 @@ namespace Visual
             this.label2.TabIndex = 1;
             this.label2.Text = "Registro de Secretaria";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Frm_Secretaria_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,6 +566,7 @@ namespace Visual
             this.gboxnombres.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -559,41 +574,42 @@ namespace Visual
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton btnguardar;
-        private FontAwesome.Sharp.IconButton btncancelar;
-        private FontAwesome.Sharp.IconButton btnlimpiar;
+        private FontAwesome.Sharp.IconButton btn_Guardar;
+        private FontAwesome.Sharp.IconButton btn_Cancelar;
+        private FontAwesome.Sharp.IconButton btn_Limpiar;
         private System.Windows.Forms.Panel pncontenido;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_Contrasenia2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtrcontra;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txt_Contrasenia1;
+        private System.Windows.Forms.TextBox txt_NombreUsuario;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txt_Correo;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_Telefono;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker daterfechanac;
+        private System.Windows.Forms.DateTimePicker dtp_FechaNac;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton oprfemenino;
-        private System.Windows.Forms.RadioButton oprmasculino;
+        private System.Windows.Forms.RadioButton rdb_Femenino;
+        private System.Windows.Forms.RadioButton rdb_Masculino;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_Apellido2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_Apellido1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_Cedula;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox gboxnombres;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_Nombre2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Nombre1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtp_FechaContrato;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
