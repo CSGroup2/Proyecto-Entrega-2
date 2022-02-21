@@ -11,11 +11,11 @@ namespace SGAR_TEST
         public void InsertarDatosAmbulancia_AmbulanciaExistente()
         {
             var admA = new Adm_Ambulancia();
-            int id_ambulancia = 1, tipoA = 2, capacidad = 3, disponibilidad = 1;
-            string placa = "AAC123", modelo = "modeloxtest", observacion = "NN", msj = "";
+            int tipoA = 2, capacidad = 3;
+            string placa = "ABC123", modelo = "modeloxtest", observacion = "NN", msj = "";
             //
 
-            msj = admA.InsertarDatosAmbulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
+            msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
 
 
             Assert.AreEqual("La ambulancia ya está registrada", msj);
@@ -25,10 +25,10 @@ namespace SGAR_TEST
         public void InsertarDatosAmbulancia_AmbulanciaNueva()
         {
             var admA = new Adm_Ambulancia();
-            int id_ambulancia = 1, tipoA = 1, capacidad = 2, disponibilidad = 1;
-            string placa = "WER456", modelo = "modeloxtest2", observacion = "NN", msj = "";
+            int tipoA = 1, capacidad = 2;
+            string placa = "ACD234", modelo = "modeloxtest2", observacion = "No tiene material de asistencia", msj = "";
 
-            msj = admA.InsertarDatosAmbulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
+            msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
 
 
             Assert.AreEqual("Los datos se insertaron exitosamente", msj);
