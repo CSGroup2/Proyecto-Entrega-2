@@ -48,13 +48,14 @@ namespace Control
         {
             bool no_error = true;
             string placa = txtPlaca.Text;
-            var regex = new Regex("[a-zA-Z]{3}[0-9]{3}|[a-zA-Z]{3}[0-9]{4}");
+            var regexP = new Regex("[a-zA-Z]{3}[0-9]{3}|[a-zA-Z]{3}[0-9]{4}");
+            var regexC = new Regex("[1-9]{1}|[0-9]{2}");
             if (String.IsNullOrEmpty(txtPlaca.Text.Trim()))
             {
                 errorP.SetError(txtPlaca, "Ingrese la placa");
                 no_error = false;
             }
-            if (!regex.IsMatch(placa))
+            if (!regexP.IsMatch(placa))
             {
                 errorP.SetError(txtPlaca, "La placa debe contener de 3 letras y 3-4 dígitos");
                 no_error = false;
@@ -79,9 +80,9 @@ namespace Control
                 errorP.SetError(txtCapacidad, "Ingrese la capacidad de la ambulancia");
                 no_error = false;
             }
-            if (Int32.Parse(txtCapacidad.Text) < 0 || Int32.Parse(txtCapacidad.Text) > 20)
+            if (!regexC.IsMatch(txtCapacidad.Text))
             {
-                errorP.SetError(txtCapacidad, "Ingrese un dato real");
+                errorP.SetError(txtCapacidad, "Ingrese números");
                 no_error = false;
             }
             if (String.IsNullOrEmpty(txtObservacion.Text))
@@ -92,35 +93,21 @@ namespace Control
             return no_error;
         }
 
-        //método para receptar los datos y guardar temporalmente en una lista
-        public void Guardar(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
+        //método para receptar los datos y guardar en la BD
+        public string InsertarDatosAmbulancia(int id_ambulancia, string placa, string modelo, int tipoA, int capacidad, string observacion, int disponibilidad)
         {
-            if (dAmbulancia.ConsultarPlaca(placa) == false)
+            string msj = "";
+            if (dAmbulancia.ConsultarPlaca(placa) == true)
             {
                 a = new Ambulancia(id_ambulancia, placa, modelo, tipoA, capacidad, observacion, disponibilidad);
-                Ambulancias.Add(a); 
-                GuardarBD(a);
+                Ambulancias.Add(a);
+                msj = dAmbulancia.InsertarAmbulancia(a);
             }
             else
             {
-                MessageBox.Show("La ambulancia ya existe");
+                msj = "La ambulancia ya está registrada";
             }
-        }
-
-        //método para insertar los datos de la lista en la BD
-        public void GuardarBD(Ambulancia a)
-        {
-            string mensaje = "";
-            mensaje = dAmbulancia.InsertarAmbulancia(a);
-            if (mensaje[0] == '1')
-            {
-                MessageBox.Show("Ingreso de datos correctamente");
-            }
-            else
-            {
-                MessageBox.Show("Error: " + mensaje);
-            }
-                
+            return msj;
         }
 
         //método para limpiar campos
