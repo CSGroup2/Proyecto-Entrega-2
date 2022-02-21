@@ -57,5 +57,13 @@ namespace Visual {
             cbtn.activaboton (sender);
         }
         #endregion
+
+        private void btnguardar_Click (object sender, EventArgs e) {
+
+        }
+
+        private void btnimprimir_Click (object sender, EventArgs e) {
+
+        }
     }
 }
