@@ -2,6 +2,7 @@
 using Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -167,6 +168,21 @@ namespace Control
             }
             return msj;
         }
+
+
+        public DataTable ConsultarAmbulancias2(TextBox txtDato, ComboBox cmbTipo, CheckBox chbDisponibilidad, int buscarOb, int buscarOp)
+        {
+            DataTable dtresult = new DataTable();
+            string dato = txtDato.Text;
+            int disponibilidad = 0, tipo = cmbTipo.SelectedIndex;
+            if (chbDisponibilidad.Checked)
+            {
+                disponibilidad = 1;
+            }
+            dtresult= dAmbulancia.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
+            return dtresult;
+        }
+
 
         // método para listar todas las ambulancias registradas
         public void ListarAmbulancias(DataGridView dgvAmbulancias)
