@@ -148,41 +148,12 @@ namespace Control
         }
 
         // método para consultar ambulancias por filtros
-        public string ConsultarAmbulancias(DataGridView dgvAmbulancias, TextBox txtDato, ComboBox cmbTipo, CheckBox chbDisponibilidad, int buscarOb, int buscarOp)
-        {
-            string dato = txtDato.Text, msj = "";
-            int disponibilidad = 0, tipo = cmbTipo.SelectedIndex ;
-            if (chbDisponibilidad.Checked)
-            {
-                disponibilidad = 1;
-            }
-            dgvAmbulancias.Refresh();
-            dgvAmbulancias.DataSource = dAmbulancia.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
-            if(dgvAmbulancias == null)
-            {
-                msj = "No hay ambulancias con esos datos";
-            }
-            else
-            {
-                msj = "Consulta exitosa";
-            }
-            return msj;
-        }
-
-
-        public DataTable ConsultarAmbulancias2(TextBox txtDato, ComboBox cmbTipo, CheckBox chbDisponibilidad, int buscarOb, int buscarOp)
+        public DataTable ConsultarAmbulancias(string dato, int tipo, int disponibilidad, int buscarOb, int buscarOp)
         {
             DataTable dtresult = new DataTable();
-            string dato = txtDato.Text;
-            int disponibilidad = 0, tipo = cmbTipo.SelectedIndex;
-            if (chbDisponibilidad.Checked)
-            {
-                disponibilidad = 1;
-            }
-            dtresult= dAmbulancia.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
+            dtresult = dAmbulancia.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
             return dtresult;
         }
-
 
         // método para listar todas las ambulancias registradas
         public void ListarAmbulancias(DataGridView dgvAmbulancias)

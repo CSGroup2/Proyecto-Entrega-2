@@ -75,30 +75,6 @@ namespace Visual {
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            /* if(admA.ValidarC(rdbPlaca, txtDato, chbTipo, cmbTipo, errorP))
-             {
-                 if (rdbPlaca.Checked == true)
-                 {
-                     buscarOb = 1;
-                 }
-                 else 
-                 {
-                     buscarOb = 2;
-                 }
-                 if (chbDisponibilidad.Checked == true)
-                 {
-                     buscarOp = 1;
-                 }
-                 else if(chbTipo.Checked == true)
-                 {
-                     buscarOp = 2;
-                 }
-                 else if (chbDisponibilidad.Checked == true && chbTipo.Checked == true)
-                 {
-                     buscarOp = 3;
-                 }
-                 admA.ConsultarAmbulancias(dgvAmbulancias, txtDato, cmbTipo, chbDisponibilidad, buscarOb, buscarOp);
-             }*/
             if (admA.ValidarC(rdbPlaca, txtDato, chbTipo, cmbTipo, errorP))
             {
                 if (rdbPlaca.Checked == true)
@@ -121,13 +97,14 @@ namespace Visual {
                 {
                     buscarOp = 3;
                 }
-                DataTable dtresult = new DataTable();
-                dtresult = admA.ConsultarAmbulancias2(txtDato, cmbTipo, chbDisponibilidad, buscarOb, buscarOp);
-                //admA.ConsultarAmbulancias(dgvAmbulancias, txtDato, cmbTipo, chbDisponibilidad, buscarOb, buscarOp);
+                string dato = txtDato.Text;
+                int disponibilidad = 0, tipo = Int32.Parse(cmbTipo.SelectedValue.ToString());
+                if (chbDisponibilidad.Checked)
+                {
+                    disponibilidad = 1;
+                }
                 dgvAmbulancias.Refresh();
-                dgvAmbulancias.DataSource = dtresult;
-                
-                MessageBox.Show(dtresult.Rows.Count.ToString()); 
+                dgvAmbulancias.DataSource = admA.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
             }
 
 
