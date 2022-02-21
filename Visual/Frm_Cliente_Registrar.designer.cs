@@ -544,6 +544,7 @@ namespace Visual {
             // 
             // errpvdatoscliente
             // 
+            this.errpvdatoscliente.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errpvdatoscliente.ContainerControl = this;
             // 
             // Frm_Cliente_Registrar
