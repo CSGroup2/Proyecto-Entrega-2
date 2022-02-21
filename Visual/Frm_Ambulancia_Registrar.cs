@@ -57,13 +57,16 @@ namespace Visual {
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string placa = txtPlaca.Text.ToUpper(), modelo = txtModelo.Text, observacion = txtObservacion.Text;
-            int capacidad = Int32.Parse(txtCapacidad.Text), tipoA = cmbTipo.SelectedIndex;
             if (admA.Validar(txtPlaca, txtModelo, cmbTipo, txtCapacidad, txtObservacion, errorP))
             {
+                string msj = "";
+                string placa = txtPlaca.Text.ToUpper(), modelo = txtModelo.Text, observacion = txtObservacion.Text;
+                int capacidad = Int32.Parse(txtCapacidad.Text), tipoA = cmbTipo.SelectedIndex;
                 errorP.Clear();
-                admA.Guardar(1, placa, modelo, tipoA, capacidad, observacion, 1);
+                msj = admA.InsertarDatosAmbulancia(1, placa, modelo, tipoA, capacidad, observacion, 1);
+                MessageBox.Show(msj);
             }
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

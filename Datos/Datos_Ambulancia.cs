@@ -57,13 +57,13 @@ namespace Datos
                     param_observacion.Value = a.Observacion;
                     comando.Parameters.Add(param_observacion);
                     comando.ExecuteNonQuery();
-                    msj =  "1";
+                    msj =  "Los datos se insertaron exitosamente";
                 }    
             }
             catch (Exception ex)
             {
                 con.cerrar_conexion(c1);
-                msj = "OCURRIO UN ERROR " + ex.Message;
+                msj = "Error al insertar en la base de datos " + ex.Message;
             }
             return msj;
         }
