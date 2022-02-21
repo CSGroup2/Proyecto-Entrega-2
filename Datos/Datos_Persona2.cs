@@ -10,16 +10,17 @@ namespace Datos
 {
     public class Datos_Persona2
     {
-        Conexion con = new Conexion();
-
-        public String insertarpersona(Persona2 person, ref SqlTransaction Sqltra, ref SqlConnection connex)
+        
+        public Tuple<string, int> insertarpersona(Persona2 person, ref SqlTransaction Sqltra, ref SqlConnection connex)
         {
+            
+            int id_persona = 0;
             string msj = "";
-
-            //ref SqlTransaction Sqltra;
-            /*try
-            {*/
-                SqlCommand comando = new SqlCommand();
+            try
+            {
+                if (person != null)
+                {
+                    SqlCommand comando = new SqlCommand();
                 comando.Connection = connex;
                 comando.Transaction = Sqltra;
                 comando.CommandText = "insertar_persona";
@@ -78,9 +79,17 @@ namespace Datos
                 telefono.SqlDbType = SqlDbType.VarChar;
                 telefono.Value = person.Fecha_nac;
                 comando.Parameters.Add(telefono);
+                msj = comando.ExecuteNonQuery() == 1 ? "Ok" : "No se ingreso el registro";
 
+                id_persona = Convert.ToInt16(comando.Parameters["@id_persona"].Value);
+                }
+            }
 
-            return msj;
+            catch (Exception ex)
+            {
+                msj = "OCURRIO UN ERROR " + ex.Message + ex.StackTrace;
+            }
+            return Tuple.Create(msj, id_persona);
         }
 
 
