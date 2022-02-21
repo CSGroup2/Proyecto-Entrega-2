@@ -73,7 +73,7 @@ namespace Datos {
                 {
                     Sqltra.Rollback();
                 }
-                comando.ExecuteNonQuery();
+
                 con.cerrar_conexion(conexion);
                 
                 msj = "1";
