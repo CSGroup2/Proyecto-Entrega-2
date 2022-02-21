@@ -8,11 +8,34 @@ using System.Text;
 
 namespace Datos {
     public class Datos_Conductor {
-        Conexion con = new Conexion ();
+
+        // Variables
+        Conexion con = null;
+
+
+        
+
+
+        /*----------------------Frm_Conductor_Editar-------------------------------------*/
+        public string Insertar_Datos_Conductor (Conductor conductor) {
+            string message = "";
+            SqlConnection conexion = con.abrir_conexion ();
+
+            try {
+
+            } catch () {
+
+            }
+
+            return message;
+        }
+
+        /*---------------------- Billy -------------------------------------*/
         public object ListarConductoresDisponibles () {
             DataTable dt = new DataTable ();
-            SqlConnection conexion = con.abrir_conexion ();
             try {
+                con = new Conexion ();
+                SqlConnection conexion = con.abrir_conexion ();
                 using (SqlCommand comando = new SqlCommand ("sp_listar_conductores_disponibles", conexion)) {
                     comando.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter da = new SqlDataAdapter (comando);
@@ -24,12 +47,6 @@ namespace Datos {
             }
 
             return dt;
-        }
-
-
-        /*----------------------Frm_Conductor_Editar-------------------------------------*/
-        public string Insertar_Datos_Conductor (Conductor conductor) {
-            throw new NotImplementedException ();
         }
 
     }
