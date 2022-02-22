@@ -1,8 +1,8 @@
 # Proyecto-Entrega-2
 En este repositorio se encuentran los siguientes archivos:
--- Documento de plan de pruebas del SGAR
--- Script de la BD
--- Código en C# 
+* Documento de plan de pruebas del SGAR
+* Script de la BD
+* Código en C# 
 
 Pasos para ejecutar el programa:
 1. Descargar el proyecto en .zip
