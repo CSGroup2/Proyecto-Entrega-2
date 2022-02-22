@@ -212,6 +212,7 @@ namespace Visual {
             // 
             // cmbTipo
             // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Location = new System.Drawing.Point(80, 63);
             this.cmbTipo.Name = "cmbTipo";

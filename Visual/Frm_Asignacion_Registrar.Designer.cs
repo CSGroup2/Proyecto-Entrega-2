@@ -53,6 +53,9 @@ namespace Visual
             this.lbl_id_conductor = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_id_ambulancia = new System.Windows.Forms.Label();
+            this.Peticion_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Conductor_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ambulancia_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmb_Cond)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,6 +196,10 @@ namespace Visual
             // dgvAmb_Cond
             // 
             this.dgvAmb_Cond.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAmb_Cond.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Peticion_Codigo,
+            this.Conductor_Codigo,
+            this.Ambulancia_Codigo});
             this.dgvAmb_Cond.Location = new System.Drawing.Point(25, 308);
             this.dgvAmb_Cond.Name = "dgvAmb_Cond";
             this.dgvAmb_Cond.Size = new System.Drawing.Size(610, 186);
@@ -399,6 +406,24 @@ namespace Visual
             this.lbl_id_ambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_id_ambulancia.Visible = false;
             // 
+            // Peticion_Codigo
+            // 
+            this.Peticion_Codigo.HeaderText = "Petición Código";
+            this.Peticion_Codigo.Name = "Peticion_Codigo";
+            this.Peticion_Codigo.ReadOnly = true;
+            // 
+            // Conductor_Codigo
+            // 
+            this.Conductor_Codigo.HeaderText = "Conductor Código";
+            this.Conductor_Codigo.Name = "Conductor_Codigo";
+            this.Conductor_Codigo.ReadOnly = true;
+            // 
+            // Ambulancia_Codigo
+            // 
+            this.Ambulancia_Codigo.HeaderText = "Ambulancia Código";
+            this.Ambulancia_Codigo.Name = "Ambulancia_Codigo";
+            this.Ambulancia_Codigo.ReadOnly = true;
+            // 
             // Frm_Asignacion_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,5 +490,8 @@ namespace Visual
         internal System.Windows.Forms.Label lbl_id_conductor;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.Label lbl_id_ambulancia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Peticion_Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Conductor_Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ambulancia_Codigo;
     }
 }

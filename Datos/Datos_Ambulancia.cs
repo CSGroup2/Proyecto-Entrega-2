@@ -68,6 +68,7 @@ namespace Datos
             return msj;
         }
 
+        // CONSULTA LOS TIPO DE AMBULANCIA DE LA BD Y DEVUELVE EN DATATABLE
         public DataTable ConsultarTipo()
         {
             DataTable DtResultado = new DataTable("TIPO_AMBULANCIA");
@@ -93,6 +94,7 @@ namespace Datos
             return DtResultado;
         }
 
+        // CONSULTA SI PLACA INGRESADA ESTÁ REGISTRADA EN LA BD
         public bool ConsultarPlaca(string placa)
         {
             bool flag = true;
@@ -131,6 +133,7 @@ namespace Datos
             return flag;
         }
 
+        // CONSULTA LAS AMBULANCIAS REGISTRADAS EN LA BD SEGÚN EL FILTRO SELECCIONADO POR EL USUARIO
         public DataTable ConsultarAmbulancias(string dato, int tipo_ambulancia, int disponibilidad, int buscarOb, int buscarOp)
         {
             DataTable dt = new DataTable();
@@ -158,6 +161,7 @@ namespace Datos
             return dt;
         }
 
+        // CONSULTA TODAS LAS AMBULANCIAS REGISTRADAS EN LA BD
         public DataTable ListarAmbulancias()
         {
             DataTable dt = new DataTable();
@@ -180,6 +184,7 @@ namespace Datos
             return dt;
         }
 
+        // CONSULTA TODAS LAS AMBULANCIAS REGISTRADAS EN LA BD QUE ESTÉN DISPONIBLES PARA ASIGNARLAS LUEGO
         public object ListarAmbulanciasDisponibles()
         {
             DataTable dt = new DataTable();

@@ -145,6 +145,12 @@
     <Compile Include="Frm_Asignar_Conductor.Designer.cs">
       <DependentUpon>Frm_Asignar_Conductor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Configuracion_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Configuracion_Cuenta.Designer.cs">
+      <DependentUpon>Frm_Configuracion_Cuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Asignar_Conductor.resx">
       <DependentUpon>Frm_Asignar_Conductor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Configuracion_Cuenta.resx">
+      <DependentUpon>Frm_Configuracion_Cuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>

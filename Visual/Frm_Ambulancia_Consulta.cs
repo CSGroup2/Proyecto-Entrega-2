@@ -75,31 +75,40 @@ namespace Visual {
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if(admA.ValidarC(rdbPlaca, txtDato, chbTipo, cmbTipo, errorP))
+            int disponibilidad = 0, tipo = 0;
+            if (admA.ValidarC(rdbPlaca, txtDato, chbTipo, cmbTipo, errorP))
             {
                 if (rdbPlaca.Checked == true)
                 {
                     buscarOb = 1;
                 }
-                else 
+                else
                 {
                     buscarOb = 2;
                 }
-                if (chbDisponibilidad.Checked == true)
-                {
-                    buscarOp = 1;
-                }
-                else if(chbTipo.Checked == true)
-                {
-                    buscarOp = 2;
-                }
-                else if (chbDisponibilidad.Checked == true && chbTipo.Checked == true)
+                if (chbDisponibilidad.Checked == true && chbTipo.Checked == true)
                 {
                     buscarOp = 3;
+                    disponibilidad = 1;
+                    tipo = Int32.Parse(cmbTipo.SelectedValue.ToString());
                 }
-                admA.ConsultarAmbulancias(dgvAmbulancias, txtDato, cmbTipo, chbDisponibilidad, buscarOb, buscarOp);
+                else if (chbTipo.Checked == true)
+                {
+                    buscarOp = 2;
+                    tipo = Int32.Parse(cmbTipo.SelectedValue.ToString());
+                }
+                else if(chbDisponibilidad.Checked == true)
+                {
+                    buscarOp = 1;
+                    disponibilidad = 1;
+                }
+                
+                string dato = txtDato.Text;
+                dgvAmbulancias.Refresh();
+                dgvAmbulancias.DataSource = admA.ConsultarAmbulancias(dato, tipo, disponibilidad, buscarOb, buscarOp);
             }
-            
+
+
         }
     }
 }
