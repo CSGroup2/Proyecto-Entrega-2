@@ -75,7 +75,7 @@ namespace Control {
         }
 
         // Methods for Buttons
-        public string guardarDatosConductor (string cedula, string nombre1, string nombre2, string apellido1, string apellido2, string correo, string telefono, string sexo, DateTime fecha_nac, DateTime fecha_contrato) {
+        public string guardarDatosConductor (string cedula, string nombre1, string nombre2, string apellido1, string apellido2, string telefono, string sexo, DateTime fecha_nac, DateTime fecha_contrato) {
             string mensaje = "¡"; // '¡' in case of incorrec data on fields   
             Conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
             mensaje = Datos_Conductor.insertarDatosConductor (Conductor);

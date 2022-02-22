@@ -41,8 +41,6 @@ namespace Control {
             return adm_secretaria;
         }
 
-
-
         /*----------------------Frm_Secretaria_Registrar-------------------------------*/
 
         #region Frm_Secretaria_Registrar
@@ -52,7 +50,7 @@ namespace Control {
             // Only allows numbers on press
             Validacion.validarSoloNumerosKeyPress (sender, e);
         }
-
+       
         public void validarSoloLettrasKeyPress (object sender, KeyPressEventArgs e) {
             // Only allows alphabetic characters
             Validacion.validarSoloLettrasKeyPress (sender, e);
@@ -63,30 +61,13 @@ namespace Control {
             Validacion.validarSoloCorreoKeypress (sender, e);
         }
 
-
-        public string guardarDatosSecretaria (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1) {
+        // 
+        public string guardarDatosSecretaria (string cedula, string nombre1, string nombre2, string apellido1, string apellido2, string correo, string telefono, string sexo, DateTime fecha_nac, DateTime fecha_contrato, string nombre_usuario, string contrasenia1) {
             string mensaje = "¡";
-            errorProvider1.Clear ();
-            if (Validacion.esCorrectoDatosSecretaria (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, txt_NombreUsuario, txt_Contrasenia1, txt_Contrasenia2, errorProvider1)) {
-                string
-                    cedula = txt_Cedula.Text.Trim (),
-                    nombre1 = txt_Nombre1.Text.Trim (),
-                    nombre2 = txt_Nombre2.Text.Trim (),
-                    apellido1 = txt_Apellido1.Text.Trim (),
-                    apellido2 = txt_Apellido2.Text.Trim (),
-                    correo = txt_Correo.Text.Trim (),
-                    telefono = txt_Telefono.Text.Trim (),
-                    sexo = Validacion.esSexo (rdb_Masculino, rdb_Femenino),
-                    nombre_usuario = txt_NombreUsuario.Text.Trim (),
-                    contrasenia1 = txt_Contrasenia1.Text.Trim ();
-                DateTime
-                    fecha_nac = dtp_FechaNac.Value.Date,
-                    fehca_contraro = dtp_FechaContrato.Value.Date;
-                Usuario = new Usuario (0, correo, nombre_usuario, contrasenia1);
-                Secretaria = new Secretaria (0, Usuario, fehca_contraro, 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
-                mensaje = Datos_Secretaria.insertarDatosSecretaria (Secretaria);
-                MessageBox.Show (mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            Usuario = new Usuario (0, correo, nombre_usuario, contrasenia1);
+            Secretaria = new Secretaria (0, Usuario, fecha_contrato, 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
+            mensaje = Datos_Secretaria.insertarDatosSecretaria (Secretaria);
+            MessageBox.Show (mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return mensaje;
         }
 
@@ -110,7 +91,13 @@ namespace Control {
 
         #endregion
 
+        public string esSexoValidacion (RadioButton rdb_Masculino, RadioButton rdb_Femenino) {
+            return Validacion.esSexo (rdb_Masculino, rdb_Femenino);
+        }
 
+        public bool esCorrectoDatosSecretariaValidacion (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1) {
+            return Validacion.esCorrectoDatosSecretaria (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, txt_NombreUsuario, txt_Contrasenia1, txt_Contrasenia2, errorProvider1);
+        }
 
     }
 }
