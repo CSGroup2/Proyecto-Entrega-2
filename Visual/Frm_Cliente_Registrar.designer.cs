@@ -249,6 +249,7 @@ namespace Visual {
             this.txt_numtelf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_numtelf.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_numtelf.Location = new System.Drawing.Point(419, 145);
+            this.txt_numtelf.MaxLength = 10;
             this.txt_numtelf.Name = "txt_numtelf";
             this.txt_numtelf.Size = new System.Drawing.Size(194, 26);
             this.txt_numtelf.TabIndex = 17;
