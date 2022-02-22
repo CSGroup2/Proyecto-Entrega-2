@@ -15,14 +15,13 @@ namespace SGAR_TEST
             Adm_Ambulancia admA = Adm_Ambulancia.GetAdm();
             int tipoA = 2, capacidad = 3;
             string placa = "ABC123", modelo = "modeloxtest", observacion = "NN", msj = "";
-            //
 
             msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
-
 
             Assert.AreEqual("La ambulancia ya está registrada", msj);
         }
 
+        //NOTA: CAMBIAR LOS DATOS DE INSERTAR AMBULANCIA NUEVA PARA QUE EJECUTE CON ÉXITO
         [TestMethod]
         public void InsertarDatosAmbulancia_AmbulanciaNueva()
         {
@@ -31,7 +30,6 @@ namespace SGAR_TEST
             string placa = "ACD234", modelo = "modeloxtest2", observacion = "No tiene material de asistencia", msj = "";
 
             msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
-
 
             Assert.AreEqual("Los datos se insertaron exitosamente", msj);
         }
