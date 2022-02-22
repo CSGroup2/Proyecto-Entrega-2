@@ -34,7 +34,7 @@ namespace Datos {
                     sql_comando.Parameters.AddWithValue ("@fecha_contrato", conductor.Fecha_contrato);
                     mensaje = Convert.ToString (sql_comando.ExecuteNonQuery ());
                     if (mensaje == "-1") {
-                        mensaje = "¡DATOS NO GUARDADOS!";
+                        mensaje = "¡CÉDULA YA EXISTE!";
                     } else {
                         mensaje = "DATOS GUARDADOS CORRECTAMENTE.";
                     }
