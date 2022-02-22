@@ -75,26 +75,11 @@ namespace Control {
         }
 
         // Methods for Buttons
-        public string guardarDatosConductor (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
-            string mensaje = "¡"; // '¡' in case of incorrec data on fields
-            errorProvider1.Clear ();
-            if (Validacion.esCorrectoDatosConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1)) {
-                string
-                    cedula = txt_Cedula.Text.Trim (),
-                    nombre1 = txt_Nombre1.Text.Trim (),
-                    nombre2 = txt_Nombre2.Text.Trim (),
-                    apellido1 = txt_Apellido1.Text.Trim (),
-                    apellido2 = txt_Apellido2.Text.Trim (),
-                    correo = txt_Correo.Text.Trim (),
-                    telefono = txt_Telefono.Text.Trim (), 
-                    sexo = Validacion.esSexo (rdb_Masculino, rdb_Femenino);
-                DateTime
-                    fecha_nac = dtp_FechaNac.Value.Date,
-                    fecha_contrato = dtp_FechaContrato.Value.Date;
-                Conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
-                mensaje = Datos_Conductor.insertarDatosConductor (Conductor);
-                MessageBox.Show (mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+        public string guardarDatosConductor (string cedula, string nombre1, string nombre2, string apellido1, string apellido2, string correo, string telefono, string sexo, DateTime fecha_nac, DateTime fecha_contrato) {
+            string mensaje = "¡"; // '¡' in case of incorrec data on fields   
+            Conductor = new Conductor (0, fecha_contrato, "", 0, cedula, nombre1, nombre2, apellido1, apellido2, sexo, fecha_nac, telefono);
+            mensaje = Datos_Conductor.insertarDatosConductor (Conductor);
+            MessageBox.Show (mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return mensaje;
         }
 
@@ -112,6 +97,16 @@ namespace Control {
             dtp_FechaNac.Value = DateTime.Today;
             dtp_FechaContrato.Value = DateTime.Today;
         }
+        // Validations
+        public string esSexoValidacion (RadioButton rdb_Masculino, RadioButton rdb_Femenino) {
+            return Validacion.esSexo (rdb_Masculino, rdb_Femenino);
+        }
+
+        public bool esCorrectoDatosConductorValidacion (TextBox txt_Cedula, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, DateTimePicker dtp_FechaContrato, ErrorProvider errorProvider1) {
+            return Validacion.esCorrectoDatosConductor (txt_Cedula, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, dtp_FechaContrato, errorProvider1);
+        }
+
+
         #endregion
 
 
