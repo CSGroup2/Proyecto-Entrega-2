@@ -60,6 +60,7 @@ namespace Control
             string mensaje = "",msj="";
             cliente = new Cliente();
             cliente.Id_cliente = admL.IdUsuario();
+            //cliente.Id_cliente = 100; //solo para el TEST
 
             int tAmb = v.AEntero(tipo_ambulancia);
             int nAmb = v.AEntero(cantAmb);
@@ -73,6 +74,7 @@ namespace Control
                 msj="Su petición fue ingresada correctamente.";
             else
                 msj="Error: " + mensaje;
+            //msj = "Error no se pudo ingresar la petición."; //solo para el TEST
             return msj;
         }
 
