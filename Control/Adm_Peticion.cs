@@ -53,13 +53,14 @@ namespace Control
 
         /*--------------------------Frm_Peticion_Registrar-------------------------------*/
 
+
+        //Guarda la peticion en una lista y en la base de datos
         public string guardarPeticion(string cantAmb, string tipo_ambulancia,string punto_Origen, string punto_Destino)
         {
             string mensaje = "",msj="";
             cliente = new Cliente();
             cliente.Id_cliente = admL.IdUsuario();
 
-            //Validar datos
             int tAmb = v.AEntero(tipo_ambulancia);
             int nAmb = v.AEntero(cantAmb);
 
@@ -75,6 +76,7 @@ namespace Control
             return msj;
         }
 
+        // Llena los labels del frm con los datos del Cliente
         public void datosCliente(Label lbl_cedula, Label lbl_nombre, Label lbl_apellido)
         {
             lbl_cedula.Text = CedulaUsuario();
@@ -82,11 +84,13 @@ namespace Control
             lbl_apellido.Text = admL.ApellidoUsuario();
         }
 
+        // Llena el combobox del tipo de ambulancias que existen en la base de datos
         public void llenarTipoAmb(ComboBox cmb_TAmb)
         {
             admA.LlenarComboTipoAmbulancia(cmb_TAmb);
         }
 
+        //borra los datos ingresados por el usuario y los deja en su estado default
         public void borrarTipeos(NumericUpDown nud_Ambulancia, TextBox txt_Origen, TextBox txt_Destino, ComboBox cmb_TAmb)
         {
             nud_Ambulancia.Value=1;
@@ -95,6 +99,7 @@ namespace Control
             cmb_TAmb.SelectedIndex = 0;
         }
 
+        //devuelve la cedula del usuario para colocarla en un label
         public string CedulaUsuario()
         {
             string cedula = "";
@@ -104,6 +109,7 @@ namespace Control
 
         /*--------------------------Frm_Peticion_Consultar-------------------------------*/
 
+        //Llena el dgv con las peticiones que se encuentran "En Progreso"
         internal void llenarTablaPeticion(DataGridView dgvPeticion)
         {
             dgvPeticion.Refresh();
@@ -112,6 +118,7 @@ namespace Control
 
         /*--------------------------Enviar a Base de Datos-------------------------------*/
 
+        //Objeto para interactuar con el proyecto Datos y aplicar MVC
         Datos_Peticion datosPeticion = new Datos_Peticion();
     }
 }

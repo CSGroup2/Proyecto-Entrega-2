@@ -19,6 +19,8 @@ namespace Control {
 
         private static Adm_Asignacion adm = null;   // 1.
 
+
+        /*---------------Parametros en null para llamarlos en getadm------------*/
         Validacion v = null;
         Peticion p = null;
         Cliente cl = null;
@@ -36,9 +38,11 @@ namespace Control {
         Adm_Ambulancia admA = Adm_Ambulancia.GetAdm();
         Adm_Conductor admCo = Adm_Conductor.GetAdm();
 
+        //Getters y Setters de las listas cabecera y detalle
         public List<Asignacion_Cabecera> ListaC { get => listaC; set => listaC = value; }
         public List<Asignacion_Detalle> ListaD { get => listaD; set => listaD = value; }
 
+        //constructor adm asignacion
         private Adm_Asignacion() 
         {
             v = new Validacion();
@@ -54,7 +58,7 @@ namespace Control {
             listaD = new List<Asignacion_Detalle>();
         }
 
-        public static Adm_Asignacion GetAdm() 
+        public static Adm_Asignacion GetAdm() //getadm para aplicar singleton
         {
             if (adm == null)                    //3.2
             {
@@ -65,6 +69,7 @@ namespace Control {
 
         /*--------------------------Frm_Asignacion_Registrar-------------------------------*/
 
+        //Llena dgv con las peticiones "En Progreso"
         public void llenarTablaPeticion(DataGridView dgvPeticion)
         {
             admP.llenarTablaPeticion(dgvPeticion);
@@ -73,16 +78,19 @@ namespace Control {
 
         /*--------------------------Frm_Asignar_Ambulancia-------------------------------*/
 
+        //Llena dgv con las ambulancias "disponibles"
         public void llenarTablaAmbulanciaAsignar(DataGridView dgvAmbulancia)
         {
             admA.ListarAmbulanciasDisponibles(dgvAmbulancia);
         }
 
+        //Llena dgv con los conductores "disponibles"
         public void llenarTablaConductorAsignar(DataGridView dgvConductores)
         {
             admCo.ListarConductoresDisponibles(dgvConductores);
         }
 
+        //Llena La lista de asignacion detalle y la muestra en un dgv
         public void enlistarCond_AmbAsignados(string id_peticion, string id_conductor, string id_ambulancia, DataGridView dgvAmb_Cond, Label lbl_cantAmbulancia, Label lblAmb_Restantes)
         {
             int id_P = v.AEntero(id_peticion), id_C=v.AEntero(id_conductor), id_A=v.AEntero(id_ambulancia);
@@ -98,10 +106,11 @@ namespace Control {
 
             ad = new Asignacion_Detalle(p, co, a);
             ListaD.Add(ad);
-            llenarDgvCA(dgvAmb_Cond,ListaD);
-            calcularAmbRestantes(lbl_cantAmbulancia, lblAmb_Restantes,ListaD,id_P);
+            llenarDgvCA(dgvAmb_Cond,ListaD);  //llena el dgv
+            calcularAmbRestantes(lbl_cantAmbulancia, lblAmb_Restantes,ListaD,id_P); //calcula las ambulancias restantes para completar la asignacion
         }
 
+        //limpia todo lo que el usuario haya ingresado
         public void LimpiarTodo(Label lblAmb_Restantes, Label lblCliente, Label lblIdPeticion, Label lbl_cantAmbulancia, Label lbl_conductor, Label lbl_id_ambulancia, Label lbl_id_conductor, Label lbl_Placa, Label lbl_TipoAmbulancia, DataGridView dgvAmb_Cond)
         {
             limpiarListas(ListaD, ListaC);
@@ -117,6 +126,8 @@ namespace Control {
             lbl_TipoAmbulancia.Text = "";
         }
 
+        //cambia el label de las ambulancias restantes para conocer
+        //cuantas ambulancias faltan para completar la asignacion
         private void calcularAmbRestantes(Label lbl_cantAmbulancia, Label lblAmb_Restantes, List<Asignacion_Detalle> listaD, int id_P)
         {
             int i = 0;
@@ -138,6 +149,7 @@ namespace Control {
             }
         }
 
+        //llena el dgv de los conductores y ambulancias asignadas
         private void llenarDgvCA(DataGridView dgvAmb_Cond, List<Asignacion_Detalle> listaD)
         {
             dgvAmb_Cond.Rows.Clear();
@@ -147,6 +159,7 @@ namespace Control {
             }
         }
 
+        //guarda asignacion cabecera en lista y manda toda la asignacion a la base de datos
         public void guardarAsignacion(string id_peticion)
         {
             int id_S = admL.IdUsuario();
@@ -167,12 +180,14 @@ namespace Control {
             }
         }
 
+        //Clear de las listas para limpiarlas
         private void limpiarListas(List<Asignacion_Detalle> listaD, List<Asignacion_Cabecera> listaC)
         {
             listaD.Clear();
             listaC.Clear();
         }
 
+        //limpia los labels del frm
         public void LimpiarLabelsCA(Label lbl_id_ambulancia, Label lbl_id_conductor, Label lbl_conductor, Label lbl_Placa)
         {
             lbl_conductor.Text = "";
@@ -181,8 +196,9 @@ namespace Control {
             lbl_Placa.Text = "";
         }
 
-        Datos_Asignacion datosAsignacion = new Datos_Asignacion();
+        Datos_Asignacion datosAsignacion = new Datos_Asignacion(); //objeto para interactuar con el proyecto Datos
 
+        //guarda asignacion en base de datos
         private string guardarAsignacionBD(List<Asignacion_Cabecera> ac,List<Asignacion_Detalle> ad)
         {
             string mensaje = "";

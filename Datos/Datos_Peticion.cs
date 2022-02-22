@@ -11,8 +11,9 @@ namespace Datos
 {
     public class Datos_Peticion
     {
-        Conexion con = new Conexion();
+        Conexion con = new Conexion();  //Objeto conexion para conectar la BD
 
+        //consulta la cedula del usuario en la base de datos
         public string consultarCedula(int v)
         {
             string ced = "";
@@ -33,6 +34,7 @@ namespace Datos
             return ced;
         }
 
+        //inserta la peticion en la base de datos
         public string insetarPeticion(Peticion peticion)
         {
             string msj = "";
@@ -95,6 +97,7 @@ namespace Datos
             return msj;
         }
 
+        // consulta las penticiones en progreso de la base de datos
         public object listarPeticionesPendientes()
         {
             DataTable dt = new DataTable();

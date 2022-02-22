@@ -9,8 +9,9 @@ using System.Text;
 namespace Datos {
     public class Datos_Asignacion
     {
-        Conexion con = new Conexion();
+        Conexion con = new Conexion(); //Objeto para conectar con la base de datos
 
+        //guarda la asignacion completa en la BD
         public string insetarAsignacion(List<Asignacion_Cabecera> ac, List<Asignacion_Detalle> ad)
         {
             string msj = "";
@@ -52,6 +53,7 @@ namespace Datos {
 
                 msj = comando.ExecuteNonQuery() == 1 ? "1" : "Error.";
 
+                //envia los datos ya ingresados en la tabla cabecera a tabla detalle
                 if (msj.Equals("1")) 
                 {
                     ac[0].Id_asignacion_cabecera = Convert.ToInt32(comando.Parameters["@id_a_cabecera"].Value);
@@ -88,6 +90,7 @@ namespace Datos {
             return msj;
         }
 
+        //actualiza la peticion a condicion "Asignada"
         private string actualizarPeticion(int id_peticion)
         {
             string msj = "";
@@ -117,6 +120,7 @@ namespace Datos {
             return msj;
         }
 
+        //Inserta datos en asignacion detalle 
         private string insertarDetalle(Asignacion_Detalle x, ref SqlTransaction Sqltra, ref SqlConnection conexion)
         {
             string msj = "";
@@ -171,6 +175,7 @@ namespace Datos {
             return msj;
         }
 
+        //Cambia la disponibilidad de las ambulancias
         private string OcuparAmbulancias(int id_ambulancia, ref SqlTransaction Sqltra, ref SqlConnection conexion)
         {
             string msj = "";
@@ -197,6 +202,7 @@ namespace Datos {
             return msj;
         }
 
+        //cambia la disponibilidad de los conductores
         private string OcuparConductores(int id_conductor, ref SqlTransaction Sqltra, ref SqlConnection conexion)
         {
             string msj = "";
