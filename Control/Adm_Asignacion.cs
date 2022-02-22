@@ -199,16 +199,20 @@ namespace Control {
         Datos_Asignacion datosAsignacion = new Datos_Asignacion(); //objeto para interactuar con el proyecto Datos
 
         //guarda asignacion en base de datos
-        private string guardarAsignacionBD(List<Asignacion_Cabecera> ac,List<Asignacion_Detalle> ad)
+        public string guardarAsignacionBD(List<Asignacion_Cabecera> ac,List<Asignacion_Detalle> ad)
         {
-            string mensaje = "";
+            string mensaje = "",msj="";
             mensaje = datosAsignacion.insetarAsignacion(ac,ad);
-            if (mensaje[0] == '1') 
+            if (mensaje[0] == '1')
             {
                 MessageBox.Show("La Asignación fue ingresada correctamente.");
+                msj = "La Asignación fue ingresada correctamente.";
             }
-            else
+            else 
+            {
                 MessageBox.Show("Error: " + mensaje);
+                msj = "Error no se pudo ingresar la asignacion";
+            }
             return mensaje;
         }
     }
