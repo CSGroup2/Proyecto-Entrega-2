@@ -39,6 +39,9 @@ namespace Visual
             this.label2 = new System.Windows.Forms.Label();
             this.lblAmb_Restantes = new System.Windows.Forms.Label();
             this.dgvAmb_Cond = new System.Windows.Forms.DataGridView();
+            this.Peticion_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Conductor_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ambulancia_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,9 +56,7 @@ namespace Visual
             this.lbl_id_conductor = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbl_id_ambulancia = new System.Windows.Forms.Label();
-            this.Peticion_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Conductor_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ambulancia_Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmb_Cond)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +84,7 @@ namespace Visual
             this.lbl_conductor.Size = new System.Drawing.Size(194, 26);
             this.lbl_conductor.TabIndex = 16;
             this.lbl_conductor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_conductor.TextChanged += new System.EventHandler(this.lbl_conductor_TextChanged);
             // 
             // label1
             // 
@@ -108,6 +110,7 @@ namespace Visual
             this.lbl_Placa.Size = new System.Drawing.Size(194, 26);
             this.lbl_Placa.TabIndex = 16;
             this.lbl_Placa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Placa.TextChanged += new System.EventHandler(this.lbl_Placa_TextChanged);
             // 
             // btnConductor
             // 
@@ -192,18 +195,39 @@ namespace Visual
             this.lblAmb_Restantes.Size = new System.Drawing.Size(56, 26);
             this.lblAmb_Restantes.TabIndex = 16;
             this.lblAmb_Restantes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAmb_Restantes.TextChanged += new System.EventHandler(this.lblAmb_Restantes_TextChanged);
             // 
             // dgvAmb_Cond
             // 
+            this.dgvAmb_Cond.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAmb_Cond.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAmb_Cond.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Peticion_Codigo,
             this.Conductor_Codigo,
             this.Ambulancia_Codigo});
+            this.dgvAmb_Cond.Enabled = false;
             this.dgvAmb_Cond.Location = new System.Drawing.Point(25, 308);
             this.dgvAmb_Cond.Name = "dgvAmb_Cond";
             this.dgvAmb_Cond.Size = new System.Drawing.Size(610, 186);
             this.dgvAmb_Cond.TabIndex = 18;
+            // 
+            // Peticion_Codigo
+            // 
+            this.Peticion_Codigo.HeaderText = "Petición Código";
+            this.Peticion_Codigo.Name = "Peticion_Codigo";
+            this.Peticion_Codigo.ReadOnly = true;
+            // 
+            // Conductor_Codigo
+            // 
+            this.Conductor_Codigo.HeaderText = "Conductor Código";
+            this.Conductor_Codigo.Name = "Conductor_Codigo";
+            this.Conductor_Codigo.ReadOnly = true;
+            // 
+            // Ambulancia_Codigo
+            // 
+            this.Ambulancia_Codigo.HeaderText = "Ambulancia Código";
+            this.Ambulancia_Codigo.Name = "Ambulancia_Codigo";
+            this.Ambulancia_Codigo.ReadOnly = true;
             // 
             // btnCancelar
             // 
@@ -364,6 +388,7 @@ namespace Visual
             this.lblIdPeticion.Size = new System.Drawing.Size(194, 26);
             this.lblIdPeticion.TabIndex = 16;
             this.lblIdPeticion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblIdPeticion.TextChanged += new System.EventHandler(this.lblIdPeticion_TextChanged);
             // 
             // lbl_id_conductor
             // 
@@ -406,23 +431,25 @@ namespace Visual
             this.lbl_id_ambulancia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_id_ambulancia.Visible = false;
             // 
-            // Peticion_Codigo
+            // btnLimpiar
             // 
-            this.Peticion_Codigo.HeaderText = "Petición Código";
-            this.Peticion_Codigo.Name = "Peticion_Codigo";
-            this.Peticion_Codigo.ReadOnly = true;
-            // 
-            // Conductor_Codigo
-            // 
-            this.Conductor_Codigo.HeaderText = "Conductor Código";
-            this.Conductor_Codigo.Name = "Conductor_Codigo";
-            this.Conductor_Codigo.ReadOnly = true;
-            // 
-            // Ambulancia_Codigo
-            // 
-            this.Ambulancia_Codigo.HeaderText = "Ambulancia Código";
-            this.Ambulancia_Codigo.Name = "Ambulancia_Codigo";
-            this.Ambulancia_Codigo.ReadOnly = true;
+            this.btnLimpiar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnLimpiar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(42)))), ((int)(((byte)(94)))));
+            this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLimpiar.IconSize = 30;
+            this.btnLimpiar.Location = new System.Drawing.Point(446, 55);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLimpiar.Size = new System.Drawing.Size(189, 32);
+            this.btnLimpiar.TabIndex = 17;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // Frm_Asignacion_Registrar
             // 
@@ -436,6 +463,7 @@ namespace Visual
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAsignar);
             this.Controls.Add(this.btnAmbulancia);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnPeticion);
             this.Controls.Add(this.btnConductor);
             this.Controls.Add(this.lblIdPeticion);
@@ -493,5 +521,6 @@ namespace Visual
         private System.Windows.Forms.DataGridViewTextBoxColumn Peticion_Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Conductor_Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ambulancia_Codigo;
+        private FontAwesome.Sharp.IconButton btnLimpiar;
     }
 }

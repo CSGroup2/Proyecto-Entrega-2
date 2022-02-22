@@ -20,7 +20,7 @@ namespace Control
 
         public List<Ambulancia> Ambulancias { get => ambulancias; set => ambulancias = value; }
 
-        public Adm_Ambulancia()
+        private Adm_Ambulancia()
         {
             ambulancias = new List<Ambulancia>();
         }

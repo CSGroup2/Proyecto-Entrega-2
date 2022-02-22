@@ -7,30 +7,30 @@ namespace SGAR_TEST
     [TestClass]
     public class Adm_Peticion_Test
     {
-        [TestMethod]
+        /*[TestMethod]
         public void guardarPeticion_PeticionNueva()
         {
-            /*var admP = new Adm_Peticion();
+            Adm_Peticion admP = Adm_Peticion.GetAdm();
             string cantAmb = "2", tipo_ambulancia = "2", punto_Origen = "Clínica Kennedy", punto_Destino = "Hospital del niño", msj = "";
             
 
             msj = admP.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
 
 
-            Assert.AreEqual("Su petición fue ingresada correctamente.", msj);*/
+            Assert.AreEqual("Su petición fue ingresada correctamente.", msj);
         }
 
-        /*[TestMethod]
+        [TestMethod]
         public void guardarPeticion_ErrorConsulta()
         {
-            var admA = new Adm_Ambulancia();
-            int tipoA = 1, capacidad = 2;
-            string placa = "ABC567", modelo = "modeloxtest2", observacion = "NN", msj = "";
-
-            msj = admA.InsertarDatosAmbulancia(placa, modelo, tipoA, capacidad, observacion);
+            Adm_Peticion admP = Adm_Peticion.GetAdm();
+            string cantAmb = "2", tipo_ambulancia = "2", punto_Origen = "Clínica Kennedy", punto_Destino = "Hospital del niño", msj = "";
 
 
-            Assert.AreEqual("Los datos se insertaron exitosamente", msj);
+            msj = admP.guardarPeticion(cantAmb, tipo_ambulancia, punto_Origen, punto_Destino);
+
+
+            Assert.AreEqual("Error no se pudo ingresar la petición.", msj);
         }*/
     }
 }

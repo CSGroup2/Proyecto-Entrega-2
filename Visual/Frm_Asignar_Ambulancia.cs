@@ -19,6 +19,7 @@ namespace Visual
             InitializeComponent();
             adm.llenarTablaAmbulanciaAsignar(dgvAmbulancia);
             this.frm = frmA;
+            btnElegir.Enabled = false;
         }
 
         private static string GetValorCelda(DataGridView dgv, int num)
@@ -40,6 +41,14 @@ namespace Visual
             frm.lbl_id_ambulancia.Text = GetValorCelda(dgvAmbulancia, 0);
             frm.lbl_Placa.Text = GetValorCelda(dgvAmbulancia, 2);
             this.Close();
+        }
+
+        private void dgvAmbulancia_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (GetValorCelda(dgvAmbulancia, 0)!="") 
+            {
+                btnElegir.Enabled = true;
+            }
         }
     }
 }

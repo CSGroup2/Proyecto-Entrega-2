@@ -85,6 +85,7 @@ namespace Visual
             this.dgvAmbulancia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAmbulancia.Size = new System.Drawing.Size(732, 201);
             this.dgvAmbulancia.TabIndex = 20;
+            this.dgvAmbulancia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAmbulancia_CellMouseClick);
             // 
             // Frm_Asignar_Ambulancia
             // 
