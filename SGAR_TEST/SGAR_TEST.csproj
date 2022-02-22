@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Adm_Secretaria_Test.cs" />
     <Compile Include="Adm_Conductor_Test.cs" />
+    <Compile Include="Adm_Login_Test.cs" />
+    <Compile Include="Adm_Cliente_Test.cs" />
     <Compile Include="Adm_Peticion_Test.cs" />
     <Compile Include="Adm_Ambulancia_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

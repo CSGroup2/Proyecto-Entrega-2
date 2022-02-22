@@ -45,6 +45,7 @@ namespace Visual
             this.dgvConductores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvConductores.Size = new System.Drawing.Size(732, 201);
             this.dgvConductores.TabIndex = 0;
+            this.dgvConductores.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvConductores_CellMouseClick);
             // 
             // btnElegir
             // 

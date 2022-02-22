@@ -20,6 +20,7 @@ namespace Visual
             InitializeComponent();
             adm.llenarTablaPeticion(dgvPeticion);
             this.frm = frmA;
+            btnElegir.Enabled = false;
         }
 
         public static string GetValorCelda(DataGridView dgv, int num)
@@ -44,6 +45,12 @@ namespace Visual
             frm.lbl_cantAmbulancia.Text = GetValorCelda(dgvPeticion,3);
             frm.lblAmb_Restantes.Text = GetValorCelda(dgvPeticion,3);
             this.Close();
+        }
+
+        private void dgvPeticion_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (GetValorCelda(dgvPeticion, 0) != "")
+                btnElegir.Enabled = true;
         }
     }
 }

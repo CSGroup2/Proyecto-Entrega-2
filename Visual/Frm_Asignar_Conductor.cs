@@ -21,6 +21,7 @@ namespace Visual
             InitializeComponent();
             adm.llenarTablaConductorAsignar(dgvConductores);
             this.frm = frmA;
+            btnElegir.Enabled = false;
         }
 
         private static string GetValorCelda(DataGridView dgv, int num)
@@ -42,6 +43,12 @@ namespace Visual
             frm.lbl_id_conductor.Text = GetValorCelda(dgvConductores, 0);
             frm.lbl_conductor.Text = GetValorCelda(dgvConductores,1);
             this.Close();
+        }
+
+        private void dgvConductores_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (GetValorCelda(dgvConductores, 0) != "")
+                btnElegir.Enabled = true;
         }
     }
 }
