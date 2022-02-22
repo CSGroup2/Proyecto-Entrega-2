@@ -64,6 +64,8 @@ namespace Datos {
                             break;
                         }
                     }
+                    ac[0].Peticion.Id_peticion = Convert.ToInt32(comando.Parameters["@id_peticion"].Value);
+                    msj = actualizarPeticion(ac[0].Peticion.Id_peticion);
                 }
                 if (msj.Equals("1")) 
                 {
@@ -82,6 +84,35 @@ namespace Datos {
             {
                 con.cerrar_conexion(conexion);
                 msj = "en cabecera error " + ex.Message;
+            }
+            return msj;
+        }
+
+        private string actualizarPeticion(int id_peticion)
+        {
+            string msj = "";
+            SqlConnection conexion = con.abrir_conexion();
+            try 
+            {
+                //comando
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexion;
+                comando.CommandText = "sp_actualizar_peticiones_asignada";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter param_id_peticion = new SqlParameter();
+                param_id_peticion.ParameterName = "@id_peticion";
+                param_id_peticion.SqlDbType = SqlDbType.Int;
+                param_id_peticion.Value = id_peticion;
+                comando.Parameters.Add(param_id_peticion);
+
+                msj = comando.ExecuteNonQuery() == 1 ? "1" : "No se pudo actualizar el stock";
+                con.cerrar_conexion(conexion);
+            }
+            catch (Exception ex)
+            {
+                con.cerrar_conexion(conexion);
+                msj = "en detalle error" + ex.Message + ex.StackTrace;
             }
             return msj;
         }
@@ -124,9 +155,70 @@ namespace Datos {
 
                 msj = comando.ExecuteNonQuery() == 1 ? "1" : "No se ingreso el registro";
 
+                if (msj.Equals("1")) 
+                {
+                    msj = OcuparConductores(x.Conductor.Id_conductor, ref Sqltra,ref conexion);
+                    if (msj.Equals("1")) 
+                    {
+                        msj = OcuparAmbulancias(x.Ambulancia.Id_ambulancia,ref Sqltra,ref conexion);
+                    }
+                }
+
             } catch (Exception ex) 
             {
                 msj = "en detalle error" + ex.Message + ex.StackTrace;
+            }
+            return msj;
+        }
+
+        private string OcuparAmbulancias(int id_ambulancia, ref SqlTransaction Sqltra, ref SqlConnection conexion)
+        {
+            string msj = "";
+            try
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexion;
+                comando.Transaction = Sqltra;
+                comando.CommandText = "sp_ocupar_ambulancia";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter param_id_conductor = new SqlParameter();
+                param_id_conductor.ParameterName = "@id_ambulancia";
+                param_id_conductor.SqlDbType = SqlDbType.Int;
+                param_id_conductor.Value = id_ambulancia;
+                comando.Parameters.Add(param_id_conductor);
+
+                msj = comando.ExecuteNonQuery() == 1 ? "1" : "No se ingreso el registro";
+            }
+            catch (Exception ex)
+            {
+                msj = "en conductor error" + ex.Message + ex.StackTrace;
+            }
+            return msj;
+        }
+
+        private string OcuparConductores(int id_conductor, ref SqlTransaction Sqltra, ref SqlConnection conexion)
+        {
+            string msj = "";
+            try 
+            {
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexion;
+                comando.Transaction = Sqltra;
+                comando.CommandText = "sp_ocupar_conductor";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter param_id_conductor = new SqlParameter();
+                param_id_conductor.ParameterName = "@id_conductor";
+                param_id_conductor.SqlDbType = SqlDbType.Int;
+                param_id_conductor.Value = id_conductor;
+                comando.Parameters.Add(param_id_conductor);
+
+                msj = comando.ExecuteNonQuery() == 1 ? "1" : "No se ingreso el registro";
+            }
+            catch (Exception ex)
+            {
+                msj = "en conductor error" + ex.Message + ex.StackTrace;
             }
             return msj;
         }

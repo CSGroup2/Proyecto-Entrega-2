@@ -40,11 +40,13 @@ namespace Visual
             this.dgvPeticion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPeticion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeticion.Location = new System.Drawing.Point(30, 26);
+            this.dgvPeticion.MultiSelect = false;
             this.dgvPeticion.Name = "dgvPeticion";
             this.dgvPeticion.ReadOnly = true;
             this.dgvPeticion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeticion.Size = new System.Drawing.Size(900, 322);
             this.dgvPeticion.TabIndex = 1;
+            this.dgvPeticion.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPeticion_CellMouseClick);
             // 
             // btnCancelar
             // 

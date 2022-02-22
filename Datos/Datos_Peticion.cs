@@ -101,7 +101,7 @@ namespace Datos
             SqlConnection conexion = con.abrir_conexion();
             try
             {
-                using (SqlCommand comando = new SqlCommand("sp_listar_peticiones_pendientes", conexion))
+                using (SqlCommand comando = new SqlCommand("sp_listar_peticiones_progreso", conexion))
                 {
                     comando.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter da = new SqlDataAdapter(comando);
