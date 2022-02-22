@@ -46,9 +46,12 @@ namespace SGAR_TEST
 
             dt = admA.ConsultarAmbulancias(dato, tipoA, disponibilidad, buscarOb, buscarOp);
 
-            msj = dt.Rows.Count.ToString();
-
-            Assert.AreEqual("0", msj);
+            if (dt.Rows.Count == 0)
+            {
+                msj = "No hay registros con esos datos";
+            }
+            
+            Assert.AreEqual("No hay registros con esos datos", msj);
         }
 
         [TestMethod]
