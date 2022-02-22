@@ -44,6 +44,7 @@ namespace Control
             return adm_client;
         }
 
+        //Metodo para cargar la lista de hospitales afiliados a un combo box
         public void LlenarComboHospitales(ComboBox cmbhospitales)
         {
             cmbhospitales.Items.Clear();
@@ -71,13 +72,13 @@ namespace Control
             // Only allows eamil characters
             validacion.validarSoloCorreoKeypress(sender, e);
         }
-        #endregion 
-
+        
+        //Valida si realmente un sexo se ha escogido
         public string esSexo(RadioButton rdb_Masculino, RadioButton rdb_Femenino)
         {
             return validacion.esSexo(rdb_Masculino, rdb_Femenino);
         }
-
+        //verifica que todos los datos sean correctos, o que se envien datos incompletos
         public  bool validarDatosCliente(TextBox txt_Cedula, ComboBox cmbhospital, TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1)
         {
             bool validaciondatos = validacion.esCorrectoDatosCliente(txt_Cedula, cmbhospital, txt_Nombre1, txt_Nombre2, txt_Apellido1, txt_Apellido2, txt_Correo, txt_Telefono, rdb_Masculino, rdb_Femenino, dtp_FechaNac, txt_NombreUsuario, txt_Contrasenia1, txt_Contrasenia2, errorProvider1);
@@ -87,7 +88,12 @@ namespace Control
             }
             return validaciondatos;
         }
+        #endregion
 
+
+        #region Metodos que se comunicaran con la capa datos para la BD
+
+        //Metodo "GuardarDatosCliente" inserta un cliente con sus respectivos datos y su nueva cuenta de usuario.
         public string guardarDatosCliente(string Cedula, int id_hospital , string Nombre1, string Nombre2, string Apellido1, string Apellido2, string Correo, string Telefono, string sexo, DateTime dtp_FechaNac, string NombreUsuario, string Contrasenia1)
         {
             string mensaje = "";
@@ -98,6 +104,10 @@ namespace Control
             return mensaje;
         }
 
+        #endregion
+
+
+        //Metodo para limpiar los componentes posterior a una insersion.
         public void limpiarCamposGuardarCliente(TextBox txt_Cedula, ComboBox cbxhospital ,TextBox txt_Nombre1, TextBox txt_Nombre2, TextBox txt_Apellido1, TextBox txt_Apellido2, TextBox txt_Correo, TextBox txt_Telefono, RadioButton rdb_Masculino, RadioButton rdb_Femenino, DateTimePicker dtp_FechaNac, TextBox txt_NombreUsuario, TextBox txt_Contrasenia1, TextBox txt_Contrasenia2, ErrorProvider errorProvider1)
         {
             errorProvider1.Clear();

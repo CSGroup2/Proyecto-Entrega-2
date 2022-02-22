@@ -10,18 +10,10 @@ namespace Datos
 {
     public class Datos_Cliente
     {
+        //NOTA: Esta clase es creada para realizar solamente las operaciones de base de datos, como insertar,
+        //consultar, eliminar, editar, etc.
+
         Conexion con = new Conexion();
-
-
-
-
-
-
-
-
-
-
-
 
 
         // Metodo para poder cargar todos los hospitales disponibles de la base de datos
@@ -58,6 +50,7 @@ namespace Datos
             return DtResultado;
         }
 
+        //metodo para insertar la informacion pasado desde la capa de control a la base de datos
         public string insertarDatosCliente(Cliente cliente)
         {
             Conexion conexion = null;
