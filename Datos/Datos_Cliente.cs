@@ -82,6 +82,10 @@ namespace Datos
                     mensaje = Convert.ToString(sql_comando.ExecuteNonQuery());
                     if (mensaje == "-1")
                     {
+                        // ¡Error el numero de cedula o usuario ya existen! \n DATOS NO GUARDADOS
+                        // Este numero de cedula ya esta registrado
+                        //Este nombre de usuario ya existe
+                        //Registro exitoso
                         mensaje = "¡Error el numero de cedula o usuario ya existen! \n DATOS NO GUARDADOS";
                     }
                     else
