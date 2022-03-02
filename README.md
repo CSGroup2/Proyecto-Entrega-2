@@ -19,5 +19,4 @@ Requisitos para ejecutar el proyecto:
 Credenciales
 * Gerente    -->  Usuario: Stefan45S   Contraseña: 12345
 * Cliente    -->  Usuario: Helen45B    Contraseña: 12345
-* Conductor  -->  Usuario: Renan45P    Contraseña: 12345
 * Secretario -->  Usuario: Blilly      Contraseña: 12345
