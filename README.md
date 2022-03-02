@@ -15,3 +15,9 @@ Pasos para ejecutar el programa:
 Requisitos para ejecutar el proyecto:
 * Microsoft Visual Studio 2019
 * Microsoft SQL Server 2019
+
+Credenciales
+* Gerente    -->  Usuario: Stefan45S   Contraseña: 12345
+* Cliente    -->  Usuario: Helen45B    Contraseña: 12345
+* Conductor  -->  Usuario: Renan45P    Contraseña: 12345
+* Secretario -->  Usuario: Blilly      Contraseña: 12345
